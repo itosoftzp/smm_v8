@@ -1,0 +1,128 @@
+[{
+    title : '@@datalist.processStatusFormatter.edit@@',
+    properties : [{
+        name : 'showProcessName',
+        label : '@@userview.processStatus.showProcessName@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : '',
+        }]
+    },
+    {
+        name : 'showFutureActivities',
+        label : '@@userview.processStatus.showFutureActivities@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : '',
+        }]
+    },
+    {
+        name : 'showSkippedActivities',
+        label : '@@userview.processStatus.showSkippedActivities@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : '',
+        }]
+    },
+    {
+        name : 'usernameFormat',
+        label : '@@userview.processStatus.usernameFormat@@',
+        type : 'selectbox',
+        value : 'name',
+        options : [{
+            value : '',
+            label : '@@userview.processStatus.usernameFormat.username@@',
+        },
+        {
+            value : 'name',
+            label : '@@userview.processStatus.usernameFormat.name@@',
+        },
+        {
+            value : 'combine',
+            label : '@@userview.processStatus.usernameFormat.combine@@',
+        }]
+    },
+    {
+        name : 'eventClick',
+        label : '@@userview.processStatus.eventClick@@',
+        description : '@@userview.processStatus.eventClick.desc@@',
+        type : 'codeeditor',
+        mode : 'javascript'
+    },
+    {
+        name : 'viewPermission',
+        label : '@@userview.processStatus.additionalViewPermission@@',
+        type : 'checkbox',
+        value : 'requester',
+        options : [{
+            value : 'all',
+            label : '@@userview.processStatus.viewPermission.all@@',
+        },{
+            value : 'group',
+            label : '@@userview.processStatus.viewPermission.group@@',
+        },
+        {
+            value : 'department',
+            label : '@@userview.processStatus.viewPermission.department@@',
+        }]
+    },
+    {
+        name : 'orgId',
+        label : '@@userview.userpermission.selectOrg@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/plugin/org.joget.apps.userview.lib.UserPermission/service?action=getOrgs',
+        control_field: 'viewPermission',
+        control_value: 'group|department',
+        control_use_regex: 'true'
+    },
+    {
+        name : 'groupIds',
+        label : '@@userview.processStatus.viewPermission.group@@',
+        type : 'multiselect',
+        options_ajax_on_change : 'orgId',
+        options_ajax : '[CONTEXT_PATH]/web/json/plugin/org.joget.plugin.enterprise.UserOptionsBinder/service?action=getGroupOptions',
+        required : 'true',
+        control_field: 'viewPermission',
+        control_value: 'group'
+    },
+    {
+        name : 'departmentIds',
+        label : '@@userview.processStatus.viewPermission.department@@',
+        type : 'multiselect',
+        options_ajax_on_change : 'orgId',
+        options_ajax : '[CONTEXT_PATH]/web/json/plugin/org.joget.plugin.enterprise.UserOptionsBinder/service?action=getDeptOptions',
+        required : 'true',
+        control_field: 'viewPermission',
+        control_value: 'department'
+    },
+    {
+        label : '@@userview.cache.cache@@',
+        type : 'header'
+    },{
+        name : 'userviewCacheScope',
+        label : '@@userview.cache.scope@@',
+        description : '@@userview.cache.scope.desc@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : '@@userview.cache.none@@'
+        },{
+            value : 'application',
+            label : '@@userview.cache.application@@'
+        },{
+            value : 'user',
+            label : '@@userview.cache.user@@'
+        }]
+    },
+    {
+        name : 'userviewCacheDuration',
+        label : '@@userview.cache.duration@@',
+        description : '@@userview.cache.duration.desc@@',
+        type : 'textfield',
+        value : '20'
+    }]
+}]

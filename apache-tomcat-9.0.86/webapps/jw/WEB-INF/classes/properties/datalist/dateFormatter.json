@@ -1,0 +1,29 @@
+[{
+    title : '@@datalist.dateformatter.config@@',
+    properties : [{
+        name : 'dateStoreInUTC',
+        label : '@@datalist.dateformatter.dateStoreInUTC@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'dataFormat',
+        label : '@@datalist.dateformatter.dataFormat@@',
+        description : '@@datalist.dateformatter.dataFormat.desc@@',
+        type : 'textfield',
+        value : 'yyyy-MM-dd',
+        required : 'true',
+        control_field: 'dateStoreInUTC',
+        control_value: ''
+    },
+    {
+        name : 'displayFormat',
+        label : '@@datalist.dateformatter.displayFormat@@',
+        description : '@@datalist.dateformatter.displayFormat.desc@@',
+        type : 'textfield',
+        value : 'dd/MM/yyyy'
+    }]
+}]

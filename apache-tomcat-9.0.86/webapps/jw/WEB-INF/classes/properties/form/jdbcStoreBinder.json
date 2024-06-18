@@ -1,0 +1,89 @@
+[{
+    title : '@@form.jdbcLoadBinder.config@@',
+    properties : [{
+        name : 'jdbcDatasource',
+        label : '@@datalist.jdbcDataListBinder.datasource@@',
+        type : 'selectbox',
+        options : [{
+            value : 'custom',
+            label : '@@datalist.jdbcDataListBinder.customDatasource@@'
+        },{
+            value : 'default',
+            label : '@@datalist.jdbcDataListBinder.defaultDatasource@@'
+        }],
+        value : 'default'
+    },{
+        name : 'jdbcDriver',
+        label : '@@datalist.jdbcDataListBinder.driver@@',
+        description : '@@datalist.jdbcDataListBinder.driver.desc@@',
+        type : 'textfield',
+        value : 'com.mysql.jdbc.Driver',
+        control_field: 'jdbcDatasource',
+        control_value: 'custom',
+        control_use_regex: 'false',
+        required : 'true'
+    },{
+        name : 'jdbcUrl',
+        label : '@@datalist.jdbcDataListBinder.url@@',
+        type : 'textfield',
+        value : 'jdbc:mysql://localhost/jwdb?characterEncoding=UTF8&useSSL=false',
+        control_field: 'jdbcDatasource',
+        control_value: 'custom',
+        control_use_regex: 'false',
+        required : 'true'
+    },{
+        name : 'jdbcUser',
+        label : '@@datalist.jdbcDataListBinder.username@@',
+        type : 'textfield',
+        control_field: 'jdbcDatasource',
+        control_value: 'custom',
+        control_use_regex: 'false',
+        value : 'root',
+        required : 'true'
+    },{
+        name : 'jdbcPassword',
+        label : '@@datalist.jdbcDataListBinder.password@@',
+        type : 'password',
+        control_field: 'jdbcDatasource',
+        control_value: 'custom',
+        control_use_regex: 'false',
+        value : ''
+    },{
+        name : 'check_sql',
+        label : '@@form.jdbcStoreBinder.check_sql@@',
+        description : '@@form.jdbcStoreBinder.check_sql.desc@@',
+        type : 'codeeditor',
+        mode : 'sql',
+        required : 'true'
+    },{
+        name : 'insert_sql',
+        label : '@@form.jdbcStoreBinder.insert_sql@@',
+        description : '@@form.jdbcStoreBinder.insert_sql.desc@@',
+        type : 'codeeditor',
+        mode : 'sql',
+        required : 'true'
+    },{
+        name : 'update_sql',
+        label : '@@form.jdbcStoreBinder.update_sql@@',
+        description : '@@form.jdbcStoreBinder.update_sql.desc@@',
+        type : 'codeeditor',
+        mode : 'sql',
+        required : 'true'
+    },{
+        name : 'delete_sql',
+        label : '@@form.jdbcStoreBinder.delete_sql@@',
+        description : '@@form.jdbcStoreBinder.delete_sql.desc@@',
+        type : 'codeeditor',
+        mode : 'sql',
+        required : 'true'
+    }],
+    buttons : [{
+        name : 'testConnection',    
+        label : '@@datalist.jdbcDataListBinder.testConnection@@',
+        ajax_url : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.JdbcStoreBinder/service?action=testConnection',
+        fields : ['jdbcDriver', 'jdbcUrl', 'jdbcUser', 'jdbcPassword'],
+        control_field: 'jdbcDatasource',
+        control_value: 'custom',
+        control_use_regex: 'false'
+    }]
+}]

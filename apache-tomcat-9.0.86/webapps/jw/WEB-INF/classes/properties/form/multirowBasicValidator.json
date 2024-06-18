@@ -1,0 +1,52 @@
+[
+    {
+        "title": "@@form.multirowbasicvalidator.config@@",
+        "properties": [
+            {
+                "name": "validationrules",
+                "label": "@@form.multirowbasicvalidator.validationrules@@",
+                "type": "grid",
+                "columns": [
+                    {
+                        "key": "fieldId",
+                        "label": "@@form.equalvaluevalidator.fieldId@@",
+                        "required": "true"
+                    },
+                    {
+                        "key": "mandatory",
+                        "label": "@@form.defaultvalidator.mandatory@@",
+                        "type": "truefalse"
+                    },
+                    {
+                        "key": "validationType",
+                        "label": "@@form.multirowbasicvalidator.type@@",
+                        "type": "autocomplete",
+                        "options": [
+                            {
+                                "value": "alphabet",
+                                "label": "@@form.defaultvalidator.alphabet@@"
+                            },
+                            {
+                                "value": "alphanumeric",
+                                "label": "@@form.defaultvalidator.alphanumeric@@"
+                            },
+                            {
+                                "value": "numeric",
+                                "label": "@@form.defaultvalidator.numeric@@"
+                            },
+                            {
+                                "value": "email",
+                                "label": "@@form.defaultvalidator.email@@"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "message",
+                        "label": "@@form.defaultvalidator.message@@"
+                    }
+                ],
+                "required": "true"
+            }
+        ]
+    }
+]

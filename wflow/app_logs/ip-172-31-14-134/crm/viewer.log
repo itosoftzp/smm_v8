@@ -1,0 +1,10 @@
+INFO    06 Jun 2024 09:20:15 org.enhydra.shark.SharkUtilitiesAspect - Cache object id range : [1000200 - 1000400]
+INFO    06 Jun 2024 09:20:16 org.enhydra.shark.SharkUtilitiesAspect - Cache counter range for _xpdldata_ : [1 - 201]
+INFO    06 Jun 2024 09:20:16 PackageEventLogger - UTCTime=1717665616616,EventType=packageLoaded,PackageId=crm,PackageVersion=1,EventPerformedBy=roleSystem
+INFO    06 Jun 2024 09:20:17 org.joget.apps.app.service.AppServiceImpl - Imported xpdl
+INFO    06 Jun 2024 09:20:17 org.joget.apps.app.service.AppServiceImpl - Imported process form mappings : 4
+INFO    06 Jun 2024 09:20:17 org.joget.apps.app.service.AppServiceImpl - Imported process tool mappings : 4
+INFO    06 Jun 2024 09:20:17 org.joget.apps.app.service.AppServiceImpl - Imported process participant mappings : 3
+INFO    06 Jun 2024 09:20:17 org.joget.apps.app.service.AppServiceImpl - Imported app resources files : 4
+INFO    06 Jun 2024 09:20:17 org.joget.apps.app.service.AppServiceImpl - Imported plugins : 0
+INFO    06 Jun 2024 09:20:18 org.joget.apps.app.web.SetupServlet - Import app /setup/apps/APP_dashboard-1.zip

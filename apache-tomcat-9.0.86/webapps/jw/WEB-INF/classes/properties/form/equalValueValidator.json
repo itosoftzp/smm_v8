@@ -1,0 +1,17 @@
+[{
+    title : '@@form.equalvaluevalidator.config@@',
+    properties : [
+    {
+        name : 'fieldId',
+        label : '@@form.equalvaluevalidator.fieldId@@',
+        type : 'selectbox',
+        options_callback : 'FormBuilder.getFieldOptions',
+        required : 'True'
+    },
+    {
+        name : 'errorMsg',
+        label : '@@form.equalvaluevalidator.errorMsg@@',
+        type : 'textfield',
+        required : 'True'
+    }]
+}]

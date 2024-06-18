@@ -1,0 +1,31 @@
+#form-canvas{
+    direction:rtl;
+    text-align:right;
+}
+
+.form-cell .label, .subform-cell .label {
+    float: right;
+}
+
+.form-column, .subform-column {
+    color: #666666;
+    float: right;
+}
+
+.form-fileupload {
+    float: right;
+}
+
+#ui-datepicker-div {
+    display:none;
+}
+
+body.rtl .close-icon:after {
+    margin-right: 5px;
+    margin-left: unset;
+}
+
+body.rtl .boxy-wrapper .title-bar a.close{
+    right: auto !important;
+    left: 10px !important;
+}

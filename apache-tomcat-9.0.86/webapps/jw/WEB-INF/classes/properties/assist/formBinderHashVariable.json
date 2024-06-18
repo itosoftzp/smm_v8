@@ -1,0 +1,88 @@
+{
+    "optionGroup" : {
+        "@@assist.Form@@" : [
+            {
+                "value" : "#binder.APP_ID.FORM_DEF_ID.FIELD_ID[PRIMARY_KEY]#",
+                "label" : "@@assist.formbinder.hash@@",
+                "syntax" : [
+                    "#binder",
+                    {
+                        "placeholder" : "APP_ID",
+                        "option" : "appId",
+                        "prefix" : "."
+                    },
+                    ".",
+                    {
+                        "placeholder" : "FORM_DEF_ID",
+                        "option" : "formDefId",
+                        "required" : true
+                    },
+                    ".",
+                    {
+                        "placeholder" : "FIELD_ID",
+                        "option" : "formFieldId",
+                        "required" : true
+                    },
+                    {
+                        "placeholder" : "PRIMARY_KEY",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#binder.options.APP_ID.FORM_DEF_ID.FIELD_ID[PRIMARY_KEY]#",
+                "label" : "@@assist.formbinder.optionHash@@",
+                "syntax" : [
+                    "#binder.options",
+                    {
+                        "placeholder" : "APP_ID",
+                        "option" : "appId",
+                        "prefix" : "."
+                    },
+                    ".",
+                    {
+                        "placeholder" : "FORM_DEF_ID",
+                        "option" : "formDefId",
+                        "required" : true
+                    },
+                    ".",
+                    {
+                        "placeholder" : "FIELD_ID",
+                        "option" : "formFieldId",
+                        "required" : true
+                    },
+                    {
+                        "placeholder" : "PRIMARY_KEY",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            }
+        ]
+    },
+    "optionField" : {
+        "appId" : {
+            "name" : "appId",
+            "label" : "@@assist.App@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app/options",
+            "type" : "selectbox"
+        },
+        "formDefId" : {
+            "name" : "formDefId",
+            "label" : "@@assist.Form@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options",
+            "options_ajax_on_change" : "appId:customAppId",
+            "type" : "selectbox"
+        },
+        "formFieldId" : {
+            "name" : "formFieldId",
+            "label" : "@@assist.FormField@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options",
+            "options_ajax_on_change" : "formDefId;appId:customAppId",
+            "type" : "selectbox"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+[{
+    title : '@@app.beanshellDatalistAction.config@@',
+    properties : [{
+        name : 'label',
+        label : '@@jdbcDatalistAction.label@@',
+        type : 'textfield',
+        value : 'Bean Shell',
+        required : 'true'
+    },
+    {
+        name : 'confirmation',
+        label : '@@jdbcDatalistAction.confirmationMessage@@',
+        type : 'textfield'
+    },
+    {
+        name : 'script',
+        label : '@@app.beanshelltool.script@@',
+        description : '@@app.beanshellDatalistAction.script.desc@@',
+        type : 'codeeditor',
+        required : 'True',
+        mode : 'java'
+    }]
+}]

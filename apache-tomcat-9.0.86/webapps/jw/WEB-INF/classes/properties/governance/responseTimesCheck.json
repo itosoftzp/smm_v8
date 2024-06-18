@@ -1,0 +1,19 @@
+[
+    {
+        "title" : "@@responseTimesCheck.edit@@",
+        "properties" : [
+            {
+                "name" : "timeLimitSecond",
+                "label" : "@@responseTimesCheck.timeLimitSecond@@",
+                "type" : "number",
+                "value" : "30"
+            },
+            {
+                "name" : "countLimit",
+                "label" : "@@responseTimesCheck.countLimit@@",
+                "type" : "number",
+                "value" : "10"
+            }
+        ]
+    }
+]

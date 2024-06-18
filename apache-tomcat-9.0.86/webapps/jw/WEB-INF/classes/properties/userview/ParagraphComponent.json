@@ -1,0 +1,28 @@
+[
+    {
+        "title" : "@@userview.page.editParagraph@@",
+        "properties" : [
+            {
+                "name" : "id",
+                "label" : "Id",
+                "type" : "hidden"
+            },
+            {
+                "name" : "customId",
+                "label" : "@@userview.formmenu.customId@@",
+                "type" : "textfield",
+                "regex_validation" : "^[a-zA-Z0-9_]+$",
+                "validation_message" : "@@userview.formmenu.invalidId@@"
+            },
+            {
+                "name" : "textContent",
+                "label" : "@@userview.page.content@@",
+                "type" : "htmleditor",
+                "required" : "True",
+                "value" : "@@org.joget.apps.userview.lib.component.ParagraphComponent.pluginLabel@@"
+            }
+        ]
+    }
+]
+
+

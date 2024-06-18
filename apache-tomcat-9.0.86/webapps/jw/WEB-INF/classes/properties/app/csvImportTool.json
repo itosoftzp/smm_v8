@@ -1,0 +1,338 @@
+[{
+    title : '@@app.csvimporttool.config@@',
+    properties : [{
+        name : 'fileUploadFormDefId',
+        label : '@@app.csvimporttool.uploadFormId@@',
+        description : '@@app.csvimporttool.uploadFormId.desc@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'field',
+        label : '@@app.csvimporttool.uploadField@@',
+        description : '@@app.csvimporttool.uploadField.desc@@',
+        required : 'True',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'formDefId',
+        label : '@@app.csvimporttool.storeFormId@@',
+        description : '@@app.csvimporttool.storeFormId.desc@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'columnMapping',
+        label : '@@app.csvimporttool.columnMapping@@',
+        description : '@@app.csvimporttool.columnMapping.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'col',
+            label : '@@app.csvimporttool.columnNumber@@',
+            required : 'True'
+        },
+        {
+            key : 'field',
+            label : '@@app.csvimporttool.fieldName@@',
+            type : 'autocomplete',
+            options_ajax_on_change : 'formDefId',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            required : 'True'
+        },
+        {
+            key : 'formatted',
+            label : '@@userview.csvimportmenu.formatted@@',
+            type : 'truefalse'
+        }]
+    },
+    {
+        name : 'key',
+        label : '@@app.csvimporttool.keyColumnNumber@@',
+        description : '@@app.csvimporttool.keyColumnNumber.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'rowStart',
+        label : '@@app.csvimporttool.startFormRowNumber@@',
+        description : '@@app.csvimporttool.startFormRowNumber.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'foreignKeys',
+        label : '@@app.csvimporttool.foreignKeys@@',
+        description : '@@app.csvimporttool.foreignKeys.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@app.csvimporttool.fieldName@@',
+            options_ajax_on_change : 'formDefId',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            required : 'True'
+        },
+        {
+            key : 'value',
+            label : '@@app.csvimporttool.value@@',
+            required : 'True'
+        }]
+    },
+    {
+        name : 'mode',
+        label : '@@userview.csvimportmenu.importMode@@',
+        type : 'selectbox',
+        value : '',
+        options : [{
+            value : '',
+            label : '@@userview.csvimportmenu.importMode.new_update@@'
+        },
+        {
+            value : 'NEW',
+            label : '@@userview.csvimportmenu.importMode.new@@'
+        },
+        {
+            value : 'DELETE',
+            label : '@@userview.csvimportmenu.importMode.delete@@'
+        }]
+    },
+    {
+        name : 'validateData',
+        label : '@@userview.csvimportmenu.validateData@@',
+        description : '@@userview.csvimportmenu.validateData.desc@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'checkUTF8',
+        label : '@@userview.csvimportmenu.checkforUTF8@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'customCsvDelimiter',
+        label : '@@userview.csvimportmenu.customCsvDelimiter@@',
+        description : '@@userview.csvimportmenu.customCsvDelimiter.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'customCsvQuote',
+        label : '@@userview.csvimportmenu.customCsvQuote@@',
+        description : '@@userview.csvimportmenu.customCsvQuote.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'debug',
+        label : '@@app.soaptool.debug@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.csvimporttool.importStatus@@',
+    properties : [{
+        label : '@@app.csvimporttool.storeToWorkflowVariable@@',
+        type : 'header'
+    },
+    {
+        name : 'wf_recordsCount',
+        label : '@@app.csvimporttool.recordsCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_successImportedCount',
+        label : '@@app.csvimporttool.successImportedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_successUpdatedCount',
+        label : '@@app.csvimporttool.successUpdatedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_successDeletedCount',
+        label : '@@app.csvimporttool.successDeletedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_skippedCount',
+        label : '@@app.csvimporttool.skippedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_validationErrorCount',
+        label : '@@app.csvimporttool.validationErrorCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_successImportedRows',
+        label : '@@app.csvimporttool.successImportedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_successUpdatedRows',
+        label : '@@app.csvimporttool.successUpdatedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_successDeletedRows',
+        label : '@@app.csvimporttool.successDeletedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_skippedRows',
+        label : '@@app.csvimporttool.skippedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_validationErrorRows',
+        label : '@@app.csvimporttool.validationErrorRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_validationErrorRowDetails',
+        label : '@@app.csvimporttool.validationErrorRowDetails@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/workflowVariable/options'
+    },
+    {
+        name : 'wf_validationErrorRowDetailsFormat',
+        label : '@@app.csvimporttool.validationErrorRowDetailsFormat@@',
+        type : 'selectbox',
+        value : 'table',
+        options : [{
+            value : 'table',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.table@@'
+        },
+        {
+            value : 'json',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.json@@'
+        }]
+    },
+    {
+        label : '@@app.csvimporttool.storeToUploadForm@@',
+        type : 'header'
+    },
+    {
+        name : 'fi_recordsCount',
+        label : '@@app.csvimporttool.recordsCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_successImportedCount',
+        label : '@@app.csvimporttool.successImportedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_successUpdatedCount',
+        label : '@@app.csvimporttool.successUpdatedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_successDeletedCount',
+        label : '@@app.csvimporttool.successDeletedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_skippedCount',
+        label : '@@app.csvimporttool.skippedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_validationErrorCount',
+        label : '@@app.csvimporttool.validationErrorCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_successImportedRows',
+        label : '@@app.csvimporttool.successImportedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_successUpdatedRows',
+        label : '@@app.csvimporttool.successUpdatedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_successDeletedRows',
+        label : '@@app.csvimporttool.successDeletedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_skippedRows',
+        label : '@@app.csvimporttool.skippedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_validationErrorRows',
+        label : '@@app.csvimporttool.validationErrorRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_validationErrorRowDetails',
+        label : '@@app.csvimporttool.validationErrorRowDetails@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId:fileUploadFormDefId',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'fi_validationErrorRowDetailsFormat',
+        label : '@@app.csvimporttool.validationErrorRowDetailsFormat@@',
+        type : 'selectbox',
+        value : 'table',
+        options : [{
+            value : 'table',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.table@@'
+        },
+        {
+            value : 'json',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.json@@'
+        }]
+    }]
+}]

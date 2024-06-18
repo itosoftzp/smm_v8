@@ -1,0 +1,259 @@
+[{
+    title : '@@userview.calendarMenu.config@@',
+    properties : [{
+        name : 'id',
+        label : 'Id',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.calendarMenu.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.calendarMenu.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.calendarMenu.label@@',
+        type : 'textfield',
+        required : 'True',
+        value : '@@org.joget.plugin.enterprise.CalendarMenu.pluginLabel@@'
+    },
+    {
+        name : 'title',
+        label : '@@userview.calendarMenu.title@@',
+        type : 'textfield'
+    },
+    {
+        name : 'binder',
+        label : '@@userview.calendarMenu.binder@@',
+        type : 'elementselect',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.datalist.model.DataListBinderDefault',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    },
+    {
+        name : 'autoHandleDateRange',
+        label : '@@userview.calendarMenu.AutoHandleDateRange@@',
+        description : '@@userview.calendarMenu.AutoHandleDateRange.desc@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : ''    
+        }]
+    }]
+},
+{
+    title : '@@userview.calendarMenu.mapping@@',
+    properties : [
+        {
+        name : 'eventId',
+        label : '@@userview.calendarMenu.mapping.eventId@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name : 'eventTitle',
+        label : '@@userview.calendarMenu.mapping.eventTitle@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST',
+        options_ajax_empty: 'true',
+        required : 'True'
+    },
+    {
+        name : 'allDay',
+        label : '@@userview.calendarMenu.mapping.allDay@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name : 'fromDate',
+        label : '@@userview.calendarMenu.mapping.fromDate@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST',
+        options_ajax_empty: 'true',
+        required : 'True'
+    },
+    {
+        name : 'fromTime',
+        label : '@@userview.calendarMenu.mapping.fromTime@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name : 'toDate',
+        label : '@@userview.calendarMenu.mapping.toDate@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST',
+        options_ajax_empty: 'true'
+    },
+    {
+        name : 'toTime',
+        label : '@@userview.calendarMenu.mapping.toTime@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name : 'dateFormat',
+        label : '@@userview.calendarMenu.mapping.dateFormat@@',
+        type : 'textfield',
+        required : 'True',
+        value : 'yyyy-MM-dd'
+    },
+    {
+        name : 'timeFormat',
+        label : '@@userview.calendarMenu.mapping.timeFormat@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : '@@userview.calendarMenu.mapping.timeFormat.24hr@@'
+        },
+        {
+            value : '12hr',
+            label : '@@userview.calendarMenu.mapping.timeFormat.12hr@@'
+        }]
+    },
+    {
+        name : 'eventUrl',
+        label : '@@userview.calendarMenu.mapping.eventUrl@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name : 'eventColor',
+        label : '@@userview.calendarMenu.mapping.eventColor@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name : 'cssClass',
+        label : '@@userview.calendarMenu.mapping.cssClass@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+        options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+        options_ajax_method: 'POST'
+    },
+    {
+        name:'fields',
+        label:'@@userview.calendarMenu.mapping.fields@@',
+        type:'grid',
+        columns:[{
+            key:'name',
+            label:'@@userview.calendarMenu.mapping.fields.name@@'
+        },{
+            key:'colId',
+            label:'@@userview.calendarMenu.mapping.fields.colId@@',
+            options_ajax_on_change : 'id:binder.className;binderId:binder.className;binderJson:binder.properties',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/builder/binder/columns',
+            options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+            options_ajax_method: 'POST'
+        }],
+        developer_mode : 'advanced'
+    }]
+},
+{
+    title : '@@userview.calendarMenu.advanced@@',
+    properties : [
+    {
+        label : '@@userview.calendarMenu.google@@',
+        type : 'header'
+    },
+    {
+        name:'google_calendars',
+        label:'@@userview.calendarMenu.mapping.fields@@',
+        type:'grid',
+        columns:[{
+            key:'google_api',
+            label:'@@userview.calendarMenu.googleApi@@'
+        },{
+            key:'gcId',
+            label:'@@userview.calendarMenu.google.calendarId@@'
+        },{
+            key:'cssClass',
+            label:'@@userview.calendarMenu.google.cssClassName@@'
+        },{
+            key:'color',
+            label:'@@userview.calendarMenu.google.color@@'
+        }]
+    },
+    {
+        label : '@@userview.calendarMenu.eventui@@',
+        type : 'header'
+    },
+    {
+        name : 'eventRender',
+        label : '@@userview.calendarMenu.eventRender@@',
+        type : 'codeeditor',
+        mode : 'javascript',
+        value : '//console.log(event); console.log(element); console.log(view);'
+    },
+    {
+        name : 'eventAfterRender',
+        label : '@@userview.calendarMenu.eventAfterRender@@',
+        type : 'codeeditor',
+        mode : 'javascript',
+        value : '//console.log(event); console.log(element); console.log(view);'
+    },
+    {
+        name : 'eventAfterAllRender',
+        label : '@@userview.calendarMenu.eventAfterAllRender@@',
+        type : 'codeeditor',
+        mode : 'javascript',
+        value : '//console.log(view);'
+    },
+    {
+        name : 'eventClick',
+        label : '@@userview.calendarMenu.eventClick@@',
+        type : 'codeeditor',
+        mode : 'javascript',
+        value : '//console.log(event); console.log(jsEvent); console.log(view);'
+    },
+    {
+        name : 'timeDisplayFormat',
+        label : '@@userview.calendarMenu.timeFormat@@',
+        description : '@@userview.calendarMenu.timeFormat.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'customHeader',
+        label : '@@userview.calendarMenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'customFooter',
+        label : '@@userview.calendarMenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }],
+    developer_mode : 'advanced'
+}]

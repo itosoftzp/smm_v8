@@ -1,0 +1,46 @@
+[{
+    title : '@@app.counterincrementtool.config@@',
+    properties : [{
+        name : 'type',
+        label : '@@app.counterincrementtool.type@@',
+        type : 'selectbox',
+        required : 'True',
+        value : 'workflowVariable',
+        options : [{
+            value : "workflowVariable",
+            label : "@@app.counterincrementtool.type.workflowVariable@@"
+        },
+        {
+            value : "envVariable",
+            label : "@@app.counterincrementtool.type.envVariable@@"
+        }]
+    },
+    {
+        name : 'variableName',
+        label : '@@app.counterincrementtool.variableName@@',
+        description : '@@app.counterincrementtool.variableName.desc@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'initValue',
+        label : '@@app.counterincrementtool.initValue@@',
+        description : '@@app.counterincrementtool.initValue.desc@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'incrementValue',
+        label : '@@app.counterincrementtool.incrementValue@@',
+        description : '@@app.counterincrementtool.incrementValue.desc@@',
+        type : 'textfield',
+        value : '1',
+        required : 'True'
+    },
+    {
+        name : 'resetValue',
+        label : '@@app.counterincrementtool.resetValue@@',
+        description : '@@app.counterincrementtool.resetValue.desc@@',
+        type : 'textfield'
+    }]
+}]

@@ -1,0 +1,249 @@
+{
+    "id": "taskDelegation",
+    "name": "@@userview.taskDelegation.label@@",
+    "pageSize": "0",
+    "order": "1",
+    "orderBy": "startDate",
+    "showPageSizeSelector": "true",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "useSession": "false",
+    "hidePageSize": "",
+    "description": "",
+    "rowActions": [],
+    "actions": [
+        {
+            "name": "Data List Hyperlink Action",
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "label": "Hyperlink",
+            "type": "text",
+            "id": "action_1",
+            "properties": {
+                "href": "?_mode=add",
+                "target": "_self",
+                "label": "%s",
+                "confirmation": "",
+                "visible": "true"
+            }
+        },
+        {
+            "name": "Besn Shell Datalist Action",
+            "className": "org.joget.plugin.enterprise.BeanShellDatalistAction",
+            "label": "Bean Shell",
+            "type": "text",
+            "id": "action_0",
+            "properties": {
+                "label": "%s",
+                "confirmation": "@@userview.taskDelegation.deleteConfirm@@",
+                "script": "import org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.app.dao.UserReplacementDao;\n\n// only allow POST\nif (httpRequest != null && !\"POST\".equalsIgnoreCase(httpRequest.getMethod())) {\n    return null;\n}\n            \nif (rowKeys != null && rowKeys.length > 0) {\n    for (String id : rowKeys) {\n        UserReplacementDao dao = (UserReplacementDao) AppUtil.getApplicationContext().getBean(\"userReplacementDao\");\n        dao.delete(id);\n    }\n}\n\nreturn result;"
+            }
+        }
+    ],
+    "filters": [
+        {
+            "id": "filter_0",
+            "name": "username",
+            "filterParamName": "d-148397-fn_username",
+            "label": "@@userview.taskDelegation.user@@",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": ""
+                }
+            }
+        },
+        {
+            "id": "filter_1",
+            "name": "replacementUser",
+            "filterParamName": "d-148397-fn_replacementUser",
+            "label": "@@userview.taskDelegation.replacementUser@@",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": ""
+                }
+            }
+        },
+        {
+            "id": "filter_2",
+            "name": "appId",
+            "filterParamName": "d-148397-fn_appId",
+            "label": "@@userview.taskDelegation.app@@",
+            "type": {
+                "className": "org.joget.plugin.enterprise.SelectBoxDataListFilterType",
+                "properties": {
+                    "multiple": "textfield",
+                    "size": "",
+                    "defaultValue": "",
+                    "options": [],
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                        "properties": {
+                            "script": "import java.util.Collection;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.app.dao.AppDefinitionDao;\nimport org.joget.apps.app.model.AppDefinition;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\n\nAppDefinitionDao appDefinitionDao = (AppDefinitionDao) AppUtil.getApplicationContext().getBean(\"appDefinitionDao\");\nCollection appDefinitionList = appDefinitionDao.findPublishedApps(\"name\", Boolean.FALSE, null, null);\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n            \nif (appDefinitionList != null) {\n    for (AppDefinition a : appDefinitionList) {\n        FormRow r = new FormRow();\n        r.setProperty(FormUtil.PROPERTY_VALUE, a.getAppId());\n        r.setProperty(FormUtil.PROPERTY_LABEL, a.getName());\n        results.add(r);\n    }\n}\n\nreturn results;",
+                            "useAjax": ""
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "filter_3",
+            "name": "processIds",
+            "filterParamName": "d-148397-fn_processIds",
+            "label": "@@userview.taskDelegation.process@@",
+            "type": {
+                "className": "org.joget.plugin.enterprise.SelectBoxDataListFilterType",
+                "properties": {
+                    "multiple": "textfield",
+                    "size": "",
+                    "defaultValue": "",
+                    "options": [],
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                        "properties": {
+                            "script": "import java.util.Collection;\nimport java.util.HashSet;\nimport java.util.Set;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\nimport org.joget.workflow.model.service.WorkflowManager;\nimport org.joget.workflow.model.WorkflowProcess;\n\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\nCollection processList = workflowManager.getProcessList(null);\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n            \nSet exists = new HashSet();\nif (processList != null) {\n    for (WorkflowProcess p : processList) {\n        if (!exists.contains(p.getPackageId() + \":\" + p.getIdWithoutVersion())) {\n            FormRow r = new FormRow();\n            r.setProperty(FormUtil.PROPERTY_VALUE, p.getPackageId() + \":\" + p.getIdWithoutVersion());\n            r.setProperty(FormUtil.PROPERTY_LABEL, p.getName());\n            r.setProperty(FormUtil.PROPERTY_GROUPING, p.getPackageId());\n            exists.add(p.getPackageId() + \":\" + p.getIdWithoutVersion());\n            results.add(r);\n        }\n    }\n}\n\nreturn results;",
+                            "useAjax": ""
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "binder": {
+        "className": "org.joget.plugin.enterprise.JogetEntityDatalistBinder",
+        "properties": {
+            "entity": "UserReplacement",
+            "filters": [%s],
+            "extraCondition": ""
+        }
+    },
+    "columns": [
+        {
+            "id": "column_0",
+            "name": "username",
+            "label": "@@userview.taskDelegation.user@@",
+            "sortable": "false",
+            "hidden": "false",
+            "exclude_export": "",
+            "width": "",
+            "style": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "format": {
+                "className": "",
+                "properties": {}
+            }
+        },
+        {
+            "id": "column_1",
+            "name": "replacementUser",
+            "label": "@@userview.taskDelegation.replacementUser@@",
+            "sortable": "false",
+            "hidden": "false",
+            "exclude_export": "",
+            "width": "",
+            "style": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "format": {
+                "className": "",
+                "properties": {}
+            }
+        },
+        {
+            "id": "column_2",
+            "name": "appId",
+            "label": "@@userview.taskDelegation.app@@",
+            "sortable": "false",
+            "hidden": "false",
+            "exclude_export": "",
+            "width": "",
+            "style": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "format": {
+                "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+                "properties": {
+                    "options": [],
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                        "properties": {
+                            "script": "import java.util.Collection;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.app.dao.AppDefinitionDao;\nimport org.joget.apps.app.model.AppDefinition;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\n\nAppDefinitionDao appDefinitionDao = (AppDefinitionDao) AppUtil.getApplicationContext().getBean(\"appDefinitionDao\");\nCollection appDefinitionList = appDefinitionDao.findPublishedApps(\"name\", Boolean.FALSE, null, null);\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n            \nif (appDefinitionList != null) {\n    for (AppDefinition a : appDefinitionList) {\n        FormRow r = new FormRow();\n        r.setProperty(FormUtil.PROPERTY_VALUE, a.getAppId());\n        r.setProperty(FormUtil.PROPERTY_LABEL, a.getName());\n        results.add(r);\n    }\n}\n\nreturn results;",
+                            "useAjax": ""
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "column_3",
+            "name": "processIds",
+            "label": "@@userview.taskDelegation.process@@",
+            "sortable": "false",
+            "hidden": "false",
+            "exclude_export": "",
+            "width": "",
+            "style": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "format": {
+                "className": "org.joget.plugin.enterprise.OptionsValueFormatter",
+                "properties": {
+                    "options": [],
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                        "properties": {
+                            "script": "import java.util.Collection;\nimport java.util.HashSet;\nimport java.util.Set;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\nimport org.joget.workflow.model.service.WorkflowManager;\nimport org.joget.workflow.model.WorkflowProcess;\n\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\nCollection processList = workflowManager.getProcessList(null);\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n            \nSet exists = new HashSet();\nif (processList != null) {\n    for (WorkflowProcess p : processList) {\n        if (!exists.contains(p.getPackageId() + \":\" + p.getIdWithoutVersion())) {\n            FormRow r = new FormRow();\n            r.setProperty(FormUtil.PROPERTY_VALUE, p.getPackageId() + \":\" + p.getIdWithoutVersion());\n            r.setProperty(FormUtil.PROPERTY_LABEL, p.getName());\n            r.setProperty(FormUtil.PROPERTY_GROUPING, p.getPackageId());\n            exists.add(p.getPackageId() + \":\" + p.getIdWithoutVersion());\n            results.add(r);\n        }\n    }\n}\n\nreturn results;",
+                            "useAjax": ""
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": "column_4",
+            "name": "startDate",
+            "label": "@@userview.taskDelegation.startDate@@",
+            "sortable": "false",
+            "hidden": "false",
+            "exclude_export": "",
+            "width": "",
+            "style": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "format": {
+                "className": "",
+                "properties": {}
+            }
+        },
+        {
+            "id": "column_5",
+            "name": "endDate",
+            "label": "@@userview.taskDelegation.endDate@@",
+            "sortable": "false",
+            "hidden": "false",
+            "exclude_export": "",
+            "width": "",
+            "style": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "format": {
+                "className": "",
+                "properties": {}
+            }
+        }
+    ]
+}

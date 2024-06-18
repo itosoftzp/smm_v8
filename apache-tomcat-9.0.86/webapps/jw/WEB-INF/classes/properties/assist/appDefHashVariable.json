@@ -1,0 +1,34 @@
+{
+    "optionGroup" : {
+        "@@assist.AppDefinition@@" : [
+            {
+                "value" : "#appDef.appId#",
+                "label" : "@@assist.app.appId@@"
+            },
+            {
+                "value" : "#appDef.dateCreated#",
+                "label" : "@@assist.app.dateCreated@@"
+            },
+            {
+                "value" : "#appDef.dateModified#",
+                "label" : "@@assist.app.dateModified@@"
+            },
+            {
+                "value" : "#appDef.version#",
+                "label" : "@@assist.app.version@@"
+            },
+            {
+                "value" : "#appDef.license#",
+                "label" : "@@assist.app.license@@"
+            },
+            {
+                "value" : "#appDef.name#",
+                "label" : "@@assist.app.name@@"
+            },
+            {
+                "value" : "#appDef.published#",
+                "label" : "@@assist.app.published@@"
+            }
+        ]
+    }
+}

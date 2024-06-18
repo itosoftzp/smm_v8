@@ -1,0 +1,183 @@
+{
+  "org.joget.governance.lib.OrphanedFormDataCheck": {
+    "status": "WARN",
+    "timestamp": 1718022343555,
+    "details": [
+      {
+        "detail": "There are form data tables unused by all apps: \u003cbr/\u003e\u003col\u003e\u003cli\u003eapp_fd_j_user_register\u003c/li\u003e\u003cli\u003eapp_fd_memo\u003c/li\u003e\u003cli\u003eapp_fd_pr_handa_item\u003c/li\u003e\u003cli\u003eapp_fd_travelAdvisory_kary\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_history\u003c/li\u003e\u003cli\u003eapp_fd_j_crm_proposal\u003c/li\u003e\u003cli\u003eapp_fd_j_expense_cat\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_rfa_backup\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_tmp_q\u003c/li\u003e\u003cli\u003eapp_fd_test01\u003c/li\u003e\u003cli\u003eapp_fd_travelAdvisory\u003c/li\u003e\u003cli\u003eapp_fd_j_crm_account\u003c/li\u003e\u003cli\u003eapp_fd_internalMemo\u003c/li\u003e\u003cli\u003eapp_fd_general_approval\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_wschedule_backup\u003c/li\u003e\u003cli\u003eapp_fd_payroll_req\u003c/li\u003e\u003cli\u003eapp_fd_j_isr_remark\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_position_20230810\u003c/li\u003e\u003cli\u003eapp_fd_test_form_01\u003c/li\u003e\u003cli\u003eapp_fd_pur_mst_project_1\u003c/li\u003e\u003cli\u003eapp_fd_general_approvalsign\u003c/li\u003e\u003cli\u003eapp_fd_j_expense_claim\u003c/li\u003e\u003cli\u003eapp_fd_travelAdvisory_loc\u003c/li\u003e\u003cli\u003eapp_fd_assignmentForm\u003c/li\u003e\u003cli\u003eapp_fd_j_isr_request\u003c/li\u003e\u003cli\u003eapp_fd_j_crm_contact\u003c/li\u003e\u003cli\u003eapp_fd_pr_handa\u003c/li\u003e\u003cli\u003eapp_fd_j_expense_approval\u003c/li\u003e\u003cli\u003eapp_fd_j_smtp\u003c/li\u003e\u003cli\u003eapp_fd_j_crm_opportunity\u003c/li\u003e\u003cli\u003eapp_fd_j_temp\u003c/li\u003e\u003cli\u003eapp_fd_j_expense_entry\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_divdepsect\u003c/li\u003e\u003cli\u003eapp_fd_sk_request\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_position_temp\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_ou_20210713\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_persarea_20210726\u003c/li\u003e\u003cli\u003eapp_fd_ptfs_position_20220317\u003c/li\u003e\u003c/ol\u003e",
+        "suppressed": false
+      }
+    ],
+    "suppressable": true
+  },
+  "org.joget.governance.lib.ResponseTimesCheck": {
+    "status": "PASS",
+    "score": 100,
+    "timestamp": 1718022348788,
+    "suppressable": false
+  },
+  "lastCheckDate": {
+    "status": "FAIL",
+    "timestamp": 1718022341883,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.ErrorRateCheck": {
+    "status": "PASS",
+    "score": 100,
+    "timestamp": 1718022342105,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.SecureProcessesCheck": {
+    "status": "FAIL",
+    "timestamp": 1718022348789,
+    "details": [
+      {
+        "detail": "App \u003cb\u003ePayment Approval\u003c/b\u003e: Participant “Requester” is not mapped in \u003cb\u003ePayroll\u003c/b\u003e",
+        "link": "/web/console/app/paymentApproval/23/process/builder#payroll",
+        "appId": "paymentApproval",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003ePayment Approval\u003c/b\u003e: Participant “Process Start White List” is not mapped in \u003cb\u003eSend Notification\u003c/b\u003e",
+        "link": "/web/console/app/paymentApproval/23/process/builder#sendNotification",
+        "appId": "paymentApproval",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003ePTF Workflow\u003c/b\u003e: Participant “Approver Comben” is not mapped in \u003cb\u003ePTF\u003c/b\u003e",
+        "link": "/web/console/app/ptfWorkflow/52/process/builder#ptf",
+        "appId": "ptfWorkflow",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: Participant “Participant 25” is not mapped in \u003cb\u003eLink Approval\u003c/b\u003e",
+        "link": "/web/console/app/suratKeputusan/131/process/builder#linkApproval",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      }
+    ],
+    "suppressable": true
+  },
+  "org.joget.governance.lib.SecureAuthenticationCheck": {
+    "status": "FAIL",
+    "timestamp": 1718022348789,
+    "details": [
+      {
+        "detail": "Security Enhanced Directory Manager is not enabled",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.CpuUsageCheck": {
+    "status": "PASS",
+    "score": 95,
+    "timestamp": 1718022341883,
+    "details": [
+      {
+        "detail": "Average CPU load at 11.69% for last 10 minutes",
+        "link": "/web/console/monitor/apm",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.DbConnectionsCheck": {
+    "status": "PASS",
+    "score": 98,
+    "timestamp": 1718022341885,
+    "details": [
+      {
+        "detail": "20 DB connections used",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.SecureUserviewsCheck": {
+    "status": "FAIL",
+    "timestamp": 1718022350592,
+    "details": [
+      {
+        "detail": "App \u003cb\u003ePTF Workflow\u003c/b\u003e: UI \u003cb\u003ePTF Approval\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/ptfWorkflow/52/userview/builder/ptfWorkflowLog",
+        "appId": "ptfWorkflow",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003ePTF Workflow\u003c/b\u003e: UI \u003cb\u003ePTF Workflow Report SMMA\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/ptfWorkflow/52/userview/builder/ptfWorkflowReportSMMA",
+        "appId": "ptfWorkflow",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: UI \u003cb\u003eSubmit Evaluasi Report SAMSEK\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/suratKeputusan/131/userview/builder/SubmitEvaluasiReportSAMSEK",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: UI \u003cb\u003eSurat Keputusan\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/suratKeputusan/131/userview/builder/suratKeputusanLog",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: UI \u003cb\u003eSurat Keputusan Report\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/suratKeputusan/131/userview/builder/suratKeputusanReport",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: UI \u003cb\u003eSurat Keputusan SAMSEK\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/suratKeputusan/131/userview/builder/SuratKeputusanSAMSEK",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: UI \u003cb\u003eSurat Keputusan SK Report\u003c/b\u003e has no permissions configured",
+        "link": "/web/console/app/suratKeputusan/131/userview/builder/suratKeputusanSKReport",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      }
+    ],
+    "suppressable": true
+  },
+  "org.joget.governance.lib.MemoryUsageCheck": {
+    "status": "WARN",
+    "score": 56,
+    "timestamp": 1718022342270,
+    "details": [
+      {
+        "detail": "Average free memory available at 1.20% for last 10 minutes",
+        "link": "/web/console/monitor/apm",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.ProcessDataIntegrityCheck": {
+    "status": "PASS",
+    "timestamp": 1718022348735,
+    "details": [],
+    "suppressable": true
+  },
+  "org.joget.governance.lib.NamingConventionCheck": {
+    "status": "WARN",
+    "timestamp": 1718022342328,
+    "details": [
+      {
+        "detail": "App \u003cb\u003ePTF Workflow\u003c/b\u003e: Inconsistent ID case for field ID \u003cb\u003eapproverComBenHead\u003c/b\u003e detected in Form \u003cb\u003e12 - TM Approval\u003c/b\u003e",
+        "link": "/web/console/app/ptfWorkflow/52/form/builder/formApproval8",
+        "appId": "ptfWorkflow",
+        "suppressed": false
+      }
+    ],
+    "suppressable": true
+  },
+  "org.joget.governance.lib.DeadlineCheckerAvailabilityCheck": {
+    "status": "PASS",
+    "timestamp": 1718022341886,
+    "suppressable": false
+  }
+}

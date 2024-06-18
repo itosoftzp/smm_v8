@@ -1,0 +1,85 @@
+[{
+    title : '@@nestedDatalistFormatter.config@@',
+    properties : [{
+            name : 'listId',
+            label : '@@nestedDatalistFormatter.listId@@',
+            description : '@@form.popupselectbox.listId.desc@@',
+            type : 'selectbox',
+            required : 'True',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options'
+        },
+        {
+            name : 'requestParams',
+            label : '@@nestedDatalistFormatter.requestParam@@',
+            type : 'grid',
+            columns : [{
+                key : 'param',
+                label : '@@form.popupselectbox.Parameter@@'
+            },
+            {
+                key : 'hrefColumn',
+                label : '@@datalist.hyperlinkdatalistaction.columnName@@',
+                options_callback : 'DatalistBuilder.getColumnOptions'
+            },
+            {
+                key : 'defaultValue',
+                label : '@@form.popupselectbox.defaultValue@@'
+            }]
+        },
+        {
+            name : 'exportOptions',
+            label : '@@nestedDatalistFormatter.exportOptions@@',
+            type : 'checkbox',
+            options : [{
+                value : 'pdf',
+                label : 'PDF'
+            },{
+                value : 'excel',
+                label : 'Excel'
+            },{
+                value : 'csv',
+                label : 'CSV'
+            },{
+                value : 'xml',
+                label : 'XML'
+            }]
+        },
+        {
+            name : 'addEmptyRow',
+            label : '@@nestedDatalistFormatter.addEmptyRow@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'customHeaderColor',
+            label : '@@nestedDatalistFormatter.customHeaderColor@@',
+            type : 'checkbox',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'headerColor',
+            label : '@@nestedDatalistFormatter.headerColor@@',
+            type : 'color',
+            required : 'true',
+            control_field: 'customHeaderColor',
+            control_value: 'true',
+            control_use_regex: 'false'
+        },
+        {
+            name : 'headerFontColor',
+            label : '@@nestedDatalistFormatter.headerFontColor@@',
+            type : 'color',
+            required : 'true',
+            control_field: 'customHeaderColor',
+            control_value: 'true',
+            control_use_regex: 'false'
+        }
+    ]
+}]

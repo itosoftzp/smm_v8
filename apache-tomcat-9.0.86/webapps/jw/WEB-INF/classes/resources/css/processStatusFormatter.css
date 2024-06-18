@@ -1,0 +1,23 @@
+.process_status_dl_container {position: relative; width: 100px; z-index: 100;}
+.process_status_dl_container.ready {cursor: pointer;}
+.process_status_dl_container.show, .process_status_dl_container.show_popup {z-index: 101;}
+.process_status_dl_container.show .blockui, .process_status_dl_container.show_popup .blockui {min-width:100vw; min-height: 100vh; position: fixed; top:0; left:0; right: 0; bottom:0; z-index: 99998; background: #000; opacity: 0.5;}
+.process_status_dl_container.show .ps_progress_container .progress_bar, .process_status_dl_container.show .ps_iframe_container,
+.process_status_dl_container.show_popup .ps_progress_container .progress_bar, .process_status_dl_container.show_popup .ps_iframe_container {z-index: 99999;}
+.process_status_dl_container.show .ps_progress_container .progress_bar,
+.process_status_dl_container.show_popup .ps_progress_container .progress_bar {border: 1px solid #fff;}
+.process_status_dl_container.show .ps_iframe_container,
+.process_status_dl_container.show_popup .ps_iframe_container {display: block !important;}
+.ps_progress_container {position: relative; width: 100px; height: 20px; display: inline-block;}
+.ps_progress_container .progress_bar {position: absolute; top:0px; left:0px; width: 100px; height: 20px; background: #eee;}
+.ps_progress_container .progress_bar .bar_label {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); color: #000;}
+.ps_progress_container .progress_bar.revert .bar_label{color: #fff;}
+.ps_progress_container .progress_bar .bar {position: absolute; top:0; bottom:0; left:0; background: #43a047;}
+.ps_progress_container .progress_bar.aborted {background: #f2dede;}
+.ps_progress_container .progress_bar.aborted .bar {background: #a94442;}
+.ps_iframe_container {display: none; position: absolute; right: 0px; background: #fff; margin-top: 10px; width: 400px; height: 400px;}
+.rtl .ps_iframe_container {right: auto; left:0px;}
+.ps_iframe_container .arrow {width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid #fff; position: absolute; right: 45px; top: -10px;}
+.rtl .ps_iframe_container .arrow{right:auto; left: 45px;}
+.ps_iframe_container iframe {width: 100%; height: 100%; border: 0;}
+.psdf_stop_scrolling .dataList .rowaction_body a:not(.stretched-link), .psdf_stop_scrolling .dataList a.rowaction_body:not(.stretched-link), .psdf_stop_scrolling .dataList .column_body a{z-index: auto; opacity: 1 !important;}

@@ -1,0 +1,14 @@
+[
+    {
+        "title" : "@@errorRateCheck.edit@@",
+        "properties" : [
+            {
+                "name" : "maxErrorRate",
+                "label" : "@@errorRateCheck.maxErrorRate@@",
+                "type" : "number",
+                "value" : "10",
+                "required" : "true"
+            }
+        ]
+    }
+]

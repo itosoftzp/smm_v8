@@ -1,0 +1,382 @@
+10-Jun-2024 02:50:04.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+10-Jun-2024 02:50:04.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-1020-aws
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+10-Jun-2024 02:50:04.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+10-Jun-2024 02:50:04.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:50:04.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:50:04.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+10-Jun-2024 02:50:04.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+10-Jun-2024 02:50:04.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+10-Jun-2024 02:50:04.991 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/conf/logging.properties
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx768M
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=./wflow/
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/wflow-cluster.jar
+10-Jun-2024 02:50:04.992 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/aspectjweaver-1.9.22.jar
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/glowroot/glowroot.jar
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:50:04.993 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/temp
+10-Jun-2024 02:50:04.996 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+10-Jun-2024 02:50:05.238 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:50:05.265 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [580] milliseconds
+10-Jun-2024 02:50:05.350 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Jun-2024 02:50:05.351 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+10-Jun-2024 02:50:05.383 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war]
+10-Jun-2024 02:50:18.609 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10-Jun-2024 02:51:08.820 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war] has finished in [63,434] ms
+10-Jun-2024 02:51:08.822 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager]
+10-Jun-2024 02:51:08.900 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager] has finished in [79] ms
+10-Jun-2024 02:51:08.900 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples]
+10-Jun-2024 02:51:09.112 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples] has finished in [212] ms
+10-Jun-2024 02:51:09.113 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager]
+10-Jun-2024 02:51:09.139 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager] has finished in [24] ms
+10-Jun-2024 02:51:09.139 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs]
+10-Jun-2024 02:51:09.158 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs] has finished in [18] ms
+10-Jun-2024 02:51:09.158 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT]
+10-Jun-2024 02:51:09.175 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT] has finished in [17] ms
+10-Jun-2024 02:51:09.185 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:51:09.204 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [63939] milliseconds
+10-Jun-2024 02:52:24.770 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+10-Jun-2024 02:52:24.771 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:52:24.773 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+10-Jun-2024 02:52:24.984 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 02:52:24.984 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 02:52:24.985 SEVERE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [jw] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4ecb6612]) and a value of type [org.joget.commons.util.Analyzer] (value [org.joget.commons.util.Analyzer@697e249b]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+10-Jun-2024 02:52:24.994 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:52:25.000 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:52:48.303 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+10-Jun-2024 02:52:48.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+10-Jun-2024 02:52:48.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+10-Jun-2024 02:52:48.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Jun-2024 02:52:48.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-1020-aws
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:52:48.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/conf/logging.properties
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx768M
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=./wflow/
+10-Jun-2024 02:52:48.309 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/wflow-cluster.jar
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/aspectjweaver-1.9.22.jar
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/glowroot/glowroot.jar
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dgit.disabled=true
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:52:48.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 02:52:48.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/temp
+10-Jun-2024 02:52:48.312 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+10-Jun-2024 02:52:48.546 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:52:48.567 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [572] milliseconds
+10-Jun-2024 02:52:48.653 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Jun-2024 02:52:48.653 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+10-Jun-2024 02:52:48.682 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war]
+10-Jun-2024 02:52:59.555 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10-Jun-2024 02:53:49.414 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war] has finished in [60,729] ms
+10-Jun-2024 02:53:49.416 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager]
+10-Jun-2024 02:53:49.470 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager] has finished in [53] ms
+10-Jun-2024 02:53:49.470 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples]
+10-Jun-2024 02:53:49.646 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples] has finished in [176] ms
+10-Jun-2024 02:53:49.647 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager]
+10-Jun-2024 02:53:49.669 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager] has finished in [22] ms
+10-Jun-2024 02:53:49.670 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs]
+10-Jun-2024 02:53:49.687 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs] has finished in [17] ms
+10-Jun-2024 02:53:49.688 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT]
+10-Jun-2024 02:53:49.703 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT] has finished in [16] ms
+10-Jun-2024 02:53:49.711 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 02:53:49.748 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [61180] milliseconds
+10-Jun-2024 02:55:02.296 INFO [http-nio-8080-exec-5] org.apache.tomcat.util.http.Parameters.processParameters Invalid chunk starting at byte [54] and ending at byte [55] with a value of [=] ignored
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+10-Jun-2024 05:42:20.174 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+10-Jun-2024 05:42:20.176 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+10-Jun-2024 05:42:20.176 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-1020-aws
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+10-Jun-2024 05:42:20.177 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 05:42:20.178 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 05:42:20.178 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+10-Jun-2024 05:42:20.178 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+10-Jun-2024 05:42:20.178 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+10-Jun-2024 05:42:20.178 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10-Jun-2024 05:42:20.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10-Jun-2024 05:42:20.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/conf/logging.properties
+10-Jun-2024 05:42:20.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Jun-2024 05:42:20.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx768M
+10-Jun-2024 05:42:20.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=./wflow/
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/wflow-cluster.jar
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/aspectjweaver-1.9.22.jar
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/glowroot/glowroot.jar
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dgit.disabled=true
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Jun-2024 05:42:20.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Jun-2024 05:42:20.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+10-Jun-2024 05:42:20.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+10-Jun-2024 05:42:20.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 05:42:20.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 05:42:20.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/temp
+10-Jun-2024 05:42:20.183 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+10-Jun-2024 05:42:20.571 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 05:42:20.585 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1011)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:554)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1046)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:686)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:459)
+		at java.base/sun.nio.ch.Net.bind(Net.java:448)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:276)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:231)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1334)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1347)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:654)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1009)
+		... 13 more
+10-Jun-2024 05:42:20.586 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [577] milliseconds
+10-Jun-2024 05:42:20.652 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Jun-2024 05:42:20.652 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+10-Jun-2024 05:42:20.673 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war]
+10-Jun-2024 05:42:30.968 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10-Jun-2024 05:43:20.555 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war] has finished in [59,877] ms
+10-Jun-2024 05:43:20.563 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager]
+10-Jun-2024 05:43:20.607 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager] has finished in [44] ms
+10-Jun-2024 05:43:20.608 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples]
+10-Jun-2024 05:43:20.780 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples] has finished in [172] ms
+10-Jun-2024 05:43:20.781 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager]
+10-Jun-2024 05:43:20.801 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager] has finished in [20] ms
+10-Jun-2024 05:43:20.802 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs]
+10-Jun-2024 05:43:20.815 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs] has finished in [14] ms
+10-Jun-2024 05:43:20.815 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT]
+10-Jun-2024 05:43:20.826 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT] has finished in [11] ms
+10-Jun-2024 05:43:20.833 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [60246] milliseconds
+10-Jun-2024 05:43:20.834 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use (Bind failed)
+		at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+		at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:581)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:825)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:773)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+10-Jun-2024 05:43:20.835 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 05:43:20.835 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+10-Jun-2024 05:43:21.177 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 05:43:21.177 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 05:43:21.178 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [FelixResolver-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 05:43:21.179 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [FelixResolver-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 05:43:21.180 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [FelixResolver-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 05:43:21.181 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [FelixResolver-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 05:43:21.181 SEVERE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [jw] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@461818d6]) and a value of type [org.joget.commons.util.Analyzer] (value [org.joget.commons.util.Analyzer@500613a8]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+10-Jun-2024 05:43:21.198 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 05:43:21.199 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 07:09:00.596 INFO [http-nio-8080-exec-4] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00{0x010x000x00w0x030x03N02}0xbd0x850x990x94V0x1c=s0xf10xcc0x0d0x819g0x050x980x7f0xc4H0x9b0xa30xc90xc3wW0xf30xb30x180x000x000x1a0xc0/0xc0+0xc00x110xc00x070xc00x130xc00x090xc00x140xc00x0a0x000x050x00/0x0050xc00x120x000x0a0x010x000x0040x000x050x000x050x010x000x000x000x000x000x0a0x000x080x000x060x000x170x000x180x000x190x000x0b0x000x020x010x000x000x0d0x000x100x000x0e0x040x010x040x030x020x010x020x030x040x010x050x010x060x010xff0x010x000x010x00...]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 09:02:26.190 INFO [http-nio-8080-exec-10] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x010x070x010x000x010x030x030x03=0x92_0xab0xcb0xd8|x0x030xbcq0x9b)0xf30xe5'20xb60xab0xd10xa30x87pa0xfb0x190x96}.0xc50xcc0xa1 ]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 10:00:16.590 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+10-Jun-2024 10:00:16.591 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 10:00:16.594 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+10-Jun-2024 10:00:16.890 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 10:00:16.890 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 10:00:16.898 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 10:00:16.901 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 10:35:48.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+10-Jun-2024 10:35:48.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+10-Jun-2024 10:35:48.059 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-1020-aws
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+10-Jun-2024 10:35:48.060 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 10:35:48.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 10:35:48.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+10-Jun-2024 10:35:48.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+10-Jun-2024 10:35:48.061 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/conf/logging.properties
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx768M
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=./wflow/
+10-Jun-2024 10:35:48.062 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/wflow-cluster.jar
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/aspectjweaver-1.9.22.jar
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/glowroot/glowroot.jar
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dgit.disabled=true
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+10-Jun-2024 10:35:48.063 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+10-Jun-2024 10:35:48.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 10:35:48.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+10-Jun-2024 10:35:48.064 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/temp
+10-Jun-2024 10:35:48.066 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+10-Jun-2024 10:35:48.289 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 10:35:48.311 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [619] milliseconds
+10-Jun-2024 10:35:48.380 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Jun-2024 10:35:48.381 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+10-Jun-2024 10:35:48.409 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war]
+10-Jun-2024 10:35:58.082 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10-Jun-2024 10:36:46.851 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war] has finished in [58,438] ms
+10-Jun-2024 10:36:46.853 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager]
+10-Jun-2024 10:36:46.922 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager] has finished in [69] ms
+10-Jun-2024 10:36:46.927 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples]
+10-Jun-2024 10:36:47.096 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples] has finished in [169] ms
+10-Jun-2024 10:36:47.096 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager]
+10-Jun-2024 10:36:47.118 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager] has finished in [21] ms
+10-Jun-2024 10:36:47.118 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs]
+10-Jun-2024 10:36:47.133 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs] has finished in [15] ms
+10-Jun-2024 10:36:47.133 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT]
+10-Jun-2024 10:36:47.145 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT] has finished in [12] ms
+10-Jun-2024 10:36:47.152 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 10:36:47.171 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [58859] milliseconds
+10-Jun-2024 10:51:56.648 INFO [http-nio-8080-exec-3] org.apache.tomcat.util.http.Parameters.processParameters Invalid chunk starting at byte [58] and ending at byte [59] with a value of [=] ignored
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+10-Jun-2024 16:15:35.678 INFO [Thread-17] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 16:15:35.679 INFO [Thread-17] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+10-Jun-2024 16:15:36.295 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 16:15:36.296 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+10-Jun-2024 16:15:36.297 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [pool-12-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.23/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+10-Jun-2024 16:15:36.298 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-94] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.298 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-305] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.299 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-1627] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.301 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-1632] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.302 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-4563] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.303 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-12409] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.305 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-14342] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.306 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-17761] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.306 WARNING [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-18435] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+10-Jun-2024 16:15:36.307 SEVERE [Thread-17] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [jw] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@487a02f]) and a value of type [org.joget.commons.util.Analyzer] (value [org.joget.commons.util.Analyzer@2398b12e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+10-Jun-2024 16:15:36.319 INFO [Thread-17] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+10-Jun-2024 16:15:36.326 INFO [Thread-17] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

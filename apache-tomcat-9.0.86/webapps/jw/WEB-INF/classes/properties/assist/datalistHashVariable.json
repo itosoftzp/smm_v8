@@ -1,0 +1,122 @@
+{
+    "optionGroup" : {
+        "@@assist.Datalist@@" : [
+            {
+                "value" : "#datalist.TYPE.ID[FILTER_PARAMETERS]#",
+                "label" : "@@assist.Datalist.hash@@",
+                "syntax" : [
+                    "#datalist.",
+                    {
+                        "placeholder" : "TYPE",
+                        "option" : "datalistHashType",
+                        "required" : true
+                    },
+                    ".",
+                    {
+                        "placeholder" : "ID",
+                        "option" : "datalistId",
+                        "required" : true
+                    },
+                    {
+                        "placeholder" : "FILTER_PARAMETERS",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#datalist.col.ID.COLUMN[FILTER_PARAMETERS]#",
+                "label" : "@@assist.Datalist.columnhash@@",
+                "syntax" : [
+                    "#datalist.col.",
+                    {
+                        "placeholder" : "TYPE",
+                        "option" : "datalistColHashType",
+                        "required" : true
+                    },
+                    ".",
+                    {
+                        "placeholder" : "ID",
+                        "option" : "datalistId",
+                        "required" : true
+                    },
+                    ".",
+                    {
+                        "placeholder" : "COLUMN",
+                        "option" : "datalistColumn",
+                        "required" : true
+                    },
+                    {
+                        "placeholder" : "FILTER_PARAMETERS",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            }
+        ]
+    },
+    "optionField" : {
+        "datalistHashType" : {
+            "name" : "datalistHashType",
+            "label" : "@@assist.datalistHashType@@",
+            "options" : [
+                {
+                    "value" : "html",
+                    "label" : "@@assist.datalistHashType.html@@"
+                },
+                {
+                    "value" : "csv",
+                    "label" : "@@assist.datalistHashType.csv@@"
+                },
+                {
+                    "value" : "json",
+                    "label" : "@@assist.datalistHashType.json@@"
+                },
+                {
+                    "value" : "total",
+                    "label" : "@@assist.datalistHashType.total@@"
+                },
+                {
+                    "value" : "size",
+                    "label" : "@@assist.datalistHashType.size@@"
+                }
+            ],
+            "type" : "selectbox"
+        },
+        "datalistColHashType" : {
+            "name" : "datalistColHashType",
+            "label" : "@@assist.datalistHashType@@",
+            "options" : [
+                {
+                    "value" : "csv",
+                    "label" : "@@assist.datalistHashType.csv@@"
+                },
+                {
+                    "value" : "sum",
+                    "label" : "@@assist.datalistHashType.sum@@"
+                },
+                {
+                    "value" : "avg",
+                    "label" : "@@assist.datalistHashType.avg@@"
+                }
+            ],
+            "type" : "selectbox"
+        },
+        "datalistId" : {
+            "name" : "datalistId",
+            "label" : "@@assist.Datalist@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options",
+            "type" : "selectbox"
+        },
+        "datalistColumn" : {
+            "name" : "datalistColumn",
+            "label" : "@@assist.DatalistColumn@@",
+            "options_ajax_on_change" : "datalistId",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+            "type" : "selectbox"
+        }
+    }
+}
+

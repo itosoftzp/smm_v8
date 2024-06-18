@@ -1,0 +1,298 @@
+{
+    "optionGroup" : {
+        "@@assist.GroupUsers@@" : [
+            {
+                "value" : "#users.group.GROUP_ID.username#",
+                "label" : "@@assist.group.username@@",
+                "syntax" : [
+                    "#users.group.",
+                    {
+                        "placeholder" : "GROUP_ID",
+                        "option" : "groupId",
+                        "required" : true
+                    },
+                    ".username#"
+                ]
+            },
+            {
+                "value" : "#users.group.GROUP_ID.firstName#",
+                "label" : "@@assist.group.firstName@@",
+                "syntax" : [
+                    "#users.group.",
+                    {
+                        "placeholder" : "GROUP_ID",
+                        "option" : "groupId",
+                        "required" : true
+                    },
+                    ".firstName#"
+                ]
+            },
+            {
+                "value" : "#users.group.GROUP_ID.lastName#",
+                "label" : "@@assist.group.lastName@@",
+                "syntax" : [
+                    "#users.group.",
+                    {
+                        "placeholder" : "GROUP_ID",
+                        "option" : "groupId",
+                        "required" : true
+                    },
+                    ".lastName#"
+                ]
+            },
+            {
+                "value" : "#users.group.GROUP_ID.fullName#",
+                "label" : "@@assist.group.fullName@@",
+                "syntax" : [
+                    "#users.group.",
+                    {
+                        "placeholder" : "GROUP_ID",
+                        "option" : "groupId",
+                        "required" : true
+                    },
+                    ".fullName#"
+                ]
+            },
+            {
+                "value" : "#users.group.GROUP_ID.email#",
+                "label" : "@@assist.group.email@@",
+                "syntax" : [
+                    "#users.group.",
+                    {
+                        "placeholder" : "GROUP_ID",
+                        "option" : "groupId",
+                        "required" : true
+                    },
+                    ".email#"
+                ]
+            }
+        ],
+        "@@assist.GradeUsers@@" : [
+            {
+                "value" : "#users.grade.GRADE_ID.username#",
+                "label" : "@@assist.grade.username@@",
+                "syntax" : [
+                    "#users.grade.",
+                    {
+                        "placeholder" : "GRADE_ID",
+                        "option" : "gradeId",
+                        "required" : true
+                    },
+                    ".username#"
+                ]
+            },
+            {
+                "value" : "#users.grade.GRADE_ID.firstName#",
+                "label" : "@@assist.grade.firstName@@",
+                "syntax" : [
+                    "#users.grade.",
+                    {
+                        "placeholder" : "GRADE_ID",
+                        "option" : "gradeId",
+                        "required" : true
+                    },
+                    ".firstName#"
+                ]
+            },
+            {
+                "value" : "#users.grade.GRADE_ID.lastName#",
+                "label" : "@@assist.grade.lastName@@",
+                "syntax" : [
+                    "#users.grade.",
+                    {
+                        "placeholder" : "GRADE_ID",
+                        "option" : "gradeId",
+                        "required" : true
+                    },
+                    ".lastName#"
+                ]
+            },
+            {
+                "value" : "#users.grade.GRADE_ID.fullName#",
+                "label" : "@@assist.grade.fullName@@",
+                "syntax" : [
+                    "#users.grade.",
+                    {
+                        "placeholder" : "GRADE_ID",
+                        "option" : "gradeId",
+                        "required" : true
+                    },
+                    ".fullName#"
+                ]
+            },
+            {
+                "value" : "#users.grade.GRADE_ID.email#",
+                "label" : "@@assist.grade.email@@",
+                "syntax" : [
+                    "#users.grade.",
+                    {
+                        "placeholder" : "GRADE_ID",
+                        "option" : "gradeId",
+                        "required" : true
+                    },
+                    ".email#"
+                ]
+            }
+        ],
+        "@@assist.DepartmentUsers@@" : [
+            {
+                "value" : "#users.department.DEPARTMENT_ID.username#",
+                "label" : "@@assist.dept.username@@",
+                "syntax" : [
+                    "#users.department.",
+                    {
+                        "placeholder" : "DEPARTMENT_ID",
+                        "option" : "departmentId",
+                        "required" : true
+                    },
+                    ".username#"
+                ]
+            },
+            {
+                "value" : "#users.department.DEPARTMENT_ID.firstName#",
+                "label" : "@@assist.dept.firstName@@",
+                "syntax" : [
+                    "#users.department.",
+                    {
+                        "placeholder" : "DEPARTMENT_ID",
+                        "option" : "departmentId",
+                        "required" : true
+                    },
+                    ".firstName#"
+                ]
+            },
+            {
+                "value" : "#users.department.DEPARTMENT_ID.lastName#",
+                "label" : "@@assist.dept.lastName@@",
+                "syntax" : [
+                    "#users.department.",
+                    {
+                        "placeholder" : "DEPARTMENT_ID",
+                        "option" : "departmentId",
+                        "required" : true
+                    },
+                    ".lastName#"
+                ]
+            },
+            {
+                "value" : "#users.department.DEPARTMENT_ID.fullName#",
+                "label" : "@@assist.dept.fullName@@",
+                "syntax" : [
+                    "#users.department.",
+                    {
+                        "placeholder" : "DEPARTMENT_ID",
+                        "option" : "departmentId",
+                        "required" : true
+                    },
+                    ".fullName#"
+                ]
+            },
+            {
+                "value" : "#users.department.DEPARTMENT_ID.email#",
+                "label" : "@@assist.dept.email@@",
+                "syntax" : [
+                    "#users.department.",
+                    {
+                        "placeholder" : "DEPARTMENT_ID",
+                        "option" : "departmentId",
+                        "required" : true
+                    },
+                    ".email#"
+                ]
+            }
+        ],
+        "@@assist.OrganizationUsers@@" : [
+            {
+                "value" : "#users.organization.ORGANIZATION_ID.username#",
+                "label" : "@@assist.org.username@@",
+                "syntax" : [
+                    "#users.organization.",
+                    {
+                        "placeholder" : "ORGANIZATION_ID",
+                        "option" : "organizationId",
+                        "required" : true
+                    },
+                    ".username#"
+                ]
+            },
+            {
+                "value" : "#users.organization.ORGANIZATION_ID.firstName#",
+                "label" : "@@assist.org.firstName@@",
+                "syntax" : [
+                    "#users.organization.",
+                    {
+                        "placeholder" : "ORGANIZATION_ID",
+                        "option" : "organizationId",
+                        "required" : true
+                    },
+                    ".firstName#"
+                ]
+            },
+            {
+                "value" : "#users.organization.ORGANIZATION_ID.lastName#",
+                "label" : "@@assist.org.lastName@@",
+                "syntax" : [
+                    "#users.organization.",
+                    {
+                        "placeholder" : "ORGANIZATION_ID",
+                        "option" : "organizationId",
+                        "required" : true
+                    },
+                    ".lastName#"
+                ]
+            },
+            {
+                "value" : "#users.organization.ORGANIZATION_ID.fullName#",
+                "label" : "@@assist.org.fullName@@",
+                "syntax" : [
+                    "#users.organization.",
+                    {
+                        "placeholder" : "ORGANIZATION_ID",
+                        "option" : "organizationId",
+                        "required" : true
+                    },
+                    ".fullName#"
+                ]
+            },
+            {
+                "value" : "#users.organization.ORGANIZATION_ID.email#",
+                "label" : "@@assist.org.email@@",
+                "syntax" : [
+                    "#users.organization.",
+                    {
+                        "placeholder" : "ORGANIZATION_ID",
+                        "option" : "organizationId",
+                        "required" : true
+                    },
+                    ".email#"
+                ]
+            }
+        ]
+    },
+    "optionField" : {
+        "groupId" : {
+            "name" : "groupId",
+            "label" : "@@assist.Group@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/directory/group/options",
+            "type" : "selectbox"
+        },
+        "gradeId" : {
+            "name" : "gradeId",
+            "label" : "@@assist.Grade@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/directory/grade/options",
+            "type" : "selectbox"
+        },
+        "departmentId" : {
+            "name" : "departmentId",
+            "label" : "@@assist.Department@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/directory/department/options",
+            "type" : "selectbox"
+        },
+        "organizationId" : {
+            "name" : "organizationId",
+            "label" : "@@assist.Organization@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/directory/organization/options",
+            "type" : "selectbox"
+        }
+    }
+}

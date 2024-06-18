@@ -1,0 +1,50 @@
+[{
+    title : '@@userview.slareportmenu.edit@@',
+    properties : [{
+        name : 'id',
+        label : 'Id',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.slareportmenu.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.slareportmenu.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.slareportmenu.label@@',
+        type : 'textfield',
+        required : 'True',
+        value : '@@userview.slareportmenu.slaReport@@'
+    },
+    {
+        name : 'processDefId',
+        label : '@@userview.runprocess.process@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.userview.lib.RunProcess/service?action=getOptions'
+    },
+    {
+        name : 'hasSlaOnly',
+        label : '@@userview.slareportmenu.hasSlaOnly@@',
+        type : 'checkbox',
+        options : [{value:'true', label:''}]
+    }]
+},
+{
+    title : '@@userview.slareportmenu.ui@@',
+    properties : [{
+        name : 'customHeader',
+        label : '@@userview.slareportmenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'customFooter',
+        label : '@@userview.slareportmenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }],
+    developer_mode : 'advanced'
+}]

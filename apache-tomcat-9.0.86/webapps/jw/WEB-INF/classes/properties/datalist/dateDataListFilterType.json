@@ -1,0 +1,51 @@
+[{
+    title : '@@datalist.ddlft.config@@',
+    properties : [
+    {
+        name:'defaultValue',
+        label:'@@datalist.ddlft.defaultValue@@',
+        type:'textfield'
+    },
+    {
+        name : 'format',
+        label : '@@datalist.ddlft.format@@',
+        description : '@@datalist.ddlft.format.desc@@',
+        type : 'textfield',
+        value : 'mm/dd/yy'
+    },
+    {
+        name : 'dateStoreInUTC',
+        label : '@@datalist.dateformatter.dateStoreInUTC@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'formatJava',
+        label : '@@datalist.ddlft.formatJava@@',
+        description : '@@datalist.ddlft.formatJava.desc@@',
+        type : 'textfield',
+        value : 'yyyy-MM-dd',
+        required : 'true',
+        control_field: 'dateStoreInUTC',
+        control_value: ''
+    },
+    {
+        name : 'yearRange',
+        label : '@@datalist.ddlft.yearRange@@',
+        type : 'textfield',
+        value : 'c-10:c+10',
+        required : 'true'
+    },
+    {
+        name : 'enableTime',
+        label : '@@datalist.drdlft.enableTime@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+}]

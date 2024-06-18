@@ -1,0 +1,31 @@
+[{
+    title : '@@datalist.externalDirectoryDatalistBinder.config@@',
+    properties : [{
+        name : 'type',
+        label : '@@form.directorybinder.type@@',
+        type : 'selectbox',
+        required : 'true',
+        options : [{
+            value : '',
+            label : ''
+        },{
+            value : 'org.joget.directory.model.Department',
+            label : '@@datalist.jogetEntityDatalistBinder.DepartmentDao@@'
+        },{
+            value : 'org.joget.directory.model.Employment',
+            label : '@@datalist.jogetEntityDatalistBinder.EmploymentDao@@'
+        },{
+            value : 'org.joget.directory.model.Grade',
+            label : '@@datalist.jogetEntityDatalistBinder.GradeDao@@'
+        },{
+            value : 'org.joget.directory.model.Group',
+            label : '@@datalist.jogetEntityDatalistBinder.GroupDao@@'
+        },{
+            value : 'org.joget.directory.model.Organization',
+            label : '@@datalist.jogetEntityDatalistBinder.OrganizationDao@@'
+        },{
+            value : 'org.joget.directory.model.User',
+            label : '@@datalist.jogetEntityDatalistBinder.UserDao@@'
+        }]
+    }]
+}]

@@ -1,0 +1,37 @@
+[{
+    title : '@@datalist.nrdlft.config@@',
+    properties : [{
+        name : 'showFieldLabel',
+        label : '@@datalist.drdlft.showFieldLabel@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{
+            label : '',
+            value : 'true'
+        }]
+    },
+    {
+        name:'minDefaultValue',
+        label:'@@datalist.nrdlft.minDefaultValue@@',
+        type:'textfield'
+    },
+    {
+        name:'maxDefaultValue',
+        label:'@@datalist.nrdlft.maxDefaultValue@@',
+        type:'textfield'
+    },
+    {
+        name : 'minLabel',
+        label : '@@datalist.nrdlft.minLabel@@',
+        type : 'textfield',
+        value : '@@datalist.nrdlft.minLabel.value@@',
+        required : 'true'
+    },
+    {
+        name : 'maxLabel',
+        label : '@@datalist.nrdlft.maxLabel@@',
+        type : 'textfield',
+        value : '@@datalist.nrdlft.maxLabel.value@@',
+        required : 'true'
+    }]
+}]

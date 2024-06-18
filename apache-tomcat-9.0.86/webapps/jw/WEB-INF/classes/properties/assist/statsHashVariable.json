@@ -1,0 +1,120 @@
+{
+    "optionGroup" : {
+        "@@stats.variable@@" : [
+            {
+                "value" : "#stats.transactionCount#",
+                "label" : "@@stats.transactionCount@@"
+            },
+            {
+                "value" : "#stats.slowTrace#",
+                "label" : "@@stats.slowTrace@@"
+            },
+            {
+                "value" : "#stats.errorCount#",
+                "label" : "@@stats.errorCount@@"
+            },
+            {
+                "value" : "#stats.runningProcess#",
+                "label" : "@@stats.runningProcess@@"
+            },
+            {
+                "value" : "#stats.completedProcess#",
+                "label" : "@@stats.completedProcess@@"
+            },
+            {
+                "value" : "#stats.responseTimesCheck#",
+                "label" : "@@stats.responseTimesCheck@@"
+            },
+            {
+                "value" : "#stats.memoryUsageCheck#",
+                "label" : "@@stats.memoryUsageCheck@@"
+            },
+            {
+                "value" : "#stats.cpuUsageCheck#",
+                "label" : "@@stats.cpuUsageCheck@@"
+            },
+            {
+                "value" : "#stats.dbConnectionsCheck#",
+                "label" : "@@stats.dbConnectionsCheck@@"
+            },
+            {
+                "value" : "#stats.errorRateCheck#",
+                "label" : "@@stats.errorRateCheck@@"
+            },
+            {
+                "value" : "#stats.nodeCount#",
+                "label" : "@@stats.nodeCount@@"
+            },
+            {
+                "value" : "#stats.publishedAppCount#",
+                "label" : "@@stats.publishedAppCount@@"
+            },
+            {
+                "value" : "#stats.unpublishedAppCount#",
+                "label" : "@@stats.unpublishedAppCount@@"
+            },
+            {
+                "value" : "#stats.user.active#",
+                "label" : "@@stats.user.active@@"
+            },
+            {
+                "value" : "#stats.user.inactive#",
+                "label" : "@@stats.user.inactive@@"
+            },
+            {
+                "value" : "#stats.user.total#",
+                "label" : "@@stats.user.total@@"
+            },
+            {
+                "value" : "#stats.appList#",
+                "label" : "@@stats.appList@@"
+            },
+            {
+                "value" : "#stats.app.total#",
+                "label" : "@@stats.app.total@@"
+            },
+            {
+                "value" : "#stats.form.countPerApp#",
+                "label" : "@@stats.form.countPerApp@@"
+            },
+            {
+                "value" : "#stats.form.total#",
+                "label" : "@@stats.form.total@@"
+            },
+            {
+                "value" : "#stats.errorRateCheck#",
+                "label" : "@@stats.errorRateCheck@@"
+            },
+            {
+                "value" : "#stats.list.countPerApp#",
+                "label" : "@@stats.list.countPerApp@@"
+            },
+            {
+                "value" : "#stats.list.total#",
+                "label" : "@@stats.list.total@@"
+            },
+            {
+                "value" : "#stats.UI.countPerApp#",
+                "label" : "@@stats.UI.countPerApp@@"
+            },
+            {
+                "value" : "#stats.UI.total#",
+                "label" : "@@stats.UI.total@@"
+            },
+            {
+                "value" : "#stats.groupList#",
+                "label" : "@@stats.groupList@@"
+            },
+            {
+                "value" : "#stats.group.countPerGroup#",
+                "label" : "@@stats.group.countPerGroup@@"
+            },
+            {
+                "value" : "#stats.group.total#",
+                "label" : "@@stats.group.total@@"
+            }
+        ]
+    }
+}
+
+

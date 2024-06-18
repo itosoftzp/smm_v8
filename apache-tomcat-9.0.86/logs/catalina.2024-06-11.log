@@ -1,0 +1,622 @@
+11-Jun-2024 02:43:36.211 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+11-Jun-2024 02:43:36.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+11-Jun-2024 02:43:36.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+11-Jun-2024 02:43:36.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-1020-aws
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 02:43:36.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/conf/logging.properties
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx768M
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=./wflow/
+11-Jun-2024 02:43:36.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/wflow-cluster.jar
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/aspectjweaver-1.9.22.jar
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/glowroot/glowroot.jar
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dgit.disabled=true
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 02:43:36.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/temp
+11-Jun-2024 02:43:36.234 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+11-Jun-2024 02:43:36.550 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 02:43:36.579 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [972] milliseconds
+11-Jun-2024 02:43:36.716 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-Jun-2024 02:43:36.717 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+11-Jun-2024 02:43:36.771 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war]
+11-Jun-2024 02:43:51.994 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-Jun-2024 02:45:01.601 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war] has finished in [84,829] ms
+11-Jun-2024 02:45:01.603 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager]
+11-Jun-2024 02:45:01.772 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager] has finished in [169] ms
+11-Jun-2024 02:45:01.772 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples]
+11-Jun-2024 02:45:02.852 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples] has finished in [1,079] ms
+11-Jun-2024 02:45:02.852 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager]
+11-Jun-2024 02:45:02.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager] has finished in [52] ms
+11-Jun-2024 02:45:02.907 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs]
+11-Jun-2024 02:45:02.957 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs] has finished in [52] ms
+11-Jun-2024 02:45:02.958 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT]
+11-Jun-2024 02:45:02.990 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT] has finished in [28] ms
+11-Jun-2024 02:45:03.013 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 02:45:03.172 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [86591] milliseconds
+11-Jun-2024 02:45:43.550 INFO [http-nio-8080-exec-2] org.apache.tomcat.util.http.Parameters.processParameters Invalid chunk starting at byte [60] and ending at byte [61] with a value of [=] ignored
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+11-Jun-2024 03:23:05.156 INFO [http-nio-8080-exec-9] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030xbe0xac0xfa0xba0xa20x140xa60x8ca0x090x15Q0xf30xaaBR0x14P0xce0x80I/0xab0x05Q+0xa0;0x120x000xf20x91 ]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 03:46:23.731 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+11-Jun-2024 03:46:23.732 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 03:46:23.733 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+11-Jun-2024 03:46:25.806 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [dispatcher]
+11-Jun-2024 03:46:26.807 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [dispatcher]
+11-Jun-2024 03:46:27.809 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [dispatcher]
+11-Jun-2024 03:47:28.449 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+11-Jun-2024 03:47:28.450 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+11-Jun-2024 03:47:28.451 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Tomcat JDBC Pool Cleaner[797526745:1718073854725]] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.net.SocketInputStream.socketRead0(Native Method)
+ java.base@11.0.23/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+ java.base@11.0.23/java.net.SocketInputStream.read(SocketInputStream.java:168)
+ java.base@11.0.23/java.net.SocketInputStream.read(SocketInputStream.java:140)
+ java.base@11.0.23/java.io.FilterInputStream.read(FilterInputStream.java:133)
+ org.mariadb.jdbc.internal.io.input.ReadAheadBufferedStream.read(ReadAheadBufferedStream.java:93)
+ org.mariadb.jdbc.internal.io.input.StandardPacketInputStream.getPacketArray(StandardPacketInputStream.java:269)
+ org.mariadb.jdbc.internal.io.input.StandardPacketInputStream.getPacket(StandardPacketInputStream.java:212)
+ org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.ping(AbstractQueryProtocol.java:1150)
+ org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.isValid(AbstractQueryProtocol.java:1190)
+ org.mariadb.jdbc.MariaDbConnection.isValid(MariaDbConnection.java:1177)
+ org.apache.tomcat.jdbc.pool.PooledConnection.validate(PooledConnection.java:542)
+ org.apache.tomcat.jdbc.pool.PooledConnection.validate(PooledConnection.java:478)
+ org.apache.tomcat.jdbc.pool.ConnectionPool.testAllIdle(ConnectionPool.java:1201)
+ org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1607)
+ java.base@11.0.23/java.util.TimerThread.mainLoop(Timer.java:556)
+ java.base@11.0.23/java.util.TimerThread.run(Timer.java:506)
+11-Jun-2024 03:47:28.453 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer.parkAndCheckInterrupt(AbstractQueuedSynchronizer.java:885)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireQueued(AbstractQueuedSynchronizer.java:917)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(AbstractQueuedSynchronizer.java:1240)
+ java.base@11.0.23/java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock.lock(ReentrantReadWriteLock.java:959)
+ org.apache.tomcat.jdbc.pool.PooledConnection.lock(PooledConnection.java:773)
+ org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:825)
+ org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:682)
+ org.apache.tomcat.jdbc.pool.ConnectionPool.getConnection(ConnectionPool.java:199)
+ org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:133)
+ org.apache.tomcat.jdbc.pool.DataSource.getConnection(DataSource.java)
+ org.apache.tomcat.jdbc.pool.XADataSource.getConnection(XADataSource.java)
+ org.joget.commons.util.DynamicDataSource.getConnection_aroundBody0(DynamicDataSource.java:53)
+ org.joget.commons.util.DynamicDataSource$AjcClosure1.run(DynamicDataSource.java:1)
+ org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:167)
+ org.joget.commons.util.AnalyzerAspect.analyzeDbcpOpenConnections(AnalyzerAspect.java:173)
+ org.joget.commons.util.DynamicDataSource.getConnection(DynamicDataSource.java:20)
+ org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+ org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38)
+ org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:108)
+ org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:138)
+ org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:50)
+ org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:149)
+ org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:176)
+ org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:151)
+ org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:2122)
+ org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2059)
+ org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037)
+ org.hibernate.loader.hql.QueryLoader.iterate(QueryLoader.java:564)
+ org.hibernate.hql.internal.ast.QueryTranslatorImpl.iterate(QueryTranslatorImpl.java:441)
+ org.hibernate.engine.query.spi.HQLQueryPlan.performIterate(HQLQueryPlan.java:319)
+ org.hibernate.internal.SessionImpl.iterate(SessionImpl.java:1579)
+ org.hibernate.query.internal.AbstractProducedQuery.doIterate(AbstractProducedQuery.java:1559)
+ org.hibernate.query.internal.AbstractProducedQuery.iterate(AbstractProducedQuery.java:1547)
+ org.joget.apps.app.dao.AppDefinitionDaoImpl.getPublishedVersion_aroundBody0(AppDefinitionDaoImpl.java:130)
+ org.joget.apps.app.dao.AppDefinitionDaoImpl$AjcClosure1.run(AppDefinitionDaoImpl.java:1)
+ org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:167)
+ org.joget.commons.util.AppLicenseAspect.getPublishedVersion(AppLicenseAspect.java:61)
+ org.joget.apps.app.dao.AppDefinitionDaoImpl.getPublishedVersion(AppDefinitionDaoImpl.java:125)
+ jdk.internal.reflect.GeneratedMethodAccessor448.invoke(Unknown Source)
+ java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
+ org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+ org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+ org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+ org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+ org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+ org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+ com.sun.proxy.$Proxy126.getPublishedVersion_aroundBody2(Unknown Source)
+ com.sun.proxy.$Proxy126$AjcClosure3.run(<Unknown>:1)
+ org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:167)
+ org.joget.commons.util.AppLicenseAspect.getPublishedVersion(AppLicenseAspect.java:61)
+ com.sun.proxy.$Proxy126.getPublishedVersion(Unknown Source)
+ org.joget.apps.app.service.AppServiceImpl.getPublishedVersion(AppServiceImpl.java:2225)
+ jdk.internal.reflect.GeneratedMethodAccessor447.invoke(Unknown Source)
+ java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
+ org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+ org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:234)
+ com.sun.proxy.$Proxy142.getPublishedVersion(Unknown Source)
+ org.joget.apps.app.controller.AppWebController.downloadAppResource(AppWebController.java:610)
+ jdk.internal.reflect.GeneratedMethodAccessor446.invoke(Unknown Source)
+ java.base@11.0.23/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@11.0.23/java.lang.reflect.Method.invoke(Method.java:566)
+ org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+ org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+ org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:903)
+ org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:809)
+ org.joget.commons.spring.web.ParameterizedAnnotationMethodHandlerAdapter.handleInternal(ParameterizedAnnotationMethodHandlerAdapter.java:32)
+ org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+ org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+ org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+ org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+ org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+ org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.joget.apps.app.web.GitRequestFilter.doFilter(GitRequestFilter.java:42)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.displaytag.filter.ResponseOverrideFilter.doFilter(ResponseOverrideFilter.java:125)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.owasp.csrfguard.CsrfGuardFilter.handleSession(CsrfGuardFilter.java:107)
+ org.owasp.csrfguard.CsrfGuardFilter.doFilter(CsrfGuardFilter.java:97)
+ org.owasp.csrfguard.CsrfGuardFilter.doFilter(CsrfGuardFilter.java:68)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.springframework.web.multipart.support.MultipartFilter.doFilterInternal(MultipartFilter.java:125)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:352)
+ org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:117)
+ org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:83)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+ org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+ org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+ org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+ org.joget.apps.workflow.security.WorkflowHttpAuthProcessingFilter.doFilter(WorkflowHttpAuthProcessingFilter.java:88)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:168)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+ org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+ org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+ org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:117)
+ org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:361)
+ org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:225)
+ org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:190)
+ org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+ org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+ org.joget.commons.spring.web.CustomDelegatingFilterProxy.doFilter(CustomDelegatingFilterProxy.java:31)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.joget.apps.app.web.ExpireFilter.doFilter(ExpireFilter.java:48)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+ org.joget.apps.app.web.CustomCharacterEncodingFilter.doFilterInternal(CustomCharacterEncodingFilter.java:47)
+ org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)]
+11-Jun-2024 03:47:28.453 SEVERE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [jw] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@2a1df867]) and a value of type [org.joget.commons.util.Analyzer] (value [org.joget.commons.util.Analyzer@707ea4bf]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jun-2024 03:47:28.467 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 03:47:33.471 WARNING [main] org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor The executor associated with thread pool [http-nio-8080] has not fully shutdown. Some application threads may still be running.
+11-Jun-2024 03:47:33.473 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 03:50:25.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.86
+11-Jun-2024 03:50:25.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 14 2024 08:15:12 UTC
+11-Jun-2024 03:50:25.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.86.0
+11-Jun-2024 03:50:25.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+11-Jun-2024 03:50:25.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.5.0-1020-aws
+11-Jun-2024 03:50:25.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+11-Jun-2024 03:50:25.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+11-Jun-2024 03:50:25.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+11-Jun-2024 03:50:25.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+11-Jun-2024 03:50:25.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+11-Jun-2024 03:50:25.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/conf/logging.properties
+11-Jun-2024 03:50:25.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+11-Jun-2024 03:50:25.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx2048M
+11-Jun-2024 03:50:25.395 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=./wflow/
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/wflow-cluster.jar
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/aspectjweaver-1.9.22.jar
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:./wflow/glowroot/glowroot.jar
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dgit.disabled=true
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86
+11-Jun-2024 03:50:25.396 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/temp
+11-Jun-2024 03:50:25.399 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+11-Jun-2024 03:50:25.627 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 03:50:25.648 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [633] milliseconds
+11-Jun-2024 03:50:25.743 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+11-Jun-2024 03:50:25.744 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.86]
+11-Jun-2024 03:50:25.789 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war]
+11-Jun-2024 03:50:38.277 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+11-Jun-2024 03:51:33.383 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/jw.war] has finished in [67,593] ms
+11-Jun-2024 03:51:33.385 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager]
+11-Jun-2024 03:51:33.640 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/host-manager] has finished in [254] ms
+11-Jun-2024 03:51:33.642 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples]
+11-Jun-2024 03:51:33.958 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/examples] has finished in [316] ms
+11-Jun-2024 03:51:33.958 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager]
+11-Jun-2024 03:51:33.987 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/manager] has finished in [23] ms
+11-Jun-2024 03:51:33.987 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs]
+11-Jun-2024 03:51:34.003 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/docs] has finished in [16] ms
+11-Jun-2024 03:51:34.004 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT]
+11-Jun-2024 03:51:34.021 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/joget-enterprise-linux-8.1.1/apache-tomcat-9.0.86/webapps/ROOT] has finished in [17] ms
+11-Jun-2024 03:51:34.038 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 03:51:34.112 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [68464] milliseconds
+11-Jun-2024 03:53:57.385 INFO [http-nio-8080-exec-6] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [MGLNDD_108.137.35.184_80800x0a...]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 04:09:17.986 INFO [http-nio-8080-exec-2] org.apache.tomcat.util.http.Parameters.processParameters Invalid chunk starting at byte [75] and ending at byte [76] with a value of [=] ignored
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+11-Jun-2024 06:38:57.616 INFO [http-nio-8080-exec-5] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00{0x010x000x00w0x030x030xbd0xc9)0x85JCM0x8e0x170xad0xa00xf70xcc0xf10x840xfd0xf90x040x13 ]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 09:09:01.494 INFO [http-nio-8080-exec-2] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x010x070x010x000x010x030x030x03s60xb50x080xc80xd20xf7/|0xb70xfe)0xfb0xf9s0xf50xac0xf4XE0x900x070x970xa3[#0xe90x9f&0x80<0xb7 ]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 09:33:11.682 INFO [http-nio-8080-exec-3] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x00{0x010x000x00w0x030x03W0x960xf80xdd0xd80xc70xe10xed?U0x00S0x0d0xd20xb10x0a90xbe}0x91[0xa7?)0x8a@0xb6cA0x9b|0x8d0x000x000x1a0xc0/0xc0+0xc00x110xc00x070xc00x130xc00x090xc00x140xc00x0a0x000x050x00/0x0050xc00x120x000x0a0x010x000x0040x000x050x000x050x010x000x000x000x000x000x0a0x000x080x000x060x000x170x000x180x000x190x000x0b0x000x020x010x000x000x0d0x000x100x000x0e0x040x010x040x030x020x010x020x030x040x010x050x010x060x010xff0x010x000x010x00...]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 11:30:47.472 INFO [Thread-33] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 11:30:47.474 INFO [Thread-33] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+11-Jun-2024 11:30:47.572 WARNING [Thread-27] org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings Unable to clear Warnings, connection will be closed.
+	java.sql.SQLException: Connection.clearWarnings cannot be called on a closed connection
+		at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getSqlException(ExceptionMapper.java:278)
+		at org.mariadb.jdbc.MariaDbConnection.clearWarnings(MariaDbConnection.java:974)
+		at org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings(PooledConnection.java:868)
+		at org.apache.tomcat.jdbc.pool.ConnectionPool.returnConnection(ConnectionPool.java:1022)
+		at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:103)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.ConnectionState.invoke(ConnectionState.java:159)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.TrapException.invoke(TrapException.java:39)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:64)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81)
+		at com.sun.proxy.$Proxy97.close_aroundBody0(Unknown Source)
+		at com.sun.proxy.$Proxy97.close_aroundBody1$advice(Unknown Source)
+		at com.sun.proxy.$Proxy97.close(Unknown Source)
+		at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.closeConnection(DatasourceConnectionProviderImpl.java:127)
+		at org.hibernate.internal.NonContextualJdbcConnectionAccess.releaseConnection(NonContextualJdbcConnectionAccess.java:49)
+		at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.releaseConnection(LogicalConnectionManagedImpl.java:219)
+		at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.afterStatement(LogicalConnectionManagedImpl.java:151)
+		at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.afterStatementExecution(JdbcCoordinatorImpl.java:266)
+		at org.hibernate.loader.Loader.getResultSet(Loader.java:2328)
+		at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2075)
+		at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037)
+		at org.hibernate.loader.Loader.doQuery(Loader.java:956)
+		at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357)
+		at org.hibernate.loader.Loader.doList(Loader.java:2868)
+		at org.hibernate.loader.Loader.doList(Loader.java:2850)
+		at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682)
+		at org.hibernate.loader.Loader.list(Loader.java:2677)
+		at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540)
+		at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400)
+		at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:218)
+		at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1459)
+		at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649)
+		at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617)
+		at org.joget.commons.spring.model.AbstractSpringDao.find(AbstractSpringDao.java:95)
+		at org.joget.workflow.shark.model.dao.DeadlineDao.getDeadlines(DeadlineDao.java:37)
+		at org.joget.workflow.shark.model.dao.DeadlineDao$$FastClassBySpringCGLIB$$aabaab08.invoke(<generated>)
+		at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+		at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+		at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+		at org.joget.workflow.shark.model.dao.DeadlineDao$$EnhancerBySpringCGLIB$$ba19a28a.getDeadlines(<generated>)
+		at org.enhydra.shark.CustomWfProcessImpl.getDeadlineActivities(CustomWfProcessImpl.java:128)
+		at org.enhydra.shark.CustomWfProcessImpl.checkDeadlines(CustomWfProcessImpl.java:99)
+		at org.enhydra.shark.ExecutionAdmin.checkDeadlinesForProcesses(ExecutionAdmin.java:825)
+		at org.joget.workflow.model.service.WorkflowManagerImpl.internalCheckDeadlines(WorkflowManagerImpl.java:5304)
+		at jdk.internal.reflect.GeneratedMethodAccessor492.invoke(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+		at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+		at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+		at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.joget.apps.app.service.SqlFilterAspect.invoke(SqlFilterAspect.java:38)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+		at com.sun.proxy.$Proxy131.internalCheckDeadlines(Unknown Source)
+		at org.joget.workflow.shark.DeadlineChecker.runMe(DeadlineChecker.java:240)
+		at org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:143)
+11-Jun-2024 11:30:48.846 WARNING [Thread-27] org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings Unable to clear Warnings, connection will be closed.
+	java.sql.SQLException: Connection.clearWarnings cannot be called on a closed connection
+		at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getSqlException(ExceptionMapper.java:278)
+		at org.mariadb.jdbc.MariaDbConnection.clearWarnings(MariaDbConnection.java:974)
+		at org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings(PooledConnection.java:868)
+		at org.apache.tomcat.jdbc.pool.ConnectionPool.returnConnection(ConnectionPool.java:1022)
+		at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:103)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.ConnectionState.invoke(ConnectionState.java:159)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.TrapException.invoke(TrapException.java:39)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:64)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81)
+		at com.sun.proxy.$Proxy97.close_aroundBody0(Unknown Source)
+		at com.sun.proxy.$Proxy97.close_aroundBody1$advice(Unknown Source)
+		at com.sun.proxy.$Proxy97.close(Unknown Source)
+		at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.closeConnection(DatasourceConnectionProviderImpl.java:127)
+		at org.hibernate.internal.NonContextualJdbcConnectionAccess.releaseConnection(NonContextualJdbcConnectionAccess.java:49)
+		at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.releaseConnection(LogicalConnectionManagedImpl.java:219)
+		at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.afterStatement(LogicalConnectionManagedImpl.java:151)
+		at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.afterStatementExecution(JdbcCoordinatorImpl.java:266)
+		at org.hibernate.loader.Loader.getResultSet(Loader.java:2328)
+		at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2075)
+		at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037)
+		at org.hibernate.loader.Loader.doQuery(Loader.java:956)
+		at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357)
+		at org.hibernate.loader.Loader.doList(Loader.java:2868)
+		at org.hibernate.loader.Loader.doList(Loader.java:2850)
+		at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682)
+		at org.hibernate.loader.Loader.list(Loader.java:2677)
+		at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540)
+		at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400)
+		at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:218)
+		at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1459)
+		at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649)
+		at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617)
+		at org.joget.commons.spring.model.AbstractSpringDao.find(AbstractSpringDao.java:95)
+		at org.joget.commons.util.SetupDao.find(SetupDao.java:31)
+		at org.joget.commons.util.SetupDao$$FastClassBySpringCGLIB$$3a7fd694.invoke(<generated>)
+		at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+		at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+		at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+		at org.joget.commons.util.SetupDao$$EnhancerBySpringCGLIB$$a150dae0.find(<generated>)
+		at org.joget.workflow.shark.DeadlineChecker.runMe(DeadlineChecker.java:202)
+		at org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:143)
+11-Jun-2024 11:30:48.850 WARNING [Thread-27] org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings Unable to clear Warnings, connection will be closed.
+	java.sql.SQLException: Connection.clearWarnings cannot be called on a closed connection
+		at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getSqlException(ExceptionMapper.java:278)
+		at org.mariadb.jdbc.MariaDbConnection.clearWarnings(MariaDbConnection.java:974)
+		at org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings(PooledConnection.java:868)
+		at org.apache.tomcat.jdbc.pool.ConnectionPool.returnConnection(ConnectionPool.java:1022)
+		at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:103)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.ConnectionState.invoke(ConnectionState.java:159)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.TrapException.invoke(TrapException.java:39)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:64)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81)
+		at com.sun.proxy.$Proxy97.close_aroundBody0(Unknown Source)
+		at com.sun.proxy.$Proxy97.close_aroundBody1$advice(Unknown Source)
+		at com.sun.proxy.$Proxy97.close(Unknown Source)
+		at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.closeConnection(DatasourceConnectionProviderImpl.java:127)
+		at org.hibernate.internal.NonContextualJdbcConnectionAccess.releaseConnection(NonContextualJdbcConnectionAccess.java:49)
+		at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.releaseConnection(LogicalConnectionManagedImpl.java:219)
+		at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.afterStatement(LogicalConnectionManagedImpl.java:151)
+		at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.afterStatementExecution(JdbcCoordinatorImpl.java:266)
+		at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.flushEnding(JdbcCoordinatorImpl.java:161)
+		at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:348)
+		at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+		at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+		at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+		at org.hibernate.internal.SessionImpl.flush(SessionImpl.java:1394)
+		at org.joget.commons.spring.model.AbstractSpringDao.delete(AbstractSpringDao.java:49)
+		at org.joget.commons.util.SetupDao.delete(SetupDao.java:21)
+		at org.joget.commons.util.SetupDao$$FastClassBySpringCGLIB$$3a7fd694.invoke(<generated>)
+		at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+		at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+		at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+		at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+		at org.joget.commons.util.SetupDao$$EnhancerBySpringCGLIB$$a150dae0.delete(<generated>)
+		at org.joget.workflow.shark.DeadlineChecker.runMe(DeadlineChecker.java:253)
+		at org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:143)
+11-Jun-2024 11:30:48.863 WARNING [Thread-3230] org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings Unable to clear Warnings, connection will be closed.
+	java.sql.SQLException: Connection.clearWarnings cannot be called on a closed connection
+		at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getSqlException(ExceptionMapper.java:278)
+		at org.mariadb.jdbc.MariaDbConnection.clearWarnings(MariaDbConnection.java:974)
+		at org.apache.tomcat.jdbc.pool.PooledConnection.clearWarnings(PooledConnection.java:868)
+		at org.apache.tomcat.jdbc.pool.ConnectionPool.returnConnection(ConnectionPool.java:1022)
+		at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:103)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.ConnectionState.invoke(ConnectionState.java:159)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.TrapException.invoke(TrapException.java:39)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:64)
+		at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:107)
+		at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81)
+		at com.sun.proxy.$Proxy97.close_aroundBody0(Unknown Source)
+		at com.sun.proxy.$Proxy97.close_aroundBody1$advice(Unknown Source)
+		at com.sun.proxy.$Proxy97.close(Unknown Source)
+		at com.lutris.appserver.server.sql.ExtendedDBConnection.close(ExtendedDBConnection.java:650)
+		at com.lutris.appserver.server.sql.datasource.DataSourceConnectionAllocator.release(DataSourceConnectionAllocator.java:821)
+		at com.lutris.appserver.server.sql.datasource.DataSourceDBConnection.release(DataSourceDBConnection.java:146)
+		at com.lutris.appserver.server.sql.standard.StandardDBTransaction.connectionClose(StandardDBTransaction.java:373)
+		at com.lutris.appserver.server.sql.standard.StandardDBTransaction.commit(StandardDBTransaction.java:344)
+		at org.enhydra.dods.jta.SyncDBTransactionFactory$SyncDBTransaction.beforeCompletion(SyncDBTransactionFactory.java:182)
+		at bitronix.tm.BitronixTransaction.fireBeforeCompletionEvent(BitronixTransaction.java:532)
+		at bitronix.tm.BitronixTransaction.commit(BitronixTransaction.java:235)
+		at bitronix.tm.BitronixTransactionManager.commit(BitronixTransactionManager.java:143)
+		at org.springframework.transaction.jta.JtaTransactionManager.doCommit(JtaTransactionManager.java:1035)
+		at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+		at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+		at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:152)
+		at org.joget.workflow.model.service.WorkflowManagerImpl.internalBatchMigrateProcessHistories(WorkflowManagerImpl.java:6290)
+		at org.joget.workflow.model.service.WorkflowManagerImpl$5.run(WorkflowManagerImpl.java:6270)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+		at org.joget.commons.util.PluginThread.run(PluginThread.java:67)
+11-Jun-2024 11:30:49.371 WARNING [Thread-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+11-Jun-2024 11:30:49.372 WARNING [Thread-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [jw] registered the JDBC driver [org.mariadb.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+11-Jun-2024 11:30:49.374 WARNING [Thread-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [pool-12-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.23/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.23/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 11:30:49.374 WARNING [Thread-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-27] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/java.lang.Thread.sleep(Native Method)
+ org.joget.workflow.shark.DeadlineChecker.run(DeadlineChecker.java:141)
+11-Jun-2024 11:30:49.375 WARNING [Thread-33] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [jw] appears to have started a thread named [Thread-34] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.23/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.23/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.23/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.23/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ org.joget.web.presence.PresenceManager$2.run(PresenceManager.java:72)
+ java.base@11.0.23/java.lang.Thread.run(Thread.java:829)
+11-Jun-2024 11:30:49.376 SEVERE [Thread-33] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [jw] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@1593a98c]) and a value of type [org.joget.commons.util.Analyzer] (value [org.joget.commons.util.Analyzer@235767d4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jun-2024 11:30:49.391 INFO [Thread-33] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+11-Jun-2024 11:30:49.404 INFO [Thread-33] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

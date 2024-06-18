@@ -1,0 +1,114 @@
+{
+    "optionGroup" : {
+        "@@assist.platform@@" : [
+            {
+                "value" : "#platform.name#",
+                "label" : "@@assist.platform.name@@"
+            },
+            {
+                "value" : "#platform.version#",
+                "label" : "@@assist.platform.version@@"
+            },
+            {
+                "value" : "#platform.build#",
+                "label" : "@@assist.platform.build@@"
+            },
+            {
+                "value" : "#platform.jdbcDriver#",
+                "label" : "@@assist.platform.jdbcDriver@@"
+            },
+            {
+                "value" : "#platform.currentLocale#",
+                "label" : "@@assist.platform.currentLocale@@"
+            },
+            {
+                "value" : "#platform.currentLanguage#",
+                "label" : "@@assist.platform.currentLanguage@@"
+            },
+            {
+                "value" : "#platform.currentTimezone#",
+                "label" : "@@assist.platform.currentTimezone@@"
+            },
+            {
+                "value" : "#platform.currentDateFormat#",
+                "label" : "@@assist.platform.currentDateFormat@@"
+            },
+            {
+                "value" : "#platform.firstDayOfWeek#",
+                "label" : "@@assist.platform.firstDayOfWeek@@"
+            },
+            {
+                "value" : "#platform.marketplaceUrl#",
+                "label" : "@@assist.platform.marketplaceUrl@@"
+            },
+            {
+                "value" : "#platform.isEnterprise#",
+                "label" : "@@assist.platform.isEnterprise@@"
+            },
+            {
+                "value" : "#platform.isQuickEditAvailable#",
+                "label" : "@@assist.platform.isQuickEditAvailable@@"
+            },
+            {
+                "value" : "#platform.isRTL#",
+                "label" : "@@assist.platform.isRTL@@"
+            },
+            {
+                "value" : "#platform.systemKey#",
+                "label" : "@@assist.platform.systemKey@@"
+            },
+            {
+                "value" : "#platform.setting.dataFileBasePath#",
+                "label" : "@@assist.platform.dataFileBasePath@@"
+            },
+            {
+                "value" : "#platform.setting.deadlineCheckerInterval#",
+                "label" : "@@assist.platform.deadlineCheckerInterval@@"
+            },
+            {
+                "value" : "#platform.setting.fileSizeLimit#",
+                "label" : "@@assist.platform.fileSizeLimit@@"
+            },
+            {
+                "value" : "#platform.setting.landingPage#",
+                "label" : "@@assist.platform.landingPage@@"
+            },
+            {
+                "value" : "#platform.setting.systemDateFormat#",
+                "label" : "@@assist.platform.systemDateFormat@@"
+            },
+            {
+                "value" : "#platform.setting.systemLocale#",
+                "label" : "@@assist.platform.systemLocale@@"
+            },
+            {
+                "value" : "#platform.setting.systemTimeZone#",
+                "label" : "@@assist.platform.systemTimeZone@@"
+            },
+            {
+                "value" : "#platform.license.name#",
+                "label" : "@@assist.platform.license.name@@"
+            },
+            {
+                "value" : "#platform.license.holder#",
+                "label" : "@@assist.platform.license.holder@@"
+            },
+            {
+                "value" : "#platform.license.users#",
+                "label" : "@@assist.platform.license.users@@"
+            },
+            {
+                "value" : "#platform.license.expiry#",
+                "label" : "@@assist.platform.license.expiry@@"
+            },
+            {
+                "value" : "#platform.license.appLimit#",
+                "label" : "@@assist.platform.license.appLimit@@"
+            },
+            {
+                "value" : "#platform.license.activated#",
+                "label" : "@@assist.platform.license.activated@@"
+            }
+        ]
+    }
+}

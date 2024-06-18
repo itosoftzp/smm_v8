@@ -1,0 +1,207 @@
+[{
+    title : '@@datalist.jogetEntityDatalistBinder.config@@',
+    properties : [{
+        name : 'entity',
+        label : '@@datalist.jogetEntityDatalistBinder.entity@@',
+        type : 'selectbox',
+        required : 'true',
+        options : [{
+            value : '',
+            label : ''
+        },{
+            value : 'AppDefinition',
+            label : '@@datalist.jogetEntityDatalistBinder.AppDefinitionDao@@'
+        },{
+            value : 'DatalistDefinition',
+            label : '@@datalist.jogetEntityDatalistBinder.DatalistDefinitionDao@@'
+        },{
+            value : 'FormDefinition',
+            label : '@@datalist.jogetEntityDatalistBinder.FormDefinitionDao@@'
+        },{
+            value : 'PackageDefinition',
+            label : '@@datalist.jogetEntityDatalistBinder.PackageDefinitionDao@@'
+        },{
+            value : 'UserviewDefinition',
+            label : '@@datalist.jogetEntityDatalistBinder.UserviewDefinitionDao@@'
+        },{
+            value : 'EnvironmentVariable',
+            label : '@@datalist.jogetEntityDatalistBinder.EnvironmentVariableDao@@'
+        },{
+            value : 'Message',
+            label : '@@datalist.jogetEntityDatalistBinder.MessageDao@@'
+        },{
+            value : 'PluginDefaultProperties',
+            label : '@@datalist.jogetEntityDatalistBinder.PluginDefaultPropertiesDao@@'
+        },{
+            value : 'AuditTrail',
+            label : '@@datalist.jogetEntityDatalistBinder.AuditTrailDao@@'
+        },{
+            value : 'FormDataAuditTrail',
+            label : '@@datalist.jogetEntityDatalistBinder.FormDataAuditTrailDao@@'
+        },{
+            value : 'Department',
+            label : '@@datalist.jogetEntityDatalistBinder.DepartmentDao@@'
+        },{
+            value : 'Employment',
+            label : '@@datalist.jogetEntityDatalistBinder.EmploymentDao@@'
+        },{
+            value : 'EmploymentReportTo',
+            label : '@@datalist.jogetEntityDatalistBinder.EmploymentReportToDao@@'
+        },{
+            value : 'Grade',
+            label : '@@datalist.jogetEntityDatalistBinder.GradeDao@@'
+        },{
+            value : 'Group',
+            label : '@@datalist.jogetEntityDatalistBinder.GroupDao@@'
+        },{
+            value : 'Organization',
+            label : '@@datalist.jogetEntityDatalistBinder.OrganizationDao@@'
+        },{
+            value : 'Role',
+            label : '@@datalist.jogetEntityDatalistBinder.RoleDao@@'
+        },{
+            value : 'User',
+            label : '@@datalist.jogetEntityDatalistBinder.UserDao@@'
+        },{
+            value : 'UserExtra',
+            label : '@@datalist.jogetEntityDatalistBinder.UserExtraDao@@'
+        },{
+            value : 'UserPasswordHistory',
+            label : '@@datalist.jogetEntityDatalistBinder.UserPasswordHistoryDao@@'
+        },{
+            value : 'UserReplacement',
+            label : '@@datalist.jogetEntityDatalistBinder.UserReplacement@@'
+        },{
+            value : 'ReportApp',
+            label : '@@datalist.jogetEntityDatalistBinder.ReportAppDao@@'
+        },{
+            value : 'ReportWorkflowActivity',
+            label : '@@datalist.jogetEntityDatalistBinder.ReportWorkflowActivityDao@@'
+        },{
+            value : 'ReportWorkflowActivityInstance',
+            label : '@@datalist.jogetEntityDatalistBinder.ReportWorkflowActivityInstanceDao@@'
+        },{
+            value : 'ReportWorkflowPackage',
+            label : '@@datalist.jogetEntityDatalistBinder.ReportWorkflowPackageDao@@'
+        },{
+            value : 'ReportWorkflowProcess',
+            label : '@@datalist.jogetEntityDatalistBinder.ReportWorkflowProcessDao@@'
+        },{
+            value : 'ReportWorkflowProcessInstance',
+            label : '@@datalist.jogetEntityDatalistBinder.ReportWorkflowProcessInstanceDao@@'
+        },{
+            value : 'ResourceBundleMessage',
+            label : '@@datalist.jogetEntityDatalistBinder.ResourceBundleMessageDao@@'
+        },{
+            value : 'Setting',
+            label : '@@datalist.jogetEntityDatalistBinder.SetupDao@@'
+        },{
+            value : 'WorkflowProcessLink',
+            label : '@@datalist.jogetEntityDatalistBinder.WorkflowProcessLinkDao@@'
+        }]
+    },
+    {
+        name : 'currentAppVersion',
+        label : '@@datalist.jogetEntityDatalistBinder.currentAppVersion@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [
+            {value : 'true', label : ''}
+        ],
+        control_field: 'entity',
+        control_value: 'DatalistDefinition|FormDefinition|PackageDefinition|UserviewDefinition|EnvironmentVariable|Message|PluginDefaultProperties',
+        control_use_regex: 'true'
+    },
+    {
+        name : 'filters',
+        label : '@@datalist.afrdlb.filters@@',
+        type : 'grid',
+        columns : [{
+            key : 'join',
+            label : '@@datalist.afrdlb.join@@',
+            options : [{
+                value : 'AND',
+                label : '@@datalist.afrdlb.join.and@@'
+            },
+            {
+                value : 'OR',
+                label : '@@datalist.afrdlb.join.or@@'
+            }]
+        },
+        {
+            key : 'field',
+            label : '@@datalist.afrdlb.field@@'
+        },
+        {
+            key : 'operator',
+            label : '@@datalist.afrdlb.operator@@',
+            options : [{
+                value : '=',
+                label : '@@datalist.afrdlb.operator.equal@@'
+            },
+            {
+                value : '<>',
+                label : '@@datalist.afrdlb.operator.notEqual@@'
+            },
+            {
+                value : '>',
+                label : '@@datalist.afrdlb.operator.greaterThan@@'
+            },
+            {
+                value : '>=',
+                label : '@@datalist.afrdlb.operator.greaterThanOrEqual@@'
+            },
+            {
+                value : '<',
+                label : '@@datalist.afrdlb.operator.lessThan@@'
+            },
+            {
+                value : '<=',
+                label : '@@datalist.afrdlb.operator.lessThanOrEqual@@'
+            },
+            {
+                value : 'LIKE',
+                label : '@@datalist.afrdlb.operator.like@@'
+            },
+            {
+                value : 'NOT LIKE',
+                label : '@@datalist.afrdlb.operator.notLike@@'
+            },
+            {
+                value : 'IN',
+                label : '@@datalist.afrdlb.operator.in@@'
+            },
+            {
+                value : 'NOT IN',
+                label : '@@datalist.afrdlb.operator.notIn@@'
+            },
+            {
+                value : 'IS TRUE',
+                label : '@@datalist.afrdlb.operator.isTrue@@'
+            },
+            {
+                value : 'IS FALSE',
+                label : '@@datalist.afrdlb.operator.isFalse@@'
+            },
+            {
+                value : 'IS NULL',
+                label : '@@datalist.afrdlb.operator.isNull@@'
+            },
+            {
+                value : 'IS NOT NULL',
+                label : '@@datalist.afrdlb.operator.isNotNull@@'
+            }]
+        },
+        {
+            key : 'value',
+            label : '@@datalist.afrdlb.value@@'
+        }]
+    },
+    {
+        name : 'extraCondition',
+        label : '@@datalist.afrdlb.extraCondition@@',
+        type : 'textarea',
+        rows : '5',
+        cols : '50'
+    }]
+}]

@@ -1,0 +1,11 @@
+[{
+    title : '@@app.beanshellformatter.config@@',
+    properties : [{
+        name : 'script',
+        label : '@@app.beanshelltool.script@@',
+        description : '@@app.beanshellformatter.script.desc@@',
+        type : 'codeeditor',
+        required : 'True',
+        mode : 'java'
+    }]
+}]

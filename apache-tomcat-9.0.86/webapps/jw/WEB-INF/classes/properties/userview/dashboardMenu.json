@@ -1,0 +1,325 @@
+[{
+    title : '@@userview.dashboard.edit@@',
+    properties : [{
+        name : 'id',
+        label : 'Id',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.runprocess.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.runprocess.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.runprocess.label@@',
+        type : 'textfield',
+        required : 'True',
+        value : '@@userview.dashboard.label.value@@'
+    },
+    {
+        name : 'mode',
+        label : '@@userview.dashboard.label.mode@@',
+        type : 'selectbox',
+        value : 'plugins',
+        options : [
+            { value : '', label : '@@userview.dashboard.label.mode.usingUserview@@'},
+            { value : 'plugins', label : '@@userview.dashboard.label.mode.usingPlugin@@'},
+            { value : 'url', label : '@@userview.dashboard.label.mode.usingURL@@'}
+        ]
+    },
+    {
+        name : 'plugins',
+        label : '@@userview.dashboard.label.portletSetting@@',
+        type : 'repeater',
+        fields : [{
+            name : 'userviewMenu',
+            label : '@@userview.dashboard.label.userviewMenuPlugin@@',
+            type : 'elementselect',
+            options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.userview.model.UserviewMenu',
+            url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions',
+            required : 'true'
+        },
+        {
+            name : 'x',
+            label : '@@userview.dashboard.label.portlet.positionX@@',
+            type : 'textfield'
+        },
+        {
+            name : 'y',
+            label : '@@userview.dashboard.label.portlet.positionY@@',
+            type : 'textfield'
+        },
+        {
+            name : 'width',
+            label : '@@userview.dashboard.label.portlet.width@@',
+            type : 'selectbox',
+            value : '1',
+            options : [
+                { value : '1', label : '1'},
+                { value : '2', label : '2'},
+                { value : '3', label : '3'}
+            ]
+        },
+        {
+            name : 'height',
+            label : '@@userview.dashboard.label.portlet.height@@',
+            type : 'textfield'
+        },
+        {
+            name : 'autoReload',
+            label : '@@userview.dashboard.label.portlet.autoReload@@',
+            type : 'textfield'
+        },
+        {
+            name : 'fixed',
+            label : '@@userview.dashboard.label.portlet.fixedPosition@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        },
+        {
+            name : 'resizable',
+            label : '@@userview.dashboard.label.resizable@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        },
+        {
+            name : 'autoHeight',
+            label : '@@userview.dashboard.label.autoHeight@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        }],
+        control_field: 'mode',
+        control_value: 'plugins',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'userviewId',
+        label : '@@generator.approval.process.userview@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/userview/options',
+        control_field: 'mode',
+        control_value: '',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'urlPortletSetting',
+        label : '@@userview.dashboard.label.urlPortletSetting@@',
+        type : 'repeater',
+        fields : [{
+            name : 'url',
+            label : '@@userview.dashboard.label.portlet.url@@',
+            required : 'True',
+            type : 'textfield'
+        },
+        {
+            name : 'label',
+            label : '@@userview.runprocess.label@@',
+            required : 'True',
+            type : 'textfield'
+        },
+        {
+            name : 'x',
+            label : '@@userview.dashboard.label.portlet.positionX@@',
+            type : 'textfield'
+        },
+        {
+            name : 'y',
+            label : '@@userview.dashboard.label.portlet.positionY@@',
+            type : 'textfield'
+        },
+        {
+            name : 'width',
+            label : '@@userview.dashboard.label.portlet.width@@',
+            type : 'selectbox',
+            options : [
+                { value : '1', label : '1'},
+                { value : '2', label : '2'},
+                { value : '3', label : '3'}
+            ]
+        },
+        {
+            name : 'height',
+            label : '@@userview.dashboard.label.portlet.height@@',
+            type : 'textfield'
+        },
+        {
+            name : 'autoReload',
+            label : '@@userview.dashboard.label.portlet.autoReload@@',
+            type : 'textfield'
+        },
+        {
+            name : 'fixed',
+            label : '@@userview.dashboard.label.portlet.fixedPosition@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        },
+        {
+            name : 'resizable',
+            label : '@@userview.dashboard.label.resizable@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        },
+        {
+            name : 'autoHeight',
+            label : '@@userview.dashboard.label.autoHeight@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        }],
+        control_field: 'mode',
+        control_value: 'url',
+        control_use_regex: 'false'
+    }]
+},
+{
+    title : '@@userview.slareportmenu.ui@@',
+    properties : [{
+        name : 'defaultPortletWidth',
+        label : '@@userview.dashboard.label.defaultPortletWidth@@',
+        type : 'selectbox',
+        value : '1',
+        options : [
+            { value : '1', label : '1'},
+            { value : '2', label : '2'},
+            { value : '3', label : '3'}
+        ],
+        control_field: 'mode',
+        control_value: '',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'defaultPortletHeight',
+        label : '@@userview.dashboard.label.gridCellHeight@@',
+        type : 'textfield',
+        required : 'True',
+        value : '250'
+    },
+    {
+        name : 'resizable',
+        label : '@@userview.dashboard.label.resizable@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [
+            { value : 'true', label : ''}
+        ],
+        control_field: 'mode',
+        control_value: '',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'autoHeight',
+        label : '@@userview.dashboard.label.autoHeight@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [
+            { value : 'true', label : ''}
+        ],
+        control_field: 'mode',
+        control_value: '',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'customHeader',
+        label : '@@userview.slareportmenu.customHeader@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '5'
+    },
+    {
+        name : 'customFooter',
+        label : '@@userview.slareportmenu.customFooter@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '5'
+    }]
+},
+{
+    title : '@@userview.crudmenu.advanced@@',
+    properties : [{
+        name : 'customPortletSetting',
+        label : '@@userview.dashboard.label.customPortletSetting@@',
+        type : 'repeater',
+        fields : [{
+            name : 'menuID',
+            label : '@@userview.dashboard.label.portlet.menuId@@',
+            options_ajax_on_change : 'userviewId',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/userview/menu/options',
+            required : 'True',
+            type : 'selectbox'
+        },
+        {
+            name : 'x',
+            label : '@@userview.dashboard.label.portlet.positionX@@',
+            type : 'textfield'
+        },
+        {
+            name : 'y',
+            label : '@@userview.dashboard.label.portlet.positionY@@',
+            type : 'textfield'
+        },
+        {
+            name : 'width',
+            label : '@@userview.dashboard.label.portlet.width@@',
+            type : 'selectbox',
+            options : [
+                { value : '1', label : '1'},
+                { value : '2', label : '2'},
+                { value : '3', label : '3'}
+            ]
+        },
+        {
+            name : 'height',
+            label : '@@userview.dashboard.label.portlet.height@@',
+            type : 'textfield'
+        },
+        {
+            name : 'autoReload',
+            label : '@@userview.dashboard.label.portlet.autoReload@@',
+            type : 'textfield'
+        },
+        {
+            name : 'fixed',
+            label : '@@userview.dashboard.label.portlet.fixedPosition@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        },
+        {
+            name : 'resizable',
+            label : '@@userview.dashboard.label.resizable@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        },
+        {
+            name : 'autoHeight',
+            label : '@@userview.dashboard.label.autoHeight@@',
+            type : 'checkbox',
+            options : [
+                {value : 'true', label : ''}
+            ]
+        }]
+    }],
+    control_field: 'mode',
+    control_value: '',
+    control_use_regex: 'false'
+}]

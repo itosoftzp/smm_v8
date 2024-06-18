@@ -1,0 +1,110 @@
+.dataList{
+    min-width: 100%;
+}
+.dataList table {
+    width: 100%;
+    min-width: min-content;
+}
+.dataList .table-wrapper{
+    overflow-x:unset;
+    overflow:unset !important;
+}
+.filters, actions {
+    min-height: 35px;
+}
+td + .gap, th + .gap {
+    display:none;
+}
+.dataList thead th.rowActions div a {
+    color:transparent;
+    opacity: 0;
+    font-weight: normal;
+    pointer-events: none;
+}
+.dataList thead th.rowActions,
+.dataList tbody td.rowActions
+{
+    white-space: nowrap;
+    padding:0;
+    min-width:50px;
+}
+.dataList thead th.rowActions div,
+.dataList tbody td.rowActions div {
+    display: inline-block;
+    height: 100%;
+    padding: 5px 10px;
+}
+.dataList thead th.rowActions div{
+    padding: 10px;
+}
+.dataList thead th[data-cbuilder-classname],
+.dataList thead th.rowActions div[data-cbuilder-classname]
+{
+    position: relative;
+}
+.dataList thead th[data-cbuilder-classname] .overlay,
+.dataList thead th.rowActions div[data-cbuilder-classname] .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -175px;
+    display: block;
+}
+.dataList div.rowActionsContainer div.rowActions a + a{
+    margin-left: 3px;
+}
+body.is-dragging tr[data-cbuilder-droparea] th:not(.rowActions), 
+body.is-dragging th[data-cbuilder-droparea]{
+    background: rgba(0, 123, 255, 0.2);
+}
+body.is-dragging [data-cbuilder-replicate] {
+    display: none !important;
+}
+.dataList .column-hidden {
+    display: table-cell;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.stretched-link:after{
+    display: none;
+}
+body:not(.show-node-details) .dataList thead th[data-cbuilder-classname][data-cbuilder-element-invisible]::after,
+body:not(.show-node-details) .dataList thead th.rowActions div[data-cbuilder-classname][data-cbuilder-invisible]::after {
+    bottom: -175px;
+    height: auto;
+}
+.dropdown-menu[data-placeholder-key] {
+    display: block !important;
+}
+[data-cbuilder-replicate] .dropdown-menu[data-placeholder-key] {
+    display: none !important;
+}
+
+/* responsive layout */
+table.breakpoint th .overlay{
+    display: none !important;
+}
+.row_action_inner div {
+    display: inline-block;
+}
+.footable-row-detail-cell-actions .row_action_inner > div{
+    margin-right: 5px;
+}
+.footable-visible[data-cbuilder-element-invisible]:after{
+    display:none !important;
+}
+table.defaulttemplate td[data-cbuilder-element-invisible]:after{
+    display: none !important;
+}
+.cards.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}

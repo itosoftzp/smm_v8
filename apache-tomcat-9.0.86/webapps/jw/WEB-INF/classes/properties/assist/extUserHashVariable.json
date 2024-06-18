@@ -1,0 +1,643 @@
+{
+    "optionGroup" : {
+        "@@assist.User@@" : [
+            {
+                "value" : "#user.USERNAME.fullName#",
+                "label" : "@@assist.user.fullName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".fullName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.firstName#",
+                "label" : "@@assist.user.firstName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".firstName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.lastName#",
+                "label" : "@@assist.user.lastName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".lastName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.email#",
+                "label" : "@@assist.user.email@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".email#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.active#",
+                "label" : "@@assist.user.active@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".active#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.timeZone#",
+                "label" : "@@assist.user.timeZone@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".timeZone#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.locale#",
+                "label" : "@@assist.user.locale@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".locale#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.roles#",
+                "label" : "@@assist.user.roles@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".roles#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.employee.code#",
+                "label" : "@@assist.user.employee.code@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".employee.code#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.employee.jobTitle#",
+                "label" : "@@assist.user.employee.jobTitle@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".employee.jobTitle#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.employee.isHod#",
+                "label" : "@@assist.user.employee.isHod@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".employee.isHod#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.organization.id#",
+                "label" : "@@assist.user.organization.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".organization.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.organization.name#",
+                "label" : "@@assist.user.organization.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".organization.name#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.organization.description#",
+                "label" : "@@assist.user.organization.description@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".organization.description#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.id#",
+                "label" : "@@assist.user.department.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.name#",
+                "label" : "@@assist.user.department.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.name#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.description#",
+                "label" : "@@assist.user.department.description@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.description#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.fullName#",
+                "label" : "@@assist.user.department.hod.fullName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.fullName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.username#",
+                "label" : "@@assist.user.department.hod.username@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.username#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.firstName#",
+                "label" : "@@assist.user.department.hod.firstName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.firstName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.lastName#",
+                "label" : "@@assist.user.department.hod.lastName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.lastName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.email#",
+                "label" : "@@assist.user.department.hod.email@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.email#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.active#",
+                "label" : "@@assist.user.department.hod.active@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.active#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.hod.timeZone#",
+                "label" : "@@assist.user.department.hod.timeZone@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.hod.timeZone#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.organization.id#",
+                "label" : "@@assist.user.department.organization.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.organization.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.organization.name#",
+                "label" : "@@assist.user.department.organization.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.organization.nam#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.department.organization.description#",
+                "label" : "@@assist.user.department.organization.description@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".department.organization.description#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.grade.id#",
+                "label" : "@@assist.user.grade.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".grade.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.grade.name#",
+                "label" : "@@assist.user.grade.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".grade.name#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.grade.description#",
+                "label" : "@@assist.user.grade.description@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".grade.description#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.grade.organization.id#",
+                "label" : "@@assist.user.grade.organization.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".grade.organization.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.grade.organization.name#",
+                "label" : "@@assist.user.grade.organization.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".grade.organization.name#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.grade.organization.description#",
+                "label" : "@@assist.user.grade.organization.description@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".grade.organization.description#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.groups.id#",
+                "label" : "@@assist.user.groups.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".groups.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.groups.name#",
+                "label" : "@@assist.user.groups.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".groups.name#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.groups.organization.id#",
+                "label" : "@@assist.user.groups.organization.id@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".groups.organization.id#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.groups.organization.name#",
+                "label" : "@@assist.user.groups.organization.name@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".groups.organization.name#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.groups.organization.description#",
+                "label" : "@@assist.user.groups.organization.description@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".groups.organization.description#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.fullName#",
+                "label" : "@@assist.user.hod.fullName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.fullName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.username",
+                "label" : "@@assist.user.hod.username@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.username#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.firstName#",
+                "label" : "@@assist.user.hod.firstName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.firstName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.lastName#",
+                "label" : "@@assist.user.hod.lastName@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.lastName#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.email#",
+                "label" : "@@assist.user.hod.email@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.email#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.active#",
+                "label" : "@@assist.user.hod.active@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.active#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.hod.timeZone#",
+                "label" : "@@assist.user.hod.timeZone@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".hod.timeZone#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.meta.KEY#",
+                "label" : "@@assist.user.meta@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".meta.",
+                    {
+                        "placeholder" : "KEY",
+                        "required" : true
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.dateFormat#",
+                "label" : "@@assist.user.dateFormat@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".dateFormat#"
+                ]
+            },
+            {
+                "value" : "#user.USERNAME.dateTimeFormat#",
+                "label" : "@@assist.user.dateTimeFormat@@",
+                "syntax" : [
+                    "#user.",
+                    {
+                        "placeholder" : "USERNAME",
+                        "option" : "username",
+                        "required" : true
+                    },
+                    ".dateTimeFormat#"
+                ]
+            }
+        ]
+    },
+    "optionField" : {
+        "username" : {
+            "name" : "username",
+            "label" : "@@assist.User@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/directory/user/options",
+            "type" : "selectbox"
+        }
+    }
+}

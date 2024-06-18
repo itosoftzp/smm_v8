@@ -1,0 +1,15 @@
+.nesteddl_trigger{position: relative; display: inline-block; cursor: pointer; z-index: 2;}
+.nesteddl_trigger:hover {opacity: 0.7;}
+.nesteddl_trigger:before{content:"\f0d7"; display: inline-block; font-family: 'FontAwesome'; margin-right: 5px; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none;-webkit-font-smoothing: antialiased;}
+.nesteddl_trigger.active:before {content:"\f0d8";}
+.nesteddl_trigger + .dataList {display:none !important;}
+.nesteddl_trigger.active + .dataList {display:block !important; margin-top: 5px;}
+.nesteddl_row {display:none;}
+.nesteddl_container.nesteddl_row.active {display: table-row;}
+.nesteddl_row.active > td.nesteddl_col {display: table-cell !important}
+.nesteddl_container .filters, .nesteddl_container .dataList span.pagebanner, .nesteddl_container .exportlinks, .nesteddl_container .footable-buttons {display: none !important;}
+.nesteddl_row .nesteddl_col {padding: 0 !important; overflow: hidden;}
+.nesteddl_container .dataList {display: none; width: 125%; transform-origin: 0 0; transform: scale(0.8); float:left;}
+.nesteddl_container.active .dataList.active {display: block;}
+.nesteddl_container .dataList span.pagelinks {text-align: right;}
+.nesteddl_container a, .nesteddl_container button {z-index: 2;}

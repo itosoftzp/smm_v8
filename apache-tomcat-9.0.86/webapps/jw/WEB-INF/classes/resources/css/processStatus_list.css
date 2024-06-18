@@ -1,0 +1,47 @@
+.process_container {position: relative; padding: 30px;}
+.process_container .process_title {margin-bottom: 20px;}
+.process_container ul {list-style: none; padding: 0;}
+.process_container ul li.message span {display:block; background: #0288d1; color: #fff; font-weight: bold; padding: 5px 15px; border-radius: 5px;}
+.process_container ul li.message.migrated span {background: #31708f;}
+.process_container ul li.hidden_node{display: none;}
+.process_container .progress_bar {position: absolute; top:15px; right:10px; width: 150px; height: 20px; background: #eee;}
+.rtl .process_container .progress_bar {right:auto; left:10px;}
+.process_container > .progress_bar {top:inherit; margin-top: -15px;}
+.process_container .progress_bar .bar_label {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); color: #000;}
+.process_container .progress_bar.revert .bar_label{color: #fff;}
+.process_container .progress_bar .bar {position: absolute; top:0; bottom:0; left:0; background: #43a047;}
+.process_container .progress_bar.aborted {background: #f2dede;}
+.process_container .progress_bar.aborted .bar {background: #a94442;}
+.process_container .skipped > .progress_bar {background: #efebe9;}
+.process_container .skipped > .progress_bar .bar_label {color: #8d6e63;}
+.process_container .node_label {font-weight: bold; padding-right: 115px}
+.rtl .process_container .node_label {font-weight: bold; padding-left: 115px; padding-right: 0px;}
+.process_container .node_user, .process_container .node_date {font-size: 80%; color: #777; padding-right: 115px}
+.rtl .process_container .node_user, .rtl .process_container .node_date {padding-left: 115px; padding-right: 0;}
+.process_container .node_status {position: absolute; top:15px; right: 10px; background:#929FA4; color:#fff; padding: 5px 10px; box-sizing: border-box; min-width: 100px; text-align: center;}
+.rtl .process_container .node_status {right: auto; left: 10px;}
+.process_container .completed > .node_status {background:#43a047;}
+.process_container .completed.terminated > .node_status {background:#e9f2ea; color:#43a047;}
+.process_container .inprogress > .node_status {background:#0288d1;}
+.process_container .skipped > .node_status {background:#efebe9; color:#8d6e63;}
+.process_container .withdrawn > .node_status {background:#f2dede; color:#a94442;}
+.process_container .clickable {cursor: pointer;}
+.layout_path .process_container ul li.node {position: relative; padding: 15px 0px 0px 20px; min-height: 43px;}
+.rtl .layout_path .process_container ul li.node {padding: 15px 20px 0px 0px; text-align: right;}
+.layout_path .process_container ul li.message {position: relative; padding: 15px 0px 0px 20px;}
+.rtl .layout_path .process_container ul li.message {padding: 15px 20px 0px 0px;}
+.layout_path .process_container ul li:before {content: ""; border-left:2px solid #ccc; position: absolute; top: 0px; bottom:0px; left:5px; width: 0;}
+.rtl .layout_path .process_container ul li:before {left:auto; right:5px;}
+.layout_path .process_container ul li:first-child:before {top: 20px; }
+.layout_path .process_container ul li:last-child:before, .layout_path   .process_container ul li.last:before {bottom:initial; height: 20px;} 
+.layout_path .process_container ul li.first.last:before, .layout_path .process_container ul li:first-child:last-child:before, .process_container ul li.message:last-child:before {display: none;}
+.layout_path .process_container ul li.node:after {content: ""; width:12px; height:12px; border-radius: 50%; background: #ccc; position: absolute; top:18px; left:0px;}
+.rtl .layout_path .process_container ul li.node:after {left:auto; right:0px;}
+.layout_path .process_container li.completed:after {background:#43a047 !important;}
+.layout_path .process_container li.completed.terminated:after {background:#e9f2ea !important;}
+.layout_path .process_container li.inprogress:after {background:#0288d1 !important;}
+.layout_path .process_container li.skipped:after {background:#8d6e63 !important;}
+.layout_path .process_container li.withdrawn:after {background:#a94442 !important;}
+.layout_path .process_container ul li.child_path:after {background:#ddd !important;} 
+.layout_path .process_container li.child_path ul:before {content: ""; border-left:2px solid #ccc; position: absolute; top: 24px; left:5px; width: 0; height: 40px; transform-origin: 0px 0px; transform: rotate(330deg);}
+.rtl .layout_path .process_container li.child_path ul:before {left:auto; right:5px; transform: rotate(30deg);}

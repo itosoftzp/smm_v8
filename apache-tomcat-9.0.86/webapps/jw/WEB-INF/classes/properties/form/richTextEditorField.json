@@ -1,0 +1,173 @@
+[{
+    title : '@@form.richtexteditorfield.edit@@',
+    properties : [{
+        name : 'id',
+        label : '@@form.richtexteditorfield.id@@',
+        type : 'autocomplete',
+        required : 'True',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@form.richtexteditorfield.invalidId@@',
+        options_callback : 'FormBuilder.getAllFieldOptions'
+    },
+    {
+        name : 'label',
+        label : '@@form.richtexteditorfield.label@@',
+        type : 'textfield',
+        value : '@@org.joget.plugin.enterprise.RichTextEditorField.pluginLabel@@'
+    },
+    {
+        name : 'editor',
+        label : '@@form.richtexteditorfield.editor@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : '@@form.richtexteditorfield.tinymce@@'
+        },{
+            value : 'quill',
+            label : '@@form.richtexteditorfield.quill@@'
+        }]
+    },
+    {
+        name : 'mode',
+        label : '@@form.richtexteditorfield.fullFeature@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : '@@form.richtexteditorfield.fullFeature.simple@@'
+        },{
+            value : 'full',
+            label : '@@form.richtexteditorfield.fullFeature.full@@'
+        }],
+        control_field: 'editor',
+        control_value: '',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'qmode',
+        label : '@@form.richtexteditorfield.fullFeature@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : '@@form.richtexteditorfield.fullFeature.simple@@'
+        },{
+            value : 'full',
+            label : '@@form.richtexteditorfield.fullFeature.full@@'
+        },{
+            value : 'inline',
+            label : '@@form.richtexteditorfield.fullFeature.inline@@'
+        }],
+        control_field: 'editor',
+        control_value: 'quill',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'switch',
+        label : '@@form.richtexteditorfield.switch@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }],
+        control_field: 'qmode',
+        control_value: '^$|full',
+        control_use_regex: 'true'
+    },
+    {
+        name : 'inlineSwitch',
+        label : '@@form.richtexteditorfield.inlineSwitch@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : '@@form.richtexteditorfield.disable@@'    
+        },{
+            value : 'simple',
+            label : '@@form.richtexteditorfield.fullFeature.simple@@'
+        },{
+            value : 'full',
+            label : '@@form.richtexteditorfield.fullFeature.full@@'
+        }],
+        control_field: 'qmode',
+        control_value: 'inline',
+        control_use_regex: 'true'
+    },
+    {
+        name : 'placeholder',
+        label : '@@form.richtexteditorfield.placeholder@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@form.richtexteditorfield.advancedOptions@@',
+    properties : [{
+        label : '@@form.richtexteditorfield.data@@',
+        type : 'header'
+    },
+    {
+        name : 'value',
+        label : '@@form.richtexteditorfield.value@@',
+        rows : '5',
+        cols : '60',
+        type : 'textarea'
+    },
+    {
+        name : 'validator',
+        label : '@@form.richtexteditorfield.validator@@',
+        type : 'elementselect',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormValidator',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    },
+    {
+        label : '@@form.richtexteditorfield.ui@@',
+        type : 'header'
+    },
+    {
+        name : 'readonly',
+        label : '@@form.richtexteditorfield.readonly@@',
+        type : 'checkbox',
+        value : 'False',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'height',
+        label : '@@form.richtexteditorfield.height@@',
+        type : 'textfield'
+    },
+    {
+        name : 'customSettings',
+        label : '@@form.spreadsheet.customSettings@@',
+        type : 'codeeditor',
+        mode : 'json',
+        check_syntax : 'false'
+    },
+    {
+        label : '@@form.richtexteditorfield.imageUpload@@',
+        type : 'header'
+    },
+    {
+        name:'permissionType',
+        label:'@@form.section.permission@@',
+        type:'selectbox',
+        value : '',
+        options : [{
+            value : '', label : '@@form.fileupload.permission.loggedInUsers@@'
+        },{
+            value : 'public', label : '@@form.fileupload.permission.public@@'
+        },{
+            value : 'custom', label : '@@form.fileupload.permission.custom@@'
+        }]
+    },
+    {
+        name:'permissionPlugin',
+        label:'@@form.fileupload.customPermission@@',
+        type:'elementselect',
+        control_field: 'permissionType',
+        control_value: 'custom',
+        control_use_regex: 'false',
+        required : 'true',
+        options_ajax:'[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormPermission',
+        url:'[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    }]
+}]

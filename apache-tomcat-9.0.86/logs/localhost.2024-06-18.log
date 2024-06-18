@@ -1,0 +1,51 @@
+18-Jun-2024 01:51:43.784 INFO [main] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+18-Jun-2024 01:51:47.606 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+18-Jun-2024 01:52:43.352 INFO [main] org.apache.catalina.core.ApplicationContext.log Printing properties before JavaScript servlet, note, the JavaScript properties might not be initialized yet: 
+************************************************************
+* OWASP CSRFGuard properties
+
+* Actions: 
+	* org.owasp.csrfguard.action.Log
+		* Parameter: Message = potential cross-site request forgery (CSRF) attack thwarted (user:%user%, ip:%remote_ip%, method:%request_method%, uri:%request_uri%, error:%exception_message%)
+	* org.owasp.csrfguard.action.Error
+		* Parameter: Message = Security violation.
+		* Parameter: Code = 403
+	* org.owasp.csrfguard.action.Rotate
+* Ajax: true
+* Banned User Agent Properties: 
+	* msie
+	* trident
+* Enabled: true
+* Force Synchronous Ajax: false
+* Is Javascript Inject Into Dynamically Created Nodes: false
+* Javascript Domain Strict: false
+* Javascript Inject Form Attributes: false
+* Javascript Inject Get Forms: false
+* Javascript Inject Into Attributes: false
+* Javascript Inject Into Forms: false
+* Javascript Params Initialized: false
+* Javascript Referer Match Domain: false
+* Javascript Referer Match Protocol: false
+* Logical Session Extractor: org.owasp.csrfguard.session.SessionTokenKeyExtractor
+* Page Token Synchronization Tolerance: 2000 ms
+* Print Config: true
+* Prng: java.security.SecureRandom(algorithm: SHA1PRNG, provider: SUN version 11)
+* Protect: false
+* Rotate: false
+* Token Holder: org.owasp.csrfguard.token.storage.impl.InMemoryTokenHolder
+* Token Length: 32
+* Token Name: OWASP_CSRFTOKEN
+* Token Per Page: false
+* Token Per Page Precreate: false
+* Unprotected Methods: 
+	* GET
+* Unprotected Pages: 
+	* /jw/web/json/*
+* Use New Token Landing Page: false
+* Validation When No Session Exists: true
+************************************************************
+
+18-Jun-2024 01:52:43.525 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring CustomDispatcherServlet 'dispatcher'
+18-Jun-2024 01:52:43.976 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+18-Jun-2024 01:52:43.977 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+18-Jun-2024 01:52:43.980 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@4c6c197a')

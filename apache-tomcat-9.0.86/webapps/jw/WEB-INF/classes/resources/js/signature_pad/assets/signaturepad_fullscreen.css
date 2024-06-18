@@ -1,0 +1,78 @@
+.sigPad {
+    position: relative;
+}
+
+.sigPad .fullscreenButton:hover {
+    cursor: pointer;
+    color: inherit;
+}
+
+.sigPad .fullscreenButton {
+    cursor: pointer;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px;
+    outline: none;
+    position: absolute;
+}
+
+body.rtl .sigPad .fullscreenButton {
+    left: 0px;
+    right: auto;
+}
+
+.sigPad.fullscreen-active .fullscreenButton, .sigPad.fullscreen .fullscreenButton{
+    top: 0px;
+    margin: 0px;
+    height: 0%;
+    right: 0px;
+}
+
+.sigPad.fullscreen-active .fullscreenButton i, .sigPad.fullscreen .fullscreenButton i{
+    font-size: 25px !important;
+}
+
+.sigPad.fullscreen-active .clearButton, .sigPad.fullscreen .clearButton {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: inherit;
+    margin-bottom: 10px;
+}
+
+body.rtl .sigPad.fullscreen-active .clearButton, body.rtl .sigPad.fullscreen .clearButton {
+    right: 10px;
+    left:auto;
+}
+
+.sigPad.fullscreen-active .clearButton a, .sigPad.fullscreen .clearButton a{
+    font-size: 25px !important;
+}
+
+.sigPad.fullscreen-active {
+    background-color: #b7b7b7;
+}
+
+.sigPad.fullscreen-active .clearButton:hover, .sigPad.fullscreen .clearButton:hover {
+    color: black;
+}
+
+.sigPad.fullscreen-active .pad, .sigPad.fullscreen .pad {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sigPad.fullscreen {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    height: auto !important;
+    width: auto  !important;
+    z-index: 2147483647;
+    background-color: #b7b7b7;
+}
+
+.sigPad.fullscreen .fullscreenButton {
+    position: absolute;
+}

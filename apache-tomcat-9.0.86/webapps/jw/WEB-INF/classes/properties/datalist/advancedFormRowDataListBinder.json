@@ -1,0 +1,320 @@
+[{
+    title : '@@datalist.afrdlb.config@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@datalist.afrdlb.form@@',
+        type : 'selectbox',
+	options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/formsWithCustomTable/options',
+        required : 'True'
+    },
+    {
+        name : 'joins',
+        label : '@@datalist.afrdlb.joins@@',
+        type : 'grid',
+        columns : [{
+            key : 'tableName',
+            label : '@@datalist.afrdlb.formDataTable@@',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/tableName/options',
+            required : 'True'
+        },
+        {
+            key : 'fieldId',
+            label : '@@datalist.afrdlb.field@@',
+            options_ajax_on_change : 'formDefId;tables:joins.tableName',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            options_ajax_row_regex_filter : '${tableName}\\\..+'
+        },
+        {
+            key : 'joinFieldId',
+            label : '@@datalist.afrdlb.joins.joinFieldId@@',
+            options_ajax_on_change : 'formDefId;tables:joins.tableName',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            required : 'True'
+        }]
+    }]
+},
+{
+    title : '@@datalist.afrdlb.advanced@@',
+    properties : [{
+        label : '@@datalist.afrdlb.filter@@',
+        type : 'header'
+    },
+    {
+        name : 'filters',
+        label : '@@datalist.afrdlb.filters@@',
+        type : 'grid',
+        columns : [{
+            key : 'join',
+            label : '@@datalist.afrdlb.join@@',
+            options : [{
+                value : 'AND',
+                label : '@@datalist.afrdlb.join.and@@'
+            },
+            {
+                value : 'OR',
+                label : '@@datalist.afrdlb.join.or@@'
+            }],
+            required : 'True'
+        },
+        {
+            key : 'field',
+            label : '@@datalist.afrdlb.field@@',
+            options_ajax_on_change : 'formDefId;tables:joins.tableName;fields:functionColumns.alias',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            required : 'True'
+        },
+        {
+            key : 'operator',
+            label : '@@datalist.afrdlb.operator@@',
+            options : [{
+                value : '=',
+                label : '@@datalist.afrdlb.operator.equal@@'
+            },
+            {
+                value : '<>',
+                label : '@@datalist.afrdlb.operator.notEqual@@'
+            },
+            {
+                value : '>',
+                label : '@@datalist.afrdlb.operator.greaterThan@@'
+            },
+            {
+                value : '>=',
+                label : '@@datalist.afrdlb.operator.greaterThanOrEqual@@'
+            },
+            {
+                value : '<',
+                label : '@@datalist.afrdlb.operator.lessThan@@'
+            },
+            {
+                value : '<=',
+                label : '@@datalist.afrdlb.operator.lessThanOrEqual@@'
+            },
+            {
+                value : 'LIKE',
+                label : '@@datalist.afrdlb.operator.like@@'
+            },
+            {
+                value : 'NOT LIKE',
+                label : '@@datalist.afrdlb.operator.notLike@@'
+            },
+            {
+                value : 'IN',
+                label : '@@datalist.afrdlb.operator.in@@'
+            },
+            {
+                value : 'NOT IN',
+                label : '@@datalist.afrdlb.operator.notIn@@'
+            },
+            {
+                value : 'IS TRUE',
+                label : '@@datalist.afrdlb.operator.isTrue@@'
+            },
+            {
+                value : 'IS FALSE',
+                label : '@@datalist.afrdlb.operator.isFalse@@'
+            },
+            {
+                value : 'IS NULL',
+                label : '@@datalist.afrdlb.operator.isNull@@'
+            },
+            {
+                value : 'IS NOT NULL',
+                label : '@@datalist.afrdlb.operator.isNotNull@@'
+            }],
+            required : 'True'
+        },
+        {
+            key : 'value',
+            label : '@@datalist.afrdlb.value@@'
+        }]
+    },
+    {
+        name : 'extraCondition',
+        label : '@@datalist.afrdlb.extraCondition@@',
+        description : '@@datalist.afrdlb.extraCondition.desc@@',
+        type : 'textarea',
+        rows : '5',
+        cols : '50'
+    },
+    {
+        label : '@@datalist.afrdlb.aggregate@@',
+        type : 'header'
+    },
+    {
+        name : 'aggregateField',
+        label : '@@datalist.afrdlb.aggregateField@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@datalist.afrdlb.field@@',
+            options_ajax_on_change : 'formDefId;tables:joins.tableName',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            required : 'True'
+        },
+        {
+            key : 'function',
+            label : '@@datalist.afrdlb.function@@',
+            options : [{
+                value : 'AFD_COUNT_',
+                label : '@@datalist.afrdlb.aggregate.count@@'
+            },
+            {
+                value : 'AFD_COUNT_DISTINCT_',
+                label : '@@datalist.afrdlb.aggregate.countDistinct@@'
+            },
+            {
+                value : 'AFD_SUM_',
+                label : '@@datalist.afrdlb.aggregate.sum@@'
+            },
+            {
+                value : 'AFD_AVG_',
+                label : '@@datalist.afrdlb.aggregate.avg@@'
+            },
+            {
+                value : 'AFD_MIN_',
+                label : '@@datalist.afrdlb.aggregate.min@@'
+            },
+            {
+                value : 'AFD_MAX_',
+                label : '@@datalist.afrdlb.aggregate.max@@'
+            }],
+            required : 'True'
+        }]
+    },
+    {
+        name : 'groupBy',
+        label : '@@datalist.afrdlb.aggregate.groupBy@@',
+        description : '@@datalist.afrdlb.aggregate.groupBy.desc@@',
+        type : 'sortableSelect',
+        options_ajax_on_change : 'formDefId;tables:joins.tableName;fields:functionColumns.alias',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    },
+    {
+        name : 'having',
+        label : '@@datalist.afrdlb.having@@',
+        type : 'grid',
+        columns : [{
+            key : 'join',
+            label : '@@datalist.afrdlb.join@@',
+            options : [{
+                value : 'AND',
+                label : '@@datalist.afrdlb.join.and@@'
+            },
+            {
+                value : 'OR',
+                label : '@@datalist.afrdlb.join.or@@'
+            }],
+            required : 'True'
+        },
+        {
+            key : 'field',
+            label : '@@datalist.afrdlb.field@@',
+            options_ajax_on_change : 'formDefId;tables:joins.tableName',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options',
+            required : 'True'
+        },
+        {
+            key : 'function',
+            label : '@@datalist.afrdlb.function@@',
+            options : [{
+                value : 'AFD_COUNT_',
+                label : '@@datalist.afrdlb.aggregate.count@@'
+            },
+            {
+                value : 'AFD_COUNT_DISTINCT_',
+                label : '@@datalist.afrdlb.aggregate.countDistinct@@'
+            },
+            {
+                value : 'AFD_SUM_',
+                label : '@@datalist.afrdlb.aggregate.sum@@'
+            },
+            {
+                value : 'AFD_AVG_',
+                label : '@@datalist.afrdlb.aggregate.avg@@'
+            },
+            {
+                value : 'AFD_MIN_',
+                label : '@@datalist.afrdlb.aggregate.min@@'
+            },
+            {
+                value : 'AFD_MAX_',
+                label : '@@datalist.afrdlb.aggregate.max@@'
+            }],
+            required : 'True'
+        },
+        {
+            key : 'operator',
+            label : '@@datalist.afrdlb.operator@@',
+            options : [{
+                value : '=',
+                label : '@@datalist.afrdlb.operator.equal@@'
+            },
+            {
+                value : '<>',
+                label : '@@datalist.afrdlb.operator.notEqual@@'
+            },
+            {
+                value : '>',
+                label : '@@datalist.afrdlb.operator.greaterThan@@'
+            },
+            {
+                value : '>=',
+                label : '@@datalist.afrdlb.operator.greaterThanOrEqual@@'
+            },
+            {
+                value : '<',
+                label : '@@datalist.afrdlb.operator.lessThan@@'
+            },
+            {
+                value : '<=',
+                label : '@@datalist.afrdlb.operator.lessThanOrEqual@@'
+            },
+            {
+                value : 'IN',
+                label : '@@datalist.afrdlb.operator.in@@'
+            },
+            {
+                value : 'NOT IN',
+                label : '@@datalist.afrdlb.operator.notIn@@'
+            }],
+            required : 'True'
+        },
+        {
+            key : 'value',
+            label : '@@datalist.afrdlb.value@@'
+        }],           
+        control_field: 'groupBy',
+        control_value: '.+',
+        control_use_regex: 'true'
+    },
+    {
+        label : '@@datalist.afrdlb.expressionColumns@@',
+        type : 'header'
+    },
+    {
+        name : 'functionColumns',
+        label : '@@datalist.afrdlb.expressionColumns@@',
+        description : '@@datalist.afrdlb.expressionColumns.desc@@',
+        type : 'grid',
+        columns : [{
+            key : 'alias',
+            label : '@@datalist.afrdlb.alias@@',
+            required : 'True'
+        },
+        {
+            key : 'function',
+            label : '@@datalist.afrdlb.expression@@',
+            required : 'True'
+        }]
+    },
+    {
+        name : 'customSelectionValue',
+        label : '@@datalist.afrdlb.customSelectionValue@@',
+        description : '@@datalist.afrdlb.customSelectionValue.desc@@',
+        type : 'selectbox',
+        options_ajax_on_change : 'formDefId;tables:joins.tableName;fields:functionColumns.alias',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+    }],
+    developer_mode : 'advanced'
+}]

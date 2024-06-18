@@ -1,0 +1,950 @@
+[
+    {
+        title:'@@userview.sqlchartmenu.editSqlChart@@',
+        properties:[
+            {
+                name : 'id',
+                label : 'Id',
+                type : 'hidden'
+            },
+            {
+                name : 'customId',
+                label : '@@userview.sqlchartmenu.customId@@',
+                type : 'textfield',
+                regex_validation : '^[a-zA-Z0-9_]+$',
+                validation_message : '@@userview.sqlchartmenu.invalidId@@'
+            },
+            {
+                name : 'label',
+                label : '@@userview.sqlchartmenu.label@@',
+                type : 'textfield',
+                required : 'True',
+                value : '@@userview.sqlchartmenu.sqlChart@@'
+            },
+            {
+                name:'chartType',
+                label:'@@userview.sqlchartmenu.chartType@@',
+                type:'selectbox',
+                options:[
+                    {
+                        value:'area',
+                        label:'@@userview.sqlchartmenu.areaChart@@'
+                    },
+                    {
+                        value:'bar',
+                        label:'@@userview.sqlchartmenu.barChart@@'
+                    },
+                    {
+                        value:'bubble',
+                        label:'@@userview.sqlchartmenu.bubbleChart@@'
+                    },
+                    {
+                        value:'candlestick',
+                        label:'@@userview.sqlchartmenu.candlestickChart@@'
+                    },
+                    {
+                        value:'donut',
+                        label:'@@userview.sqlchartmenu.donutChart@@'
+                    },
+                    {
+                        value:'line',
+                        label:'@@userview.sqlchartmenu.lineChart@@'
+                    },
+                    {
+                        value:'ohlc',
+                        label:'@@userview.sqlchartmenu.ohlcChart@@'
+                    },
+                    {
+                        value:'pie',
+                        label:'@@userview.sqlchartmenu.pieChart@@'
+                    },
+                    {
+                        value:'xy',
+                        label:'@@userview.sqlchartmenu.xyChart@@'
+                    }
+                ],
+                required:'True'
+            },
+            {
+                name : 'title',
+                label : '@@userview.sqlchartmenu.chartTitle@@',
+                type : 'textfield',
+                value : '@@userview.sqlchartmenu.chartTitle@@'
+            },
+            {
+                name:'library',
+                label:'@@userview.sqlchartmenu.library@@',
+                type:'selectbox',
+                value: 'echart',
+                options:[
+                    {
+                        value:'echart',
+                        label:'Apache ECharts'
+                    },
+                    {
+                        value:'',
+                        label:'jqPlot Charts'
+                    }
+                ],
+                control_field: 'chartType',
+                control_value: 'area|bar|line|donut|pie|xy',
+                control_use_regex: 'true'
+            }
+        ]
+    },
+    {
+        title:'@@datalist.jdbcDataListBinder.datasource@@',
+        properties:[
+            {
+                name : 'datasource',
+                label : '@@datalist.jdbcDataListBinder.datasource@@',
+                description : '@@datalist.jdbcDataListBinder.datasource.desc@@',
+                type : 'selectbox',
+                options : [{
+                    value : 'custom',
+                    label : '@@datalist.jdbcDataListBinder.customDatasource@@'
+                },{
+                    value : 'default',
+                    label : '@@datalist.jdbcDataListBinder.defaultDatasource@@'
+                },{
+                    value : 'binder',
+                    label : '@@userview.sqlchartmenu.usingBinder@@'
+                },{
+                    value : 'datalist',
+                    label : '@@userview.sqlchartmenu.usingDatalist@@'
+                }],
+                value : 'datalist'
+            },
+            {
+                label : '@@userview.sqlchartmenu.configureDatabase@@',
+                type : 'header',
+                control_field: 'datasource',
+                control_value: 'custom',
+                control_use_regex: 'false'
+            },
+            {
+                name:'driverClassName',
+                label:'@@userview.sqlchartmenu.databaseType@@',
+                description : '@@datalist.jdbcDataListBinder.driver.desc@@',
+                type : 'textfield',
+                value : 'com.mysql.jdbc.Driver',
+                control_field: 'datasource',
+                control_value: 'custom',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name:'url',
+                label:'@@userview.sqlchartmenu.targetUrl@@',
+                type:'textfield',
+                control_field: 'datasource',
+                control_value: 'custom',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name:'username',
+                label:'@@userview.sqlchartmenu.username@@',
+                type:'textfield',
+                control_field: 'datasource',
+                control_value: 'custom',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name:'password',
+                label:'@@userview.sqlchartmenu.password@@',
+                type:'password',
+                control_field: 'datasource',
+                control_value: 'custom',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                label : '@@userview.sqlchartmenu.sql@@',
+                type : 'header',
+                control_field: 'datasource',
+                control_value: 'default|custom',
+                control_use_regex: 'true'
+            },
+            {
+                name:'query',
+                label:'@@userview.sqlchartmenu.sqlQuery@@',
+                type : 'codeeditor',
+                mode : 'sql',
+                control_field: 'datasource',
+                control_value: 'default|custom',
+                control_use_regex: 'true',
+                required:'True'
+            },
+            {
+                name : 'binder',
+                label : '@@userview.sqlchartmenu.binder@@',
+                type : 'elementselect',
+                required : 'True',
+                options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.datalist.model.DataListBinderDefault',
+                url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions',
+                control_field: 'datasource',
+                control_value: 'binder',
+                control_use_regex: 'false'
+            },
+            {
+                name : 'datalistId',
+                label : '@@userview.sqlchartmenu.datalistId@@',
+                type : 'selectbox',
+                required : 'true',
+                options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options',
+                control_field: 'datasource',
+                control_value: 'datalist',
+                control_use_regex: 'false'
+            },
+            {
+                name:'chartUseAllDataRows',
+                label:'@@userview.sqlchartmenu.chartUseAllDataRows@@',
+                type : 'selectbox',
+                value : '',
+                options : [
+                    {
+                        value : '',
+                        label : '@@userview.sqlchartmenu.chartUseAllDataRows.currentPage@@'
+                    },
+                    {
+                        value : 'true',
+                        label : '@@userview.sqlchartmenu.chartUseAllDataRows.all@@'
+                    }
+                ],
+                control_field: 'datasource',
+                control_value: 'datalist',
+                control_use_regex: 'false'
+            },
+            {
+                name:'showTable',
+                label:'@@userview.sqlchartmenu.showTable@@',
+                type : 'selectbox',
+                value : '',
+                options : [
+                    {
+                        value : '',
+                        label : '@@userview.sqlchartmenu.showTable.no@@'
+                    },
+                    {
+                        value : 'top',
+                        label : '@@userview.sqlchartmenu.showTable.top@@'
+                    },
+                    {
+                        value : 'bottom',
+                        label : '@@userview.sqlchartmenu.showTable.bottom@@'
+                    }
+                ],
+                control_field: 'datasource',
+                control_value: 'datalist',
+                control_use_regex: 'false'
+            },
+            {
+                name:'showExportLinks',
+                label:'@@userview.sqlchartmenu.showExportLinks@@',
+                type : 'selectbox',
+                value : '',
+                options : [
+                    {
+                        value : '',
+                        label : '@@userview.crudmenu.checkboxPosition.no@@'
+                    },
+                    {
+                        value : 'true',
+                        label : '@@dbuilder.hidden.yes@@'
+                    }
+                ],
+                control_field:'showTable',
+                control_value:'top|bottom',
+                control_use_regex:'true'
+            },
+            {
+                name:'showFilter',
+                label:'@@userview.sqlchartmenu.showFilter@@',
+                type : 'selectbox',
+                value : '',
+                options : [
+                    {
+                        value : '',
+                        label : '@@userview.crudmenu.checkboxPosition.no@@'
+                    },
+                    {
+                        value : 'true',
+                        label : '@@dbuilder.hidden.yes@@'
+                    }
+                ],
+                control_field:'showTable',
+                control_value:'top|bottom',
+                control_use_regex:'true'
+            }
+        ]
+    },
+    {
+        title:'@@userview.sqlchartmenu.binderDataMapping@@',
+        properties:[
+            {
+                name : 'sortingOrderByColumn',
+                label : '@@dbuilder.orderBy@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST'
+            },
+            {
+                name : 'sortingOrder',
+                label : '@@dbuilder.order@@',
+                type : 'selectbox',
+                options : [
+                    {label : '@@dbuilder.order.asc@@', value : 'ASC'},
+                    {label : '@@dbuilder.order.desc@@', value : 'DESC'}
+                ]
+            },
+            {
+                name : 'mapping_x',
+                label : '@@userview.sqlchartmenu.mapping.x-axis@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|bubble|line',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_ys',
+                label : '@@userview.sqlchartmenu.mapping.y-axis.values@@',
+                type : 'repeater',
+                fields : [{
+                    name : 'y',
+                    label : '@@userview.sqlchartmenu.mapping.value@@',
+                    type : 'selectbox',
+                    options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                    options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                    options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                    options_ajax_method: 'POST',
+                    required : 'True'
+                },
+                {
+                    name : 'legend',
+                    label : '@@userview.sqlchartmenu.mapping.seriesName@@',
+                    type: 'textfield'
+                },
+                {
+                    name:'customization',
+                    label:'@@userview.sqlchartmenu.seriesCustomization@@',
+                    type : 'codeeditor',
+                    mode : 'json',
+                    control_field:'library',
+                    control_value:'echart',
+                    control_use_regex:'false'
+                }],
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|line',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_legend',
+                label : '@@userview.sqlchartmenu.mapping.legend@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'pie|donut',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_value',
+                label : '@@userview.sqlchartmenu.mapping.value@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'pie',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name:'seriesCustomization',
+                label:'@@userview.sqlchartmenu.seriesCustomization@@',
+                type : 'codeeditor',
+                mode : 'json',
+                control_field:'library;chartType',
+                control_value:'echart;pie',
+                control_use_regex:'false'
+            },
+            {
+                name : 'mapping_values',
+                label : '@@userview.sqlchartmenu.mapping.values@@',
+                type : 'repeater',
+                fields : [{
+                    name : 'value',
+                    label : '@@userview.sqlchartmenu.mapping.value@@',
+                    type : 'selectbox',
+                    options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                    options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                    options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                    options_ajax_method: 'POST',
+                    required : 'True'
+                },
+                {
+                    name : 'legend',
+                    label : '@@userview.sqlchartmenu.mapping.seriesName@@',
+                    type: 'textfield',
+                    control_field:'library',
+                    control_value:'echart',
+                    control_use_regex:'false'
+                },
+                {
+                    name:'customization',
+                    label:'@@userview.sqlchartmenu.seriesCustomization@@',
+                    type : 'codeeditor',
+                    mode : 'json',
+                    control_field:'library',
+                    control_value:'echart',
+                    control_use_regex:'false'
+                }],
+                control_field: 'chartType',
+                control_value: 'donut',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name : 'mapping_y',
+                label : '@@userview.sqlchartmenu.mapping.y-axis@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'bubble',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name : 'mapping_r',
+                label : '@@userview.sqlchartmenu.mapping.radius@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'bubble',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name : 'mapping_label',
+                label : '@@userview.sqlchartmenu.mapping.label@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'bubble',
+                control_use_regex: 'false',
+                required : 'true'
+            },
+            {
+                name : 'mapping_date',
+                label : '@@userview.sqlchartmenu.mapping.date@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_open',
+                label : '@@userview.sqlchartmenu.mapping.open@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_high',
+                label : '@@userview.sqlchartmenu.mapping.high@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_low',
+                label : '@@userview.sqlchartmenu.mapping.low@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'mapping_close',
+                label : '@@userview.sqlchartmenu.mapping.close@@',
+                type : 'selectbox',
+                options_ajax_on_change : 'type:datasource;id:datalistId;binderId:binder.className;binderJson:binder.properties',
+                options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.SqlChartMenu/service?action=getDatalistColumns',
+                options_ajax_mapping: {arrayObj: 'columns', value: 'name', label: 'label', addEmpty: true},
+                options_ajax_method: 'POST',
+                control_field: 'chartType',
+                control_value: 'candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            }
+        ],
+        control_field: 'datasource',
+        control_value: 'binder|datalist',
+        control_use_regex: 'true'
+    },
+    {
+        title:'@@userview.sqlchartmenu.chartOptions@@',
+        properties:[
+            {
+                name: 'theme',
+                label: '@@userview.sqlchartmenu.theme@@',
+                type: 'selectbox',
+                options: [
+                    {
+                        value:'',
+                        label: 'Default'
+                    },
+                    {
+                        value:'custom',
+                        label: 'Custom'
+                    },
+                    {
+                       value:'azul',
+                       label:'Azul'
+                    },
+                    {
+                       value:'bee-inspired',
+                       label:'Bee Inspired'
+                    },
+                    {
+                       value:'blue',
+                       label:'Blue'
+                    },
+                    {
+                       value:'caravan',
+                       label:'Caravan'
+                    },
+                    {
+                       value:'carp',
+                       label:'Carp'
+                    },
+                    {
+                       value:'cool',
+                       label:'Cool'
+                    },
+                    {
+                       value:'dark-blue',
+                       label:'Dark Blue'
+                    },
+                    {
+                       value:'dark-bold',
+                       label:'Dark Bold'
+                    },
+                    {
+                       value:'dark-fresh-cut',
+                       label:'Dark Fresh Cut'
+                    },
+                    {
+                       value:'dark-mushroom',
+                       label:'Dark Mushroom'
+                    },
+                    {
+                       value:'dark',
+                       label:'Dark'
+                    },
+                    {
+                       value:'eduardo',
+                       label:'Eduardo'
+                    },
+                    {
+                       value:'forest',
+                       label:'Forest'
+                    },
+                    {
+                       value:'fresh-cut',
+                       label:'Fresh Cut'
+                    },
+                    {
+                       value:'fruit',
+                       label:'Fruit'
+                    },
+                    {
+                       value:'gray',
+                       label:'Gray'
+                    },
+                    {
+                       value:'green',
+                       label:'Green'
+                    },
+                    {
+                       value:'helianthus',
+                       label:'Helianthus'
+                    },
+                    {
+                       value:'infographic',
+                       label:'Infographic'
+                    },
+                    {
+                       value:'inspired',
+                       label:'Inspired'
+                    },
+                    {
+                       value:'jazz',
+                       label:'Jazz'
+                    },
+                    {
+                       value:'london',
+                       label:'London'
+                    },
+                    {
+                       value:'macarons',
+                       label:'Macarons'
+                    },
+                    {
+                       value:'macarons2',
+                       label:'Macarons 2'
+                    },
+                    {
+                       value:'mint',
+                       label:'Mint'
+                    },
+                    {
+                       value:'red-velvet',
+                       label:'Red Velvet'
+                    },
+                    {
+                       value:'red',
+                       label:'Red'
+                    },
+                    {
+                       value:'roma',
+                       label:'Roma'
+                    },
+                    {
+                       value:'royal',
+                       label:'Royal'
+                    },
+                    {
+                       value:'sakura',
+                       label:'Sakura'
+                    },
+                    {
+                       value:'shine',
+                       label:'Shine'
+                    },
+                    {
+                       value:'tech-blue',
+                       label:'Tech Blue'
+                    },
+                    {
+                       value:'vintage',
+                       label:'Vintage'
+                    }
+                ],
+                control_field:'library',
+                control_value:'echart',
+                control_use_regex:'false'
+            },
+            {
+                name:'customTheme',
+                label:'@@userview.sqlchartmenu.customTheme@@',
+                type : 'codeeditor',
+                mode : 'json',
+                control_field:'theme',
+                control_value:'custom',
+                control_use_regex:'false',
+                required:'true'
+            },
+            {
+                name : 'categoryAxisLabel',
+                label : '@@userview.sqlchartmenu.x-axisLabel@@',
+                type : 'textfield',
+                value : '@@userview.sqlchartmenu.category@@',
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|bubble|line|candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'xAxisDisplayAS',
+                label : '@@userview.sqlchartmenu.xAxisDisplayAS@@',
+                type : 'selectbox',
+                value : '',
+                options:[
+                    {
+                        value:'',
+                        label:'@@userview.sqlchartmenu.xAxisDisplayAS.category@@'
+                    },
+                    {
+                        value:'number',
+                        label:'@@userview.sqlchartmenu.xAxisDisplayAS.number@@'
+                    },
+                    {
+                        value:'date',
+                        label:'@@userview.sqlchartmenu.xAxisDisplayAS.date@@'
+                    }
+                ],
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|line',
+                control_use_regex: 'true'
+            },
+            {
+                name : 'dateFormat',
+                label : '@@userview.sqlchartmenu.dateFormat@@',
+                type : 'textfield',
+                control_field: 'chartType',
+                control_value: 'candlestick|ohlc',
+                control_use_regex: 'true'
+            },
+            {
+                name : 'dateFormat',
+                label : '@@userview.sqlchartmenu.dateFormat@@',
+                type : 'textfield',
+                control_field: 'library;xAxisDisplayAS',
+                control_value: 'echart;date',
+                control_use_regex: 'false'
+            },
+            {
+                name : 'valueAxisLabel',
+                label : '@@userview.sqlchartmenu.y-axisLabel@@',
+                type : 'textfield',
+                value : '@@userview.sqlchartmenu.value@@',
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|bubble|line|candlestick|ohlc',
+                control_use_regex: 'true',
+                required : 'true'
+            },
+            {
+                name : 'yaxisPrefix',
+                label : '@@userview.sqlchartmenu.yaxisPrefix@@',
+                type : 'textfield',
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|line|candlestick|ohlc',
+                control_use_regex: 'true',
+            },
+            {
+                name:'showValue',
+                label:'@@userview.sqlchartmenu.showValue@@',
+                type:'radio',
+                options:[
+                    {
+                        value:'',
+                        label:'@@userview.sqlchartmenu.showValue.percentage@@'
+                    },
+                    {
+                        value:'true',
+                        label:'@@userview.sqlchartmenu.showValue.value@@'
+                    }
+                ],
+                control_field: 'chartType',
+                control_value: 'pie|donut',
+                control_use_regex: 'true'
+            },
+            {
+                name:'showLegend',
+                label:'@@userview.sqlchartmenu.showLegend@@',
+                type:'checkbox',
+                options:[
+                    {
+                        value:'true',
+                        label:''
+                    }
+                ],
+                control_field: 'chartType',
+                control_value: 'area|bar|donut|line|pie|xy',
+                control_use_regex: 'true',
+                value:'true'
+            },
+            {
+                name : 'showValueLabel',
+                label : '@@userview.sqlchartmenu.showValueLabel@@',
+                type:'checkbox',
+                options:[
+                    {
+                        value:'true',
+                        label:''
+                    }
+                ],
+                value: 'true',
+                control_field: 'chartType',
+                control_value: 'bar|xy|area|line|candlestick|ohlc',
+                control_use_regex: 'true'
+            },
+            {
+                name : 'stack',
+                label : '@@userview.sqlchartmenu.stack@@',
+                type:'checkbox',
+                options:[
+                    {
+                        value:'true',
+                        label:''
+                    }
+                ],
+                control_field: 'chartType',
+                control_value: 'bar|xy',
+                control_use_regex: 'true'
+            },
+            {
+                name : 'horizontal',
+                label : '@@userview.sqlchartmenu.horizontal@@',
+                type:'checkbox',
+                options:[
+                    {
+                        value:'true',
+                        label:''
+                    }
+                ],
+                control_field: 'chartType',
+                control_value: 'bar',
+                control_use_regex: 'false'
+            },
+            {
+                name:'xAxisBoundaryGap',
+                label:'@@userview.sqlchartmenu.xAxisNoBoundaryGap@@',
+                type:'checkbox',
+                options:[
+                   {
+                      'value':'true',
+                      'label':''
+                   }
+                ],
+                control_field:'library;chartType',
+                control_value:'echart;bar|area|line|custom',
+                control_use_regex:'true'
+            },
+            {
+                name:'smoothLine',
+                label:'@@userview.sqlchartmenu.smoothLine@@',
+                description:'@@userview.sqlchartmenu.smoothLine.desc@@',
+                type:'checkbox',
+                options:[
+                   {
+                      value:'true',
+                      label:''
+                   }
+                ],
+                control_field:'library;chartType',
+                control_value:'echart;area|line|xy',
+                control_use_regex:'true',
+                value:'true'
+            },
+            {
+                name : 'chartWidth',
+                label : '@@userview.sqlchartmenu.chartWidth@@',
+                type : 'textfield',
+                value : '100%',
+                required:'true'
+            },
+            {
+                name : 'chartHeight',
+                label : '@@userview.sqlchartmenu.chartHeight@@',
+                type : 'textfield',
+                value : '80%',
+                required:'true'
+            },
+            {
+                name : 'colors',
+                label : '@@userview.sqlchartmenu.colors@@',
+                type : 'textarea',
+                control_field:'library',
+                control_value:'',
+                control_use_regex:'false'
+            }
+        ]
+    },
+    {
+        title : '@@userview.sqlchartmenu.advanced@@',
+        properties : [
+            {
+                name : 'series_customization',
+                label : '@@userview.sqlchartmenu.seriesCustomization@@',
+                type : 'repeater',
+                fields : [{
+                    name : 'legend',
+                    label : '@@userview.sqlchartmenu.mapping.seriesName@@',
+                    type: 'textfield'
+                },
+                {
+                    name:'customization',
+                    label:'@@userview.sqlchartmenu.seriesCustomization@@',
+                    type : 'codeeditor',
+                    mode : 'json'
+                }],
+                control_field: 'library;chartType',
+                control_value: 'echart;bar|xy|area|line',
+                control_use_regex: 'true'
+            },
+            {
+                name:'optionCustomization',
+                label:'@@userview.sqlchartmenu.optionCustomization@@',
+                description: '@@userview.sqlchartmenu.optionCustomization.desc@@',
+                type : 'codeeditor',
+                mode : 'html',
+                control_field:'library',
+                control_value:'echart',
+                control_use_regex:'false'
+            },
+            {
+                label : '@@userview.sqlchartmenu.userviewKeyDataFilter@@',
+                type : 'header',
+            }, 
+            {
+                name : 'keyName',
+                label : '@@userview.sqlchartmenu.userviewKeyName@@',
+                type : 'textfield'
+            },
+            {
+                label : '@@userview.sqlchartmenu.ui@@',
+                type : 'header',
+            }, 
+            {
+                name : 'customHeader',
+                label : '@@userview.sqlchartmenu.customHeader@@',
+                type : 'codeeditor',
+                mode : 'html'
+            },
+            {
+                name : 'customFooter',
+                label : '@@userview.sqlchartmenu.customFooter@@',
+                type : 'codeeditor',
+                mode : 'html'
+            }
+        ],
+        developer_mode : 'advanced'
+    }    
+]

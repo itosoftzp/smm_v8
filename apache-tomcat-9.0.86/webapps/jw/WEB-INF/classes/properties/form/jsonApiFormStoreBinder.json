@@ -1,0 +1,159 @@
+[{
+    "title" : "@@form.jsonapibinder.store.config@@",
+    "properties" : [{
+        "name" : "jsonUrl",
+        "label" : "@@app.jsontool.jsonUrl@@",
+        "type" : "textfield",
+        "required" : "True"
+    },
+    {
+        "name" : "requestType",
+        "label" : "@@app.jsontool.requestType@@",
+        "type" : "selectbox",
+        "value" : "",
+        "options" : [{
+            "value" : "",
+            "label" : "@@app.jsontool.requestType.get@@"
+        },
+        {
+            "value" : "post",
+            "label" : "@@app.jsontool.requestType.post@@"
+        },
+        {
+            "value" : "put",
+            "label" : "@@app.jsontool.requestType.put@@"
+        },
+        {
+            "value" : "delete",
+            "label" : "@@app.jsontool.requestType.delete@@"
+        }]
+    },
+    {
+        "name" : "postMethod",
+        "label" : "@@app.jsontool.postMethod@@",
+        "type" : "selectbox",
+        "value" : "formPayload",
+        "options" : [{
+            "value" : "",
+            "label" : "@@app.jsontool.postMethod.parameters@@"
+        },
+        {
+            "value" : "formPayload",
+            "label" : "@@form.jsonapibinder.postMethod.formpayload@@"
+        },
+        {
+            "value" : "formDataParam",
+            "label" : "@@form.jsonapibinder.postMethod.formDataParam@@"
+        },
+        {
+            "value" : "jsonPayload",
+            "label" : "@@app.jsontool.postMethod.jsonPayload@@"
+        },
+        {
+            "value" : "custom",
+            "label" : "@@app.jsontool.postMethod.customJsonPayload@@"
+        }],
+        "control_field": "requestType",
+        "control_value": "post|put",
+        "control_use_regex": "true"
+    },
+    {
+        "name" : "params",
+        "label" : "@@app.jsontool.postMethod.parameters@@",
+        "type" : "grid",
+        "columns"   : [{
+            "key"   : "name",
+            "label" : "@@app.jsontool.name@@"
+        },{
+            "key"   : "value",
+            "label" : "@@datalist.tfdlft.defaultValue@@"
+        }],
+        "control_field": "postMethod",
+        "control_value": "^(?!(formPayload|custom)$).*",
+        "control_use_regex": "true"
+    },
+    {
+        "name":"customPayload",
+        "label":"@@app.jsontool.postMethod.customJsonPayload@@",
+        "type" : "codeeditor",
+        "mode"   : "json",
+        "control_field": "postMethod",
+        "control_value": "custom",
+        "control_use_regex": "false",
+        "required": "true"
+    },
+    {
+        "name" : "headers",
+        "label" : "@@app.jsontool.header@@",
+        "type" : "grid",
+        "columns"   : [{
+            "key"   : "name",
+            "label" : "@@app.jsontool.name@@"
+        },{
+            "key"   : "value",
+            "label" : "@@app.jsontool.value@@"
+        }]
+    },
+    {
+        "name" : "copyCookies",
+        "label" : "@@datalist.jsonapibinder.copyCookies@@",
+        "type" : "checkbox",
+        "options" : [{
+            "value" : "true",
+            "label" : ""
+        }]
+    },
+    {
+        "name" : "useDifferentApiForUpdate",
+        "label" : "@@form.jsonapibinder.store.useDifferentApiForUpdate@@",
+        "type" : "checkbox",
+        "options" : [{
+            "value" : "true",
+            "label" : ""
+        }]
+    },
+    {
+        "name" : "updateJsonUrl",
+        "label" : "@@form.jsonapibinder.store.updateJsonUrl@@",
+        "type" : "textfield",
+        "required" : "True",
+        "control_field": "useDifferentApiForUpdate",
+        "control_value": "true",
+        "control_use_regex": "false"
+    },
+    {
+        "name" : "updateRequestType",
+        "label" : "@@form.jsonapibinder.store.updateRequestType@@",
+        "type" : "selectbox",
+        "value" : "",
+        "options" : [{
+            "value" : "",
+            "label" : "@@app.jsontool.requestType.get@@"
+        },
+        {
+            "value" : "post",
+            "label" : "@@app.jsontool.requestType.post@@"
+        },
+        {
+            "value" : "put",
+            "label" : "@@app.jsontool.requestType.put@@"
+        },
+        {
+            "value" : "delete",
+            "label" : "@@app.jsontool.requestType.delete@@"
+        }],
+        "control_field": "useDifferentApiForUpdate",
+        "control_value": "true",
+        "control_use_regex": "false"
+    },
+    {
+        "name" : "debugMode",
+        "label" : "@@app.jsontool.debugMode@@",
+        "description" : "@@app.jsontool.debugMode.desc@@",
+        "type" : "checkbox",
+        "options" : [{
+            "value" : "true",
+            "label" : ""
+        }]
+    }]
+}]

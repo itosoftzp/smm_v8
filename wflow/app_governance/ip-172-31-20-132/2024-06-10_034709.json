@@ -1,0 +1,146 @@
+{
+  "org.joget.governance.lib.OrphanedFormDataCheck": {
+    "status": "PASS",
+    "timestamp": 1718034431418,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.ResponseTimesCheck": {
+    "status": "PASS",
+    "score": 100,
+    "timestamp": 1718034431429,
+    "suppressable": false
+  },
+  "lastCheckDate": {
+    "status": "FAIL",
+    "timestamp": 1718034429666,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.ErrorRateCheck": {
+    "status": "PASS",
+    "score": 100,
+    "timestamp": 1718034430854,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.SecureProcessesCheck": {
+    "status": "PASS",
+    "timestamp": 1718034431429,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.SecureAuthenticationCheck": {
+    "status": "FAIL",
+    "timestamp": 1718034431429,
+    "details": [
+      {
+        "detail": "Security Enhanced Directory Manager is not enabled",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.EmailUsageCheck": {
+    "status": "WARN",
+    "timestamp": 1718034429679,
+    "details": [
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: Form \u003cb\u003e09 - Form PA Admin\u003c/b\u003e has following emails used: \u003col\u003e\u003cli\u003edevvy@beraucoal.co.id\u003c/li\u003e\u003cli\u003edevvy.nurfiyanti@sinarmasmining.com\u003c/li\u003e\u003c/ol\u003e",
+        "link": "/web/console/app/suratKeputusan/131/form/builder/formPAAdmin",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: Form \u003cb\u003e2b - Form Review Massal\u003c/b\u003e has following emails used: \u003col\u003e\u003cli\u003eirene.elfrida@sinarmasmining.com\u003c/li\u003e\u003cli\u003eHELEN.LISTIANI@SINARMASMINING.COM\u003c/li\u003e\u003cli\u003ekenanga.mahyudin@sinarmasmining.com\u003c/li\u003e\u003c/ol\u003e",
+        "link": "/web/console/app/suratKeputusan/131/form/builder/formReviewsMassal",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      },
+      {
+        "detail": "App \u003cb\u003eSurat Keputusan\u003c/b\u003e: Form \u003cb\u003e1 - Submit Request\u003c/b\u003e has following emails used: \u003col\u003e\u003cli\u003eHERMAWAN.HERMAWAN@SINARMASMINING.COM\u003c/li\u003e\u003cli\u003eHERMAWAN.HERMAWAN@PARTNERS97.COM\u003c/li\u003e\u003c/ol\u003e",
+        "link": "/web/console/app/suratKeputusan/131/form/builder/submitRequest",
+        "appId": "suratKeputusan",
+        "suppressed": false
+      }
+    ],
+    "moreInfo": "Emails used in configuration need to be checked to ensure they are not public or unauthorized email addresses.",
+    "datas": {
+      "ptfWorkflow_52": "{\"details\":[],\"timestamp\":1717726024000}",
+      "paymentApproval_23": "{\"details\":[],\"timestamp\":1711649141000}",
+      "suratKeputusan_131": "{\"details\":[{\"detail\":\"App \\u003cb\\u003eSurat Keputusan\\u003c/b\\u003e: Form \\u003cb\\u003e09 - Form PA Admin\\u003c/b\\u003e has following emails used: \\u003col\\u003e\\u003cli\\u003edevvy@beraucoal.co.id\\u003c/li\\u003e\\u003cli\\u003edevvy.nurfiyanti@sinarmasmining.com\\u003c/li\\u003e\\u003c/ol\\u003e\",\"link\":\"/web/console/app/suratKeputusan/131/form/builder/formPAAdmin\",\"appId\":\"suratKeputusan\",\"suppressed\":false},{\"detail\":\"App \\u003cb\\u003eSurat Keputusan\\u003c/b\\u003e: Form \\u003cb\\u003e2b - Form Review Massal\\u003c/b\\u003e has following emails used: \\u003col\\u003e\\u003cli\\u003eirene.elfrida@sinarmasmining.com\\u003c/li\\u003e\\u003cli\\u003eHELEN.LISTIANI@SINARMASMINING.COM\\u003c/li\\u003e\\u003cli\\u003ekenanga.mahyudin@sinarmasmining.com\\u003c/li\\u003e\\u003c/ol\\u003e\",\"link\":\"/web/console/app/suratKeputusan/131/form/builder/formReviewsMassal\",\"appId\":\"suratKeputusan\",\"suppressed\":false},{\"detail\":\"App \\u003cb\\u003eSurat Keputusan\\u003c/b\\u003e: Form \\u003cb\\u003e1 - Submit Request\\u003c/b\\u003e has following emails used: \\u003col\\u003e\\u003cli\\u003eHERMAWAN.HERMAWAN@SINARMASMINING.COM\\u003c/li\\u003e\\u003cli\\u003eHERMAWAN.HERMAWAN@PARTNERS97.COM\\u003c/li\\u003e\\u003c/ol\\u003e\",\"link\":\"/web/console/app/suratKeputusan/131/form/builder/submitRequest\",\"appId\":\"suratKeputusan\",\"suppressed\":false}],\"timestamp\":1717597247000}"
+    },
+    "suppressable": true
+  },
+  "org.joget.governance.lib.CpuUsageCheck": {
+    "status": "PASS",
+    "score": 95,
+    "timestamp": 1718034429666,
+    "details": [
+      {
+        "detail": "Average CPU load at 11.26% for last 10 minutes",
+        "link": "/web/console/monitor/apm",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.DbConnectionsCheck": {
+    "status": "PASS",
+    "score": 98,
+    "timestamp": 1718034429668,
+    "details": [
+      {
+        "detail": "20 DB connections used",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.HashVariableCheck": {
+    "status": "PASS",
+    "timestamp": 1718034430855,
+    "datas": {
+      "appcenter_1": "{\"details\":[],\"timestamp\":1717665720000}",
+      "crm_1": "{\"details\":[],\"timestamp\":1717665618000}",
+      "dashboard_1": "{\"details\":[],\"timestamp\":1717665622000}"
+    },
+    "suppressable": true
+  },
+  "org.joget.governance.lib.SecureUserviewsCheck": {
+    "status": "PASS",
+    "timestamp": 1718034431482,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.MemoryUsageCheck": {
+    "status": "WARN",
+    "score": 49,
+    "timestamp": 1718034430867,
+    "details": [
+      {
+        "detail": "Average free memory available at 1.71% for last 10 minutes",
+        "link": "/web/console/monitor/apm",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.ProcessDataIntegrityCheck": {
+    "status": "PASS",
+    "timestamp": 1718034431426,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.NamingConventionCheck": {
+    "status": "PASS",
+    "timestamp": 1718034430939,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.DeadlineCheckerAvailabilityCheck": {
+    "status": "WARN",
+    "timestamp": 1718034429678,
+    "details": [
+      {
+        "detail": "Deadline checker is not started. Please enable it in System Settings.",
+        "link": "/web/console/setting/general",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  }
+}

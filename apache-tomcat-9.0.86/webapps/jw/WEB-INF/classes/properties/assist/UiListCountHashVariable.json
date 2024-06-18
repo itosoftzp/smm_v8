@@ -1,0 +1,61 @@
+{
+    "optionGroup" : {
+        "@@assist.uilistcount@@" : [
+            {
+                "value" : "#uiListCount.MENU_ID#",
+                "label" : "@@assist.uiListCount.menuId@@",
+                "syntax" : [
+                    "#uiListCount.",
+                    {
+                        "placeholder" : "MENU_ID",
+                        "option" : "currentUserviewMenuId",
+                        "required" : true
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#uiListCount.UI_ID.MENU_ID#",
+                "label" : "@@assist.uiListCount.menuId@@",
+                "syntax" : [
+                    "#uiListCount.",
+                    {
+                        "placeholder" : "UI_ID",
+                        "option" : "userviewId",
+                        "required" : true
+                    },
+                    ".",
+                    {
+                        "placeholder" : "MENU_ID",
+                        "option" : "userviewMenuId",
+                        "required" : true
+                    },
+                    "#"
+                ]
+            }
+        ]
+    },
+    "optionField" : {
+        "currentUserviewMenuId" : {
+            "name" : "currentUserviewMenuId",
+            "label" : "@@assist.url.menu@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/userview/menu/tree/options",
+            "type" : "selectbox"
+        },
+        "userviewId" : {
+            "name" : "userviewId",
+            "label" : "@@assist.url.UI@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/userview/options",
+            "type" : "selectbox"
+        },
+        "userviewMenuId" : {
+            "name" : "userviewMenuId",
+            "label" : "@@assist.url.menu@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/userview/menu/tree/options",
+            "options_ajax_on_change" : "userviewId",
+            "type" : "selectbox"
+        }
+    }
+}
+
+

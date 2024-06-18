@@ -1,0 +1,92 @@
+[
+    {
+        "title": "@@datalist.dtdlb.config@@",
+        "properties": [
+            {
+                "name": "jdbcDatasource",
+                "label": "@@datalist.jdbcDataListBinder.datasource@@",
+                "description": "@@datalist.jdbcDataListBinder.datasource.desc@@",
+                "type": "selectbox",
+                "options": [
+                    {
+                        "value": "custom",
+                        "label": "@@datalist.jdbcDataListBinder.customDatasource@@"
+                    }, 
+                    {
+                        "value": "default",
+                        "label": "@@datalist.jdbcDataListBinder.defaultDatasource@@"
+                    }
+                ],
+                "value": "default"
+            }, 
+            {
+                "name": "jdbcDriver",
+                "label": "@@datalist.jdbcDataListBinder.driver@@",
+                "description": "@@datalist.jdbcDataListBinder.driver.desc@@",
+                "type": "textfield",
+                "value": "com.mysql.jdbc.Driver",
+                "control_field": "jdbcDatasource",
+                "control_value": "custom",
+                "control_use_regex": "false",
+                "required": "true"
+            }, 
+            {
+                "name": "jdbcUrl",
+                "label": "@@datalist.jdbcDataListBinder.url@@",
+                "type": "textfield",
+                "value": "jdbc:mysql://localhost/jwdb?characterEncoding=UTF8&useSSL=false",
+                "control_field": "jdbcDatasource",
+                "control_value": "custom",
+                "control_use_regex": "false",
+                "required": "true"
+            }, 
+            {
+                "name": "jdbcUser",
+                "label": "@@datalist.jdbcDataListBinder.username@@",
+                "type": "textfield",
+                "control_field": "jdbcDatasource",
+                "control_value": "custom",
+                "control_use_regex": "false",
+                "value": "root",
+                "required": "true"
+            }, 
+            {
+                "name": "jdbcPassword",
+                "label": "@@datalist.jdbcDataListBinder.password@@",
+                "type": "password",
+                "control_field": "jdbcDatasource",
+                "control_value": "custom",
+                "control_use_regex": "false",
+                "value": ""
+            }, 
+            {
+                "name": "tableName",
+                "label": "@@datalist.dtdlb.table@@",
+                "type": "selectbox",
+                "options_ajax_on_change": "jdbcDatasource;jdbcDriver;jdbcUrl;jdbcUser;jdbcPassword",
+                "options_ajax": "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.DatabaseWizardDatalistBinder/service?action=getTables",
+                "required": "True"
+            },
+            {
+                "name" : "keyColumn",
+                "label" : "@@datalist.dtdlb.KeyColumn@@",
+                "type" : "selectbox",
+                "options_ajax_on_change": "jdbcDatasource;jdbcDriver;jdbcUrl;jdbcUser;jdbcPassword;tableName",
+                "options_ajax": "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.DatabaseWizardDatalistBinder/service?action=getColumns",
+                "value" : "id",
+                "required" : "true"
+            }
+        ],
+        "buttons" : [
+            {
+                "name" : "testConnection",    
+                "label" : "@@datalist.jdbcDataListBinder.testConnection@@",
+                "ajax_url" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.DatabaseWizardDatalistBinder/service?action=testConnection",
+                "fields" : ["jdbcDriver", "jdbcUrl", "jdbcUser", "jdbcPassword"],
+                "control_field" : "jdbcDatasource",
+                "control_value" : "custom",
+                "control_use_regex" : "false"
+            }
+        ]
+    }
+]

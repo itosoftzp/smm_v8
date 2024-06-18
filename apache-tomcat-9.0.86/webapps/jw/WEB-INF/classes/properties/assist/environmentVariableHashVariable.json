@@ -1,0 +1,40 @@
+{
+    "optionGroup" : {
+        "@@assist.EnvironmentVariable@@" : [
+            {
+                "value" : "#appVariable.KEY#",
+                "label" : "@@assist.EnvironmentVariableValue@@",
+                "syntax" : [
+                    "#appVariable.",
+                    {
+                        "placeholder" : "KEY",
+                        "option" : "environmentVariable",
+                        "required" : true
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#envVariable.KEY#",
+                "label" : "@@assist.EnvironmentVariableValue@@",
+                "syntax" : [
+                    "#envVariable.",
+                    {
+                        "placeholder" : "KEY",
+                        "option" : "environmentVariable",
+                        "required" : true
+                    },
+                    "#"
+                ]
+            }
+        ]
+    },
+    "optionField" : {
+        "environmentVariable" : {
+            "name" : "environmentVariable",
+            "label" : "@@assist.EnvironmentVariable@@",
+            "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/envVariable/options",
+            "type" : "selectbox"
+        }
+    }
+}

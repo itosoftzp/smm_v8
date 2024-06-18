@@ -1,0 +1,39 @@
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name="bootstrap_theme.min">
+        <css>classpath:resources/themes/bootstrap/css/style.css</css>
+        <js>classpath:resources/themes/bootstrap/js/custom.js</js>
+    </group>
+    <group name="elegant_theme.min">
+        <css>classpath:resources/themes/elegant/css/style.css</css>
+        <js>classpath:resources/themes/elegant/js/custom.js</js>
+    </group>
+    <group name="janux_theme.min">
+        <css>classpath:resources/themes/janux/css/perfect-scrollbar.min.css</css>
+        <css>classpath:resources/themes/janux/css/style.css</css>
+        <css>classpath:resources/themes/janux/css/style-responsive.css</css>
+        <js>classpath:resources/themes/janux/js/perfect-scrollbar.jquery.min.js</js>
+        <js>classpath:resources/themes/janux/js/custom.js</js>
+    </group>
+    <group name="spreadsheet.min">
+        <js>classpath:resources/js/handsontable/handsontable.full.js</js>
+        <js>classpath:resources/js/handsontable/languages.min.js</js>
+        <js>classpath:resources/js/handsontable/formula-parser.js</js>
+        <js>classpath:resources/js/date.js</js>
+        <js>classpath:resources/js/spreadSheet.js</js>
+    </group>
+    <group name="signature.min">
+        <js>classpath:resources/js/signature_pad/jquery.signaturepad.min.js</js>
+        <js>classpath:resources/js/signature_pad/assets/json2.min.js</js>
+        <js>classpath:resources/js/jquery.fullscreen-min.js</js>
+        <js>classpath:resources/js/signature_pad/signaturepad_fullscreen.js</js>
+        <css>classpath:resources/js/signature_pad/assets/jquery.signaturepad.css</css>
+        <css>classpath:resources/js/signature_pad/assets/signaturepad_fullscreen.css</css>
+    </group>
+    <group name="dx8AngleTheme.min">
+        <css>classpath:resources/css/dx8AngleTheme.css</css>
+    </group> 
+    <group name="dx8AngleThemeWithFont.min">
+        <css>/fonts/SourceSans3/css/font.css</css>
+        <css>classpath:resources/css/dx8AngleTheme.css</css>
+    </group>    
+</groups> 

@@ -1,0 +1,21 @@
+[
+    {
+        "title" : "@@cpuUsageCheck.edit@@",
+        "properties" : [
+            {
+                "name" : "limit",
+                "label" : "@@cpuUsageCheck.limit@@",
+                "type" : "number",
+                "value" : "60",
+                "required" : "true"
+            },
+            {
+                "name" : "range",
+                "label" : "@@cpuUsageCheck.range@@",
+                "type" : "number",
+                "value" : "10",
+                "required" : "true"
+            }
+        ]
+    }
+]

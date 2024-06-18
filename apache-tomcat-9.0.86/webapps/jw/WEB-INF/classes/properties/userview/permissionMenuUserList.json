@@ -1,0 +1,57 @@
+{
+    "id": "userlist",
+    "name": "User List",
+    "pageSize": "0",
+    "order": "",
+    "orderBy": "username",
+    "showPageSizeSelector": "true",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bothLeft",
+    "checkboxPosition": "left",
+    "useSession": "false",
+    "description": "",
+    "actions": [],
+    "rowActions": [],
+    "filters": [
+        {
+            "id": "filter_0",
+            "name": "username",
+            "label": "@@console.directory.user.common.label.username@@"
+        },
+        {
+            "id": "filter_1",
+            "name": "email",
+            "label": "@@console.directory.user.common.label.email@@"
+        }
+    ],
+    "binder": {
+        "className": "org.joget.plugin.enterprise.JdbcDataListBinder",
+        "properties": {
+            "jdbcDatasource": "default",
+            "sql": "SELECT * FROM dir_user where active = 1",
+            "primaryKey": "username"
+        }
+    },
+    "columns": [
+        {
+            "id": "column_0",
+            "label": "@@console.directory.user.common.label.username@@",
+            "name": "username"
+        },
+        {
+            "id": "column_1",
+            "label": "@@console.directory.user.common.label.firstName@@",
+            "name": "firstName"
+        },
+        {
+            "id": "column_2",
+            "label": "@@console.directory.user.common.label.lastName@@",
+            "name": "lastName"
+        },
+        {
+            "id": "column_3",
+            "label": "@@console.directory.user.common.label.email@@",
+            "name": "email"
+        }
+    ]
+}

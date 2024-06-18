@@ -1,0 +1,612 @@
+[
+    {
+        "title" : "@@userview.page.editInformationTile@@",
+        "properties" : [
+            {
+                "name" : "id",
+                "label" : "Id",
+                "type" : "hidden"
+            },
+            {
+                "name" : "customId",
+                "label" : "@@userview.formmenu.customId@@",
+                "type" : "textfield",
+                "regex_validation" : "^[a-zA-Z0-9_]+$",
+                "validation_message" : "@@userview.formmenu.invalidId@@"
+            },
+            {
+                "name" : "template",
+                "label" : "@@userview.infotile.template@@",
+                "type" : "custom",
+                "script_url" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?version=@@build.number@@",
+                "mode" : "html",
+                "required" : "True",
+                "value" : "<!--{sampleWidth: '250px'}-->\n<div class=\"card flex-row align-items-center align-items-stretch border-0\" style=\"background-color:{{color||#348fe2}}; color:#fff;\">\n    <div class=\"stats-icon col-4 py-3 d-flex align-items-center justify-content-center rounded-left\" style=\"background:rgba(0,0,0,.4); font-size: 48px; color: #fff;\">\n        {{icon||<i class=\"fas fa-globe\"></i>}}\n    </div>\n    <div class=\"stats-info py-3 col-8\">\n        <p style=\"font-size: 24px; font-weight: 600; margin-bottom: 10px;\">{{value||3,291,922}}</p>\n        <h4 style=\"font-size: 12px;margin: 5px 0;\">{{title||TOTAL VISITORS}}</h4>\n    </div>\n</div>"
+            },
+            {
+                "label" : "@@userview.infotile.mapping@@",
+                "description" : "@@userview.infotile.mapping.desc@@",
+                "type" : "header",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{\\S+[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "header",
+                "label" : "@@userview.infotile.header@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{header[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true"
+            },
+            {
+                "name" : "headerTag",
+                "label" : "@@userview.infotile.headerTag@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{headerTag[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "tagColor",
+                "label" : "@@userview.infotile.headerTagColor@@",
+                "type" : "color",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{tagColor[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "value": "#348fe2"
+            },
+            {
+                "name" : "title",
+                "label" : "@@userview.infotile.title@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{title[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true",
+                "value" : "@@userview.infotile.title.value@@"
+            },
+            {
+                "name" : "subtitle",
+                "label" : "@@userview.infotile.subtitle@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{subtitle[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "value",
+                "label" : "@@userview.infotile.value@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{value[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true",
+                "value" : "3,291,922"
+            },
+            {
+                "name" : "subvalue",
+                "label" : "@@userview.infotile.subvalue@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{subvalue[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "icon",
+                "label" : "@@userview.infotile.icon@@",
+                "type" : "icon-textfield",
+                "iconOnly" : "true",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{icon[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true",
+                "value" : "<i class=\"fas fa-globe\"></i>"
+            },
+            {
+                "name" : "description",
+                "label" : "@@userview.infotile.description@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{description[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "image",
+                "label" : "@@userview.infotile.image@@",
+                "type": "image",
+                "appPath": "[APP_PATH]",
+                "allowInput" : "true",
+                "isPublic" : "true",
+                "imageSize" : "width:80px; height:80px; background-size: contain; background-repeat: no-repeat;",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{image[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true"
+            },
+            {
+                "name" : "footer",
+                "label" : "@@userview.infotile.footer@@",
+                "type" : "codeeditor",
+                "mode" : "html",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{footer[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "link",
+                "label" : "@@userview.infotile.link@@",
+                "type" : "textfield"
+            },
+            {
+                "name" : "linkLabel",
+                "label" : "@@userview.infotile.linkLabel@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{linkLabel[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true"
+            },
+            {
+                "name" : "color",
+                "label" : "@@userview.infotile.color@@",
+                "type" : "color",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{color[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "value": "#348fe2",
+                "required" : "true"
+            },
+            {
+                "name" : "progressbar-value",
+                "label" : "@@userview.infotile.progressBarValue@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{progressbar-value[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true"
+            },
+            {
+                "name" : "chartData",
+                "label" : "@@userview.infotile.chartData@@",
+                "description" : "@@userview.infotile.chartData.desc@@",
+                "type" : "codeeditor",
+                "mode" : "json",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{chartData[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "chartLabels",
+                "label" : "@@userview.infotile.chartLabels@@",
+                "description" : "@@userview.infotile.chartLabels.desc@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{chartLabels[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true",
+                "required" : "true"
+            },
+            {
+                "name" : "chartColors",
+                "label" : "@@userview.infotile.chartColors@@",
+                "description" : "@@userview.infotile.chartColors.desc@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{chartColors[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "chartConfig",
+                "label" : "@@userview.infotile.chartConfig@@",
+                "description" : "@@userview.infotile.chartConfig.desc@@",
+                "type" : "codeeditor",
+                "mode" : "json",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{chartConfig[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "jsonArr",
+                "label" : "@@userview.infotile.jsonArray@@",
+                "description" : "@@userview.infotile.jsonArray.desc@@",
+                "type" : "codeeditor",
+                "mode" : "json",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{jsonArr[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "repeat",
+                "label" : "@@userview.infotile.repeat@@",
+                "type" : "repeater",
+                "fields" : [
+                    {
+                        "name" : "title",
+                        "label" : "@@userview.infotile.title@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.title[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true",
+                        "value" : "@@userview.infotile.title.value@@"
+                    },
+                    {
+                        "name" : "subtitle",
+                        "label" : "@@userview.infotile.subtitle@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.subtitle[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    },
+                    {
+                        "name" : "value",
+                        "label" : "@@userview.infotile.value@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.value[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true",
+                        "value" : "3,291,922"
+                    },
+                    {
+                        "name" : "subvalue",
+                        "label" : "@@userview.infotile.subvalue@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.subvalue[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    },
+                    {
+                        "name" : "icon",
+                        "label" : "@@userview.infotile.icon@@",
+                        "type" : "icon-textfield",
+                        "iconOnly" : "true",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.icon[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true",
+                        "value" : "<i class=\"fas fa-globe\"></i>"
+                    },
+                    {
+                        "name" : "description",
+                        "label" : "@@userview.infotile.description@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.description[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    },
+                    {
+                        "name" : "image",
+                        "label" : "@@userview.infotile.image@@",
+                        "type": "image",
+                        "appPath": "[APP_PATH]",
+                        "allowInput" : "true",
+                        "isPublic" : "true",
+                        "imageSize" : "width:80px; height:80px; background-size: contain; background-repeat: no-repeat;",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.image[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true"
+                    },
+                    {
+                        "name" : "link",
+                        "label" : "@@userview.infotile.link@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.link[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true"
+                    },
+                    {
+                        "name" : "linkLabel",
+                        "label" : "@@userview.infotile.linkLabel@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.linkLabel[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true"
+                    },
+                    {
+                        "name" : "color",
+                        "label" : "@@userview.infotile.color@@",
+                        "type" : "color",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.color[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "value": "#348fe2"
+                    },
+                    {
+                        "name" : "progressbar-value",
+                        "label" : "@@userview.infotile.progressBarValue@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.progressbar-value[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true"
+                    },
+                    {
+                        "name" : "chartData",
+                        "label" : "@@userview.infotile.chartData@@",
+                        "description" : "@@userview.infotile.chartData.desc@@",
+                        "type" : "codeeditor",
+                        "mode" : "json",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.chartData[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    },
+                    {
+                        "name" : "chartLabels",
+                        "label" : "@@userview.infotile.chartLabels@@",
+                        "description" : "@@userview.infotile.chartLabels.desc@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.chartLabels[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true",
+                        "required" : "true"
+                    },
+                    {
+                        "name" : "chartColors",
+                        "label" : "@@userview.infotile.chartColors@@",
+                        "description" : "@@userview.infotile.chartColors.desc@@",
+                        "type" : "textfield",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.chartColors[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    },
+                    {
+                        "name" : "chartConfig",
+                        "label" : "@@userview.infotile.chartConfig@@",
+                        "description" : "@@userview.infotile.chartConfig.desc@@",
+                        "type" : "codeeditor",
+                        "mode" : "json",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.chartConfig[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    },
+                    {
+                        "name" : "jsonArr",
+                        "label" : "@@userview.infotile.jsonArray@@",
+                        "description" : "@@userview.infotile.jsonArray.desc@@",
+                        "type" : "codeeditor",
+                        "mode" : "json",
+                        "control_field": "template",
+                        "control_value": "^[\\s\\S]*\\{\\{repeat\\.jsonArr[\\||\\}]{2}[\\s\\S]*$",
+                        "control_use_regex": "true"
+                    }
+                ],
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{repeat[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "height",
+                "label" : "@@userview.infotile.height@@",
+                "type" : "number",
+                "mode" : "css_unit",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{height[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "bgImg",
+                "label" : "@@userview.infotile.bgImg@@",
+                "type": "image",
+                "appPath": "[APP_PATH]",
+                "allowInput" : "true",
+                "isPublic" : "true",
+                "imageSize" : "width:80px; height:80px; background-size: contain; background-repeat: no-repeat;",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{bgImg[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "bgColor",
+                "label" : "@@userview.infotile.bgColor@@",
+                "type" : "color",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{bgColor[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "reload",
+                "label" : "@@userview.infotile.reload@@",
+                "type" : "checkbox",
+                "options" : [{
+                    "value" : "true",
+                    "label" : ""
+                }],
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{reload[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            }
+        ]
+    },
+    {
+        "title" : "@@userview.infotile.datalistMapping@@",
+        "properties" : [
+            {
+                "name" : "datalistId",
+                "label" : "@@userview.datalistinboxmenu.datalist@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/datalist/options",
+                "options_extra" : [
+                    {
+                        "value" : "",
+                        "label" : ""
+                    },
+                    {
+                        "value" : "INBOX",
+                        "label" : "@@theme.universal.inbox@@"
+                    }
+                ]
+            },
+            {
+                "name" : "datalist_inbox_type",
+                "label" : "@@theme.universal.inbox@@",
+                "type" : "selectbox",
+                "options" : [
+                    {
+                        "value" : "",
+                        "label" : "@@theme.universal.inbox.all@@"
+                    },
+                    {
+                        "value" : "currentApp",
+                        "label" : "@@theme.universal.inbox.current@@"
+                    },
+                    {
+                        "value" : "singleProcess",
+                        "label" : "@@userview.inboxmenu.assignmentForAProcessOnly@@"
+                    }
+                ],
+                "control_field": "datalistId",
+                "control_value": "INBOX",
+                "control_use_regex": "false"
+            },
+            {
+                "name" : "processId",
+                "label" : "@@userview.inboxmenu.process@@",
+                "type" : "selectbox",
+                "control_field": "datalist_inbox_type",
+                "control_value": "singleProcess",
+                "control_use_regex": "false",
+                "required" : "true",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.userview.lib.InboxMenu/service?action=getProcesses"
+            },
+            {
+                "name" : "datalist_image",
+                "label" : "@@userview.infotile.list.imgCol@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.image[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_title",
+                "label" : "@@userview.infotile.list.titleCol@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.title[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_subtitle",
+                "label" : "@@userview.infotile.list.subtitleCol@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.subtitle[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_desc",
+                "label" : "@@userview.infotile.list.descCol@@",
+                "type" : "selectbox",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.desc[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_value",
+                "label" : "@@userview.infotile.list.valueCol@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.value[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_col1",
+                "label" : "@@userview.infotile.list.col1@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.col1[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_col2",
+                "label" : "@@userview.infotile.list.col2@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.col2[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_col3",
+                "label" : "@@userview.infotile.list.col3@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.col3[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_col4",
+                "label" : "@@userview.infotile.list.col4@@",
+                "type" : "selectbox",
+                "required" : "true",
+                "options_ajax_on_change" : "datalistId",
+                "options_ajax" : "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.plugin.enterprise.InformationTileComponent/service?action=columns",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.col4[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_link",
+                "label" : "@@userview.infotile.link@@",
+                "type" : "textfield",
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.link[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_actions",
+                "label" : "@@userview.infotile.list.actions@@",
+                "type" : "checkbox",
+                "options" : [{
+                    "value" : "true",
+                    "label" : ""
+                }],
+                "control_field": "template",
+                "control_value": "^[\\s\\S]*\\{\\{datalist\\.actions[\\||\\}]{2}[\\s\\S]*$",
+                "control_use_regex": "true"
+            },
+            {
+                "name" : "datalist_size",
+                "label" : "@@userview.infotile.list.size@@",
+                "type" : "number",
+                "value" : "5",
+                "required" : "true"
+            }
+        ],
+        "control_field": "template",
+        "control_value": "^[\\s\\S]*\\{\\{datalist[\\||\\}]{2}[\\s\\S]*$",
+        "control_use_regex": "true"
+    }
+]
+
+
+
+
+

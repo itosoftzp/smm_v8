@@ -1,0 +1,126 @@
+{
+    "dragHtml" : "<div class=\"container-fluid\"><div class=\"row\"><div class=\"col\" data-cbuilder-label=\"@@org.joget.apps.userview.lib.component.ColumnComponent.pluginLabel@@\" data-cbuilder-invisible=\"\"></div><div class=\"col\" data-cbuilder-label=\"@@org.joget.apps.userview.lib.component.ColumnComponent.pluginLabel@@\" data-cbuilder-invisible=\"\"></div></div></div>", 
+    "html" : "<div class=\"container-fluid\"><div class=\"row\" data-cbuilder-columns></div></div>", 
+    "childsContainerAttr" : "columns", 
+    "elements" : [
+        {
+            "className" : "org.joget.apps.userview.lib.component.ColumnComponent",
+            "properties" : {
+            }
+        },
+        {
+            "className" : "org.joget.apps.userview.lib.component.ColumnComponent",
+            "properties" : {
+            }
+        }
+    ],
+    "properties" : {
+        "columns" : [
+            {
+                "style-max-width" : ""
+            },
+            {
+                "style-max-width" : ""
+            }
+        ],
+        "css-mobile-stack-columns" : "true"
+    },
+    "getStylePropertiesDefinition" : function(elementObj, component) {
+        var styleProps = $.extend(true, [], this.stylePropertiesDefinition);
+        var propColumns = elementObj.properties.columns;
+        for (var i = 0; i < propColumns.length; i++) {
+            styleProps.push(CustomBuilder.Builder.stylePropertiesDefinition("col-"+i+"-", "@@org.joget.apps.userview.lib.component.ColumnComponent.pluginLabel@@ " + (i+1))[0]);
+        }
+        return styleProps;
+    },
+    "afterRender" : function(element, elementObj, component) {
+        if (elementObj.properties['gutter'] !== undefined && elementObj.properties['gutter'] !== "") {
+            var gutter = elementObj.properties['gutter'];
+            $(element).css({"padding-left" : "0px", "padding-right" : "0px"});
+            $(element).find("> .row").css({"margin-left" : "-"+gutter, "margin-right" : "-"+gutter});
+            $(element).find("> .row > .col").css({"padding-left" : gutter, "padding-right" : gutter});
+        }
+    },
+    "updateProperties" : function(element, elementObj, component) {
+        var propColumns = elementObj.properties.columns;
+        var columns = elementObj.elements;
+        var hasChange = false;
+        if (columns.length < propColumns.length) {
+            for (var i = columns.length -1; i < propColumns.length - 1; i++) {
+                elementObj.elements.push({
+                    "className" : "org.joget.apps.userview.lib.component.ColumnComponent",
+                    "properties" : {}
+                });
+            }
+            hasChange = true;
+        } else if (columns.length > propColumns.length) {
+            for (var i = columns.length -1; i > propColumns.length - 1; i--) {
+                elementObj.elements.splice(i);
+            }
+            hasChange = true;
+        }
+        for (var i = 0; i < propColumns.length; i++) {
+            elementObj.elements[i].properties = {};
+            if (propColumns[i]['style-max-width'] !== undefined && propColumns[i]['style-max-width'] !== "") {
+                elementObj.elements[i].properties['style-max-width'] = propColumns[i]['style-max-width'];
+                elementObj.elements[i].properties['style-flex'] = "0 0 " + propColumns[i]['style-max-width'];
+            }
+            if (propColumns[i]['style-tablet-max-width'] !== undefined && propColumns[i]['style-tablet-max-width'] !== "") {
+                elementObj.elements[i].properties['style-tablet-max-width'] = propColumns[i]['style-tablet-max-width'];
+                elementObj.elements[i].properties['style-tablet-flex'] = "0 0 " + propColumns[i]['style-tablet-max-width'];
+            }
+            if (propColumns[i]['style-mobile-max-width'] !== undefined && propColumns[i]['style-mobile-max-width'] !== "") {
+                elementObj.elements[i].properties['style-mobile-max-width'] = propColumns[i]['style-mobile-max-width'];
+                elementObj.elements[i].properties['style-mobile-flex'] = "0 0 " + propColumns[i]['style-mobile-max-width'];
+            }
+        }
+        var properties = elementObj.properties;
+        for (var property in properties) {
+            if (properties.hasOwnProperty(property)) {
+                for (var i = 0; i < propColumns.length; i++) {
+                    if (property.indexOf("col-"+i+"-") === 0) {
+                        elementObj.elements[i].properties[property.replace("col-"+i+"-", "")] = properties[property];
+                    }
+                }
+            }
+        }
+        CustomBuilder.Builder.editStyles(properties, element, elementObj, component);
+    },
+    "decorateBoxActions" : function(element, elementObj, component, box) {
+        $(box).find(".element-options").append('<a class="columns-btn" title="@@fbuilder.addColumn@@"><i class="las la-columns"></i></a>');
+        
+        $(box).find(".columns-btn").off("click");
+        $(box).find(".columns-btn").on("click", function(event) {
+            var self = CustomBuilder.Builder;
+            self.boxActionSetElement(event);
+            
+            self.component = self.getComponent("org.joget.apps.userview.lib.component.ColumnComponent");
+            var classname = self.component.className;
+            var elements = [];
+            var elementObj = {
+                className: classname,
+                properties: {},
+                elements : elements
+            };
+            self.updateElementId(elementObj);
+
+            var parent = self.selectedEl;
+            var parentDataArray = $(parent).data("data").elements;
+            parentDataArray.push(elementObj);
+            
+            $(parent).data("data").properties.columns.push({
+                "style-max-width" : ""
+            });
+
+            var temp = $('<div></div>');
+            self.selectedEl.find('> .row').append(temp);
+
+            self.renderElement(elementObj, temp, self.component, true);
+
+            CustomBuilder.update();
+
+            event.preventDefault();
+            return false;
+        });
+    }
+}

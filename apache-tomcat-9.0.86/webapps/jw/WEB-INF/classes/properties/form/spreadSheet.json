@@ -1,0 +1,267 @@
+[{
+    title : '@@form.spreadsheet.editSpreadSheet@@',
+    properties : [{
+        name : 'id',
+        label : '@@form.textfield.id@@',
+        type : 'textfield',
+        required : 'True',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@form.formgrid.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@form.formgrid.label@@',
+        type : 'textfield',
+        value : '@@org.joget.plugin.enterprise.SpreadSheetGrid.pluginLabel@@'
+    },
+    {
+        name : 'options',
+        label : '@@form.formgrid.columns@@',
+        type : 'repeater',
+        description : '@@form.spreadsheet.columns.desc@@',
+        fields : [{
+            name : 'value',
+            label : '@@app.emailtool.fieldId@@',
+            type : 'textfield',
+            required : 'True'
+        },
+        {
+            name : 'label',
+            label : '@@form.formgrid.label@@',
+            type : 'textfield'
+        },
+        {
+            name : 'formatType',
+            label : '@@form.formgrid.formatType@@',
+            type : 'selectbox',
+            options : [{
+                value : '',
+                label : '@@form.spreadsheet.formatType.text@@'
+            },
+            {
+                value : 'encrypted',
+                label : '@@form.spreadsheet.formatType.encryptedText@@'
+            },
+            {
+                value : 'numeric',
+                label : '@@form.spreadsheet.formatType.numeric@@'
+            },
+            {
+                value : 'date',
+                label : '@@form.spreadsheet.formatType.date@@'
+            },
+            {
+                value : 'time',
+                label : '@@form.spreadsheet.formatType.time@@'
+            },
+            {
+                value : 'checkbox',
+                label : '@@form.spreadsheet.formatType.checkbox@@'
+            },
+            {
+                value : 'dropdown',
+                label : '@@form.spreadsheet.formatType.dropdown@@'
+            },
+            {
+                value : 'autocomplete',
+                label : '@@form.spreadsheet.formatType.autocomplete@@'
+            },
+            {
+                value : 'password',
+                label : '@@form.spreadsheet.formatType.password@@'
+            },
+            {
+                value : 'file',
+                label : '@@form.spreadsheet.formatType.file@@'
+            },
+            {
+                value : 'image',
+                label : '@@form.spreadsheet.formatType.image@@'
+            },
+            {
+                value : 'url',
+                label : '@@form.spreadsheet.formatType.url@@'
+            },
+            {
+                value : 'hidden',
+                label : '@@form.spreadsheet.formatType.hidden@@'
+            },
+            {
+                value : 'custom',
+                label : '@@form.spreadsheet.formatType.custom@@'
+            }]
+        },
+        {
+            name : 'format',
+            label : '@@form.formgrid.format@@',
+            type : 'textfield',
+            required_validation_control_field: 'formatType',
+            required_validation_control_value: 'dropdown|autocomplete|file|image|custom',
+            required_validation_control_use_regex: 'true',
+        },
+        {
+            name : 'regexValidator',
+            label : '@@form.spreadsheet.regexValidator@@',
+            type : 'textfield'
+        },
+        {
+            name : 'formula',
+            label : '@@form.spreadsheet.formula@@',
+            type : 'textfield'
+        },
+        {
+            name : 'width',
+            label : '@@form.spreadsheet.width@@',
+            type : 'textfield'
+        },
+        {
+            name : 'readonly',
+            label : '@@form.formgrid.readonly@@',
+            type : 'checkbox',
+            options : [{value : 'true', label : ''}]
+        }]
+    }]
+},
+{
+    title : '@@form.formgrid.ui@@',
+    properties : [{
+        label : '@@form.formgrid.sorting@@',
+        type : 'header'
+    },
+    {
+        name : 'headerSorting',
+        label : '@@form.spreadsheet.headerSorting@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'sortingField',
+        label : '@@form.spreadsheet.sortingField@@',
+        description : '@@form.spreadsheet.sortingField.desc@@',
+        type : 'textfield'
+    },
+    {
+        label : '@@form.formgrid.grid@@',
+        type : 'header'
+    },
+    {
+        name : 'readonly',
+        label : '@@form.formgrid.readonly@@',
+        type : 'checkbox',
+        value : 'False',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'disabledAdd',
+        label : '@@form.formgrid.disabledAdd@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'disabledDelete',
+        label : '@@form.formgrid.disabledDelete@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'showRowNumber',
+        label : '@@form.formgrid.showRowNumber@@',
+        type : 'checkbox',
+        value : 'true',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'fixedColumnsLeft',
+        label : '@@form.spreadsheet.fixedColumnsLeft@@',
+        type : 'textfield',
+        value : '0',
+        required: 'true'
+    },
+    {
+        name : 'minSpareRows',
+        label : '@@form.spreadsheet.minSpareRows@@',
+        type : 'textfield',
+        value : '1',
+        required: 'true'
+    },
+    {
+        name : 'maxHeight',
+        label : '@@form.spreadsheet.maxHeight@@',
+        type : 'textfield',
+        value : ''
+    },
+    {
+        name : 'customSettings',
+        label : '@@form.spreadsheet.customSettings@@',
+        description : '@@form.spreadsheet.customSettings.desc@@',
+        type : 'codeeditor',
+        mode : 'json',
+        check_syntax : 'false'
+    }]
+},
+{
+    title : '@@form.formgrid.validationAndData@@',
+    properties : [{
+        label : '@@form.formgrid.validation@@',
+        type : 'header'
+    },
+    {
+        name : 'validator',
+        label : '@@form.formgrid.validator@@',
+        type : 'elementselect',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormMultiRowValidator',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    },
+    {
+        name : 'validateMinRow',
+        label : '@@form.formgrid.validateMinRow@@',
+        type : 'textfield'
+    },
+    {
+        name : 'validateMaxRow',
+        label : '@@form.formgrid.validateMaxRow@@',
+        type : 'textfield'
+    },
+    {
+        name : 'errorMessage',
+        label : '@@form.formgrid.errorMessage@@',
+        type : 'textfield',
+        value : '@@form.formgrid.invalidNumberOfRow@@'
+    },
+    {
+        label : '@@form.formgrid.dataBinder@@',
+        type : 'header'
+    },
+    {
+        name : 'loadBinder',
+        label : '@@form.formgrid.loadBinder@@',
+        type : 'elementselect',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormLoadMultiRowElementBinder',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    },
+    {
+        name : 'storeBinder',
+        label : '@@form.formgrid.storeBinder@@',
+        type : 'elementselect',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.form.model.FormStoreMultiRowElementBinder',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+    }]
+}]

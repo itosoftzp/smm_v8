@@ -1,0 +1,119 @@
+#process-status-canvas{
+    min-height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.process_container{
+    margin-bottom: 50px;
+    position:relative;
+    width:100%;
+}
+.subprocess_container {
+    position:relative;
+}
+.process_title{
+    padding-left:20px;
+}
+.node:not(.sfnode), .fnode{
+    border: solid 2px #ccc;
+    background: white;
+    padding: 10px;
+    min-height: 40px;
+    max-height: 200px;
+    min-width: 80px;
+    max-width: 100px;
+    z-index: 10;
+    cursor: pointer;
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
+}
+.sfnode {
+    border: 2px dotted #555;
+    background: #F7F7F7;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index: 10;
+    display:block;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.sfnode .node {
+    z-index: 11;
+}
+.sfnode > .node_name {
+    font-weight: bold;
+    padding: 0 15px;
+}
+.fnode {
+    cursor:default;
+}
+.node.completed {
+    border-color:#43a047;
+}
+.node:not(.sfnode).completed {
+    background: #f0f9f0;
+}
+.node.running {
+    border-color:#0288d1;
+}
+.node:not(.sfnode).running{
+    background: #e8f4fb;
+}
+.node:not(.sfnode).aborted{
+    background: #FFE6F3;
+}
+.node:not(.sfnode).terminated{
+    background: #FFDB9E;
+}
+.senode, .fsenode{
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.senode.start{
+    background: lightgreen;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+.senode.end, .fsenode.endNode{
+    background: orangered;
+    border: double 5px white;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+.fnode {
+    background: #eee;
+}
+.node.route, .fnode.route {
+    border:0;
+    background: url('../../../pbuilder/css/images/route.png') no-repeat center center;
+    background-size: contain;
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    opacity: 0.3;
+}
+.node.route {
+    opacity: 1;
+}
+.fnode, .fsenode {
+    opacity: 0.5;
+}
+.node_meta {
+    display:block;
+}
+span.dot_red{background-color: red;display: inline-block;height: 15px;text-align: left;width: 15px;}
+span.dot_green{background-color: green;display: inline-block;height: 15px;text-align: left;width: 15px;}
+span.dot_yellow{background-color: yellow;display: inline-block;height: 15px;text-align: left;width: 15px;}

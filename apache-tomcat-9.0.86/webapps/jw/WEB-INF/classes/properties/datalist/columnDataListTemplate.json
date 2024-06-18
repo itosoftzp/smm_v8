@@ -1,0 +1,28 @@
+[
+    {
+        "title": "@@datalist.columnDataListTemplate.config@@",
+        "properties": [
+            {
+                "name": "actionsStyle",
+                "label": "@@datalist.simpleListTemplate.actionsStyle@@",
+                "type" : "selectbox",
+                "options" : [
+                    {
+                        "value" : "",
+                        "label" : "@@datalist.simpleListTemplate.actionsStyle.dropdown@@"
+                    },
+                    {
+                        "value" : "normalActions",
+                        "label" : "@@datalist.simpleListTemplate.actionsStyle.normal@@"
+                    },
+                    {
+                        "value" : "swipeActions",
+                        "label" : "@@datalist.simpleListTemplate.actionsStyle.swipe@@"
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+

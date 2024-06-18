@@ -1,0 +1,86 @@
+INFO    07 Jun 2024 04:36:44 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+INFO    07 Jun 2024 04:40:07 org.joget.apps.app.web.JsonResponseFilter - Possible CSRF attack from url(/jw/web/json/apps/published/userviews) referer(https://www.google.com/) IP(108.137.35.184)
+INFO    07 Jun 2024 05:58:41 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+INFO    07 Jun 2024 09:17:32 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+INFO    10 Jun 2024 02:52:04 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+INFO    10 Jun 2024 02:53:57 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+INFO    10 Jun 2024 10:36:52 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+WARN    10 Jun 2024 16:14:12 org.joget.apps.license.LicenseManager - Invalid license
+ERROR   10 Jun 2024 16:14:12 org.hibernate.engine.jdbc.spi.SqlExceptionHelper - (conn=5231) Table 'jwdb_smm.app_builder' doesn't exist
+WARN    10 Jun 2024 16:14:26 org.joget.apps.license.LicenseManager - Invalid license
+ERROR   10 Jun 2024 16:14:26 org.hibernate.engine.jdbc.spi.SqlExceptionHelper - (conn=5229) Table 'jwdb_smm.app_builder' doesn't exist
+WARN    11 Jun 2024 03:12:24 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:12:34 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:12:34 org.joget.apps.license.LicenseManager - Invalid license
+INFO    11 Jun 2024 03:20:58 org.joget.apps.app.service.AppServiceImpl - Importing app appcenter ...
+INFO    11 Jun 2024 03:20:58 org.joget.apps.app.service.AppServiceImpl - Imported datalist definitions : 3
+INFO    11 Jun 2024 03:20:58 org.joget.apps.app.service.AppServiceImpl - Imported userview definitions : 1
+INFO    11 Jun 2024 03:20:58 org.joget.apps.app.service.AppServiceImpl - Imported addon builder definitions : 5
+INFO    11 Jun 2024 03:20:59 org.joget.apps.app.service.AppServiceImpl - Imported messages : 32
+INFO    11 Jun 2024 03:20:59 org.joget.apps.app.service.AppServiceImpl - Imported app resources files : 0
+INFO    11 Jun 2024 03:20:59 org.joget.apps.app.service.AppServiceImpl - Imported plugins : 0
+WARN    11 Jun 2024 03:20:59 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:20:59 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:00 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:05 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:05 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:21:12 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:27:31 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:32:36 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:13 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:13 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:13 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:15 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:15 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:15 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:35:37 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:36:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:36:35 org.joget.apps.license.LicenseManager - Invalid license
+WARN    11 Jun 2024 03:36:35 org.joget.apps.license.LicenseManager - Invalid license
+INFO    11 Jun 2024 03:52:08 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.
+INFO    12 Jun 2024 02:31:27 org.displaytag.properties.TableProperties - LocaleResolver initialized to org.joget.apps.app.web.LocalLocaleResolver.

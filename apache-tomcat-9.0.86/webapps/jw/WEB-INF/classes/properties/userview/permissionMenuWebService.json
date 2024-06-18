@@ -1,0 +1,14 @@
+[
+    {
+        title:'@@userview.userviewcategory.setPermission@@', 
+        properties:[
+            {
+                name:'permission',
+                label:'@@userview.userviewcategory.permission@@',
+                type:'elementselect',
+                options_ajax:'[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.apps.userview.model.UserviewAccessPermission&exclude=org.joget.plugin.enterprise.PermissionMenuController',
+                url:'[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+            }
+        ]
+    }
+]

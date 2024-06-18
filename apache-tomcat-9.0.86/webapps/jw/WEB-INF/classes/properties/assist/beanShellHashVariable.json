@@ -1,0 +1,24 @@
+{
+    "optionGroup" : {
+        "@@assist.BeanShell@@" : [
+            {
+                "value" : "#beanshell.KEY[PARAMETERS]#",
+                "label" : "@@assist.BeanShell.hash@@",
+                "syntax" : [
+                    "#beanshell.",
+                    {
+                        "placeholder" : "KEY",
+                        "option" : "environmentVariable",
+                        "required" : true
+                    },
+                    {
+                        "placeholder" : "PARAMETERS",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            }
+        ]
+    }
+}

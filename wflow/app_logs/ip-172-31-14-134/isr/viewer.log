@@ -1,0 +1,9 @@
+INFO    06 Jun 2024 09:20:32 PackageEventLogger - UTCTime=1717665632235,EventType=packageLoaded,PackageId=isr,PackageVersion=1,EventPerformedBy=roleSystem
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.service.AppServiceImpl - Imported xpdl
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.service.AppServiceImpl - Imported process form mappings : 5
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.service.AppServiceImpl - Imported process tool mappings : 2
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.service.AppServiceImpl - Imported process participant mappings : 4
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.service.AppServiceImpl - Imported app resources files : 4
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.service.AppServiceImpl - Imported plugins : 0
+INFO    06 Jun 2024 09:20:32 org.joget.apps.app.web.SetupServlet - Import app /setup/apps/APP_JogetDxShowcase-1.zip
+INFO    06 Jun 2024 14:42:12 org.displaytag.export.ExportViewFactory - Initializing ExportViewFactory with type={csv,excel,xml,pdf}

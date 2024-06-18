@@ -1,0 +1,20 @@
+[{
+    title : '@@app.conditionformatter.config@@',
+    properties : [{
+        name : 'conditions',
+        label : '@@app.conditionformatter.conditions@@',
+        description : '@@app.conditionformatter.conditions.desc@@',
+        type : 'grid',
+        required : 'True',
+        columns : [{
+            key : 'rule',
+            label : '@@app.conditionformatter.rule@@',
+            required : 'True'
+        },
+        {
+            key : 'format',
+            label : '@@app.conditionformatter.format@@',
+            required : 'True'
+        }]
+    }]
+}]

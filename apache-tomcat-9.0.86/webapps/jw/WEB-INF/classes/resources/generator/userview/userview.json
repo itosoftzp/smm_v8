@@ -1,0 +1,45 @@
+{
+    "className": "org.joget.apps.userview.model.Userview",
+    "properties": {
+        "id": "%s",
+        "name": "%s",
+        "description": "",
+        "welcomeMessage": "@@generator.userview.welcomeMessage@@",
+        "logoutText": "@@generator.userview.logout@@",
+        "footerMessage": "@@generator.userview.footer@@"
+    },
+    "setting": {
+        "properties": {
+            "userviewName": "%s",
+            "userviewDescription": "%s",
+            "theme": {
+                "className": "%s", 
+                "properties": {
+                    %s
+                }
+            },
+            "permission": {
+                "className": "org.joget.apps.userview.lib.LoggedInUserPermission",
+                "properties": {}
+            },
+            "mobileViewDisabled":"",
+            "mobileCacheEnabled":""
+        }
+    },
+    "categories":[{
+        "className": "org.joget.apps.userview.model.UserviewCategory", 
+        "properties": {
+            "id": "category-EE74E4F4426241BD9BC3BC73B1D24AC7", 
+            "label": "@@generator.userview.home@@"
+        }, 
+        "menus": [{
+            "className": "org.joget.apps.userview.lib.HtmlPage", 
+            "properties": {
+                "id": "%s", 
+                "customId": "@@generator.userview.welcome.id@@", 
+                "label": "@@generator.userview.welcome.label@@", 
+                "content": "@@generator.userview.welcome.content@@"
+            }
+        }]
+    }]
+}

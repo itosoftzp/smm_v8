@@ -1,0 +1,210 @@
+{
+    "optionGroup" : {
+        "Current User" : [
+            {
+                "value" : "#currentUser.fullName#",
+                "label" : "@@assist.CurrentUser.fullName@@"
+            },
+            {
+                "value" : "#currentUser.firstName#",
+                "label" : "@@assist.CurrentUser.firstName@@"
+            },
+            {
+                "value" : "#currentUser.lastName#",
+                "label" : "@@assist.CurrentUser.lastName@@"
+            },
+            {
+                "value" : "#currentUser.email#",
+                "label" : "@@assist.CurrentUser.email@@"
+            },
+            {
+                "value" : "#currentUser.active#",
+                "label" : "@@assist.CurrentUser.active@@"
+            },
+            {
+                "value" : "#currentUser.timeZone#",
+                "label" : "@@assist.CurrentUser.timeZone@@"
+            },
+            {
+                "value" : "#currentUser.locale#",
+                "label" : "@@assist.CurrentUser.locale@@"
+            },
+            {
+                "value" : "#currentUser.roles#",
+                "label" : "@@assist.CurrentUser.roles@@"
+            },
+            {
+                "value" : "#currentUser.username#",
+                "label" : "@@assist.CurrentUser.username@@"
+            },
+            {
+                "value" : "#currentUser.employee.code#",
+                "label" : "@@assist.CurrentUser.employee.code@@"
+            },
+            {
+                "value" : "#currentUser.employee.jobTitle#",
+                "label" : "@@assist.CurrentUser.employee.jobTitle@@"
+            },
+            {
+                "value" : "#currentUser.employee.isHod#",
+                "label" : "@@assist.CurrentUser.employee.isHod@@"
+            },
+            {
+                "value" : "#currentUser.organization.id#",
+                "label" : "@@assist.CurrentUser.organization.id@@"
+            },
+            {
+                "value" : "#currentUser.organization.name#",
+                "label" : "@@assist.CurrentUser.organization.name@@"
+            },
+            {
+                "value" : "#currentUser.organization.description#",
+                "label" : "@@assist.CurrentUser.organization.description@@"
+            },
+            {
+                "value" : "#currentUser.department.id#",
+                "label" : "@@assist.CurrentUser.department.id@@"
+            },
+            {
+                "value" : "#currentUser.department.name#",
+                "label" : "@@assist.CurrentUser.department.name@@"
+            },
+            {
+                "value" : "#currentUser.department.description#",
+                "label" : "@@assist.CurrentUser.department.description@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.fullName#",
+                "label" : "@@assist.CurrentUser.department.hod.fullName@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.username#",
+                "label" : "@@assist.CurrentUser.department.hod.username@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.firstName#",
+                "label" : "@@assist.CurrentUser.department.hod.firstName@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.lastName#",
+                "label" : "@@assist.CurrentUser.department.hod.lastName@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.email#",
+                "label" : "@@assist.CurrentUser.department.hod.email@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.active#",
+                "label" : "@@assist.CurrentUser.department.hod.active@@"
+            },
+            {
+                "value" : "#currentUser.department.hod.timeZone#",
+                "label" : "@@assist.CurrentUser.department.hod.timeZone@@"
+            },
+            {
+                "value" : "#currentUser.department.organization.id#",
+                "label" : "@@assist.CurrentUser.department.organization.id@@"
+            },
+            {
+                "value" : "#currentUser.department.organization.name#",
+                "label" : "@@assist.CurrentUser.department.organization.name@@"
+            },
+            {
+                "value" : "#currentUser.department.organization.description#",
+                "label" : "@@assist.CurrentUser.department.organization.description@@"
+            },
+            {
+                "value" : "#currentUser.grade.id#",
+                "label" : "@@assist.CurrentUser.grade.id@@"
+            },
+            {
+                "value" : "#currentUser.grade.name#",
+                "label" : "@@assist.CurrentUser.grade.name@@"
+            },
+            {
+                "value" : "#currentUser.grade.description#",
+                "label" : "@@assist.CurrentUser.grade.description@@"
+            },
+            {
+                "value" : "#currentUser.grade.organization.id#",
+                "label" : "@@assist.CurrentUser.grade.organization.id@@"
+            },
+            {
+                "value" : "#currentUser.grade.organization.name#",
+                "label" : "@@assist.CurrentUser.grade.organization.name@@"
+            },
+            {
+                "value" : "#currentUser.grade.organization.description#",
+                "label" : "@@assist.CurrentUser.grade.organization.description@@"
+            },
+            {
+                "value" : "#currentUser.groups.id#",
+                "label" : "@@assist.CurrentUser.groups.id@@"
+            },
+            {
+                "value" : "#currentUser.groups.name#",
+                "label" : "@@assist.CurrentUser.groups.name@@"
+            },
+            {
+                "value" : "#currentUser.groups.organization.id#",
+                "label" : "@@assist.CurrentUser.groups.organization.id@@"
+            },
+            {
+                "value" : "#currentUser.groups.organization.name#",
+                "label" : "@@assist.CurrentUser.groups.organization.name@@"
+            },
+            {
+                "value" : "#currentUser.groups.organization.description#",
+                "label" : "@@assist.CurrentUser.groups.organization.description@@"
+            },
+            {
+                "value" : "#currentUser.hod.fullName#",
+                "label" : "@@assist.CurrentUser.hod.fullName@@"
+            },
+            {
+                "value" : "#currentUser.hod.username",
+                "label" : "@@assist.CurrentUser.hod.username@@"
+            },
+            {
+                "value" : "#currentUser.hod.firstName#",
+                "label" : "@@assist.CurrentUser.hod.firstName@@"
+            },
+            {
+                "value" : "#currentUser.hod.lastName#",
+                "label" : "@@assist.CurrentUser.hod.lastName@@"
+            },
+            {
+                "value" : "#currentUser.hod.email#",
+                "label" : "@@assist.CurrentUser.hod.email@@"
+            },
+            {
+                "value" : "#currentUser.hod.active#",
+                "label" : "@@assist.CurrentUser.hod.active@@"
+            },
+            {
+                "value" : "#currentUser.hod.timeZone#",
+                "label" : "@@assist.CurrentUser.hod.timeZone@@"
+            },
+            {
+                "value" : "#currentUser.meta.KEY#",
+                "label" : "@@assist.CurrentUser.meta@@",
+                "syntax" : [
+                    "#currentUser.meta.",
+                    {
+                        "placeholder" : "KEY",
+                        "required" : true
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#currentUser.dateFormat#",
+                "label" : "@@assist.CurrentUser.dateFormat@@"
+            },
+            {
+                "value" : "#currentUser.dateTimeFormat#",
+                "label" : "@@assist.CurrentUser.dateTimeFormat@@"
+            }
+        ]
+    }
+}

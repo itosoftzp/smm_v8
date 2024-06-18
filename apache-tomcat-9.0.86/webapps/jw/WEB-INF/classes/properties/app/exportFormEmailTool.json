@@ -1,0 +1,394 @@
+[{
+    title : '@@app.exportformemailtool.config@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@app.exportformemailtool.form@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options',
+        required : 'True'
+    },
+    {
+        name : 'fileName',
+        label : '@@app.exportformemailtool.filename@@',
+        description : '@@app.exportformemailtool.filename.desc@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'hideEmptyValueField',
+        label : '@@app.exportformemailtool.hideEmptyValueField@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'showNotSelectedOptions',
+        label : '@@app.exportformemailtool.showNotSelectedOptions@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.exportformemailtool.emailInfo@@',
+    properties : [{
+        name : 'toSpecific',
+        label : '@@app.exportformemailtool.toEmail@@',
+        type : 'textfield'
+    },
+    {
+        name : 'toParticipantId',
+        label : '@@app.exportformemailtool.toParticipant@@',
+        type : 'textfield'
+    },
+    {
+        name : 'cc',
+        label : '@@app.exportformemailtool.cc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'bcc',
+        label : '@@app.exportformemailtool.bcc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'subject',
+        label : '@@app.exportformemailtool.subject@@',
+        type : 'textfield'
+    },
+    {
+        name : 'message',
+        label : '@@app.exportformemailtool.message@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '15'
+    },
+    {
+        name : 'isHtml',
+        label : '@@app.exportformemailtool.isHtml@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.exportformemailtool.smtpSetting@@',
+    properties : [{
+        name : 'from',
+        label : '@@app.exportformemailtool.from@@',
+        description : '@@app.exportformemailtool.from.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'host',
+        label : '@@app.exportformemailtool.host@@',
+        description : '@@app.exportformemailtool.host.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'port',
+        label : '@@app.exportformemailtool.port@@',
+        description : '@@app.exportformemailtool.port.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'security',
+        label : '@@app.exportformemailtool.security@@',
+        description : '@@app.exportformemailtool.security.desc@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : ''
+        },
+        {
+            value : 'TLS',
+            label : '@@app.exportformemailtool.security.tls@@'
+        },
+        {
+            value : 'SSL',
+            label : '@@app.exportformemailtool.security.ssl@@'
+        }],
+        supportHash : 'true'
+    },
+    {
+        name : 'username',
+        label : '@@app.exportformemailtool.username@@',
+        type : 'textfield'
+    },
+    {
+        name : 'password',
+        label : '@@app.exportformemailtool.password@@',
+        type : 'password'
+    },
+    {
+        label : '@@app.emailtool.digitalSignature@@',
+        type : 'header'
+    },
+    {
+        name : 'p12',
+        label : '@@app.emailtool.p12path@@',
+        description : '@@app.emailtool.p12path.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'storepass',
+        label : '@@app.emailtool.storepass@@',
+        type : 'password'
+    },
+    {
+        name : 'alias',
+        label : '@@app.emailtool.issuerAlias@@',
+        type : 'textfield'
+    },
+    {
+        label : '@@app.emailtool.error@@',
+        type : 'header'
+    },
+    {
+        name : 'retryCount',
+        label : '@@app.emailtool.retryCount@@',
+        type : 'number'
+    },
+    {
+        name : 'retryInterval',
+        label : '@@app.emailtool.retryInterval@@',
+        type : 'number'
+    }],
+    validators : [{  
+        type : 'AJAX',
+        url : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.app.lib.EmailTool/service?action=validate',
+        default_error_message : '@@app.emailtool.error.smtp@@',
+        method : 'POST'
+    }],
+    buttons : [{
+        name : 'testmail',    
+        label : '@@app.emailtool.sendTestMail@@',
+        ajax_url : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.app.lib.EmailTool/service?action=testmail',
+        fields : ['from', 'host', 'port', 'security', 'username', 'password'],
+        addition_fields : [
+            {
+                name : 'toSpecific',
+                label : '@@app.emailtool.toEmail@@',
+                type : 'textfield',
+                required : 'True'
+            }
+        ]
+    }]
+},
+{
+    title : '@@app.exportformemailtool.advanced@@',
+    properties : [{
+        name : 'formatting',
+        label : '@@app.exportformemailtool.formatting@@',
+        type : 'codeeditor',
+        mode : 'css'
+    },
+    {
+        name : 'headerHtml',
+        label : '@@app.exportformemailtool.headerHtml@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'repeatHeader',
+        label : '@@app.exportformemailtool.repeatHeader@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'footerHtml',
+        label : '@@app.exportformemailtool.footerHtml@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'repeatFooter',
+        label : '@@app.exportformemailtool.repeatFooter@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.emailtool.attachments@@',
+    properties : [{
+        name:'attachmentFormDefId',
+        label:'@@app.emailtool.form@@',
+        type:'selectbox',
+        options_ajax:'[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options',
+    },
+    {
+        name:'fields',
+        label:'@@app.emailtool.fields@@',
+        type:'grid',
+        columns:[{
+            key:'field',
+            label:'@@app.emailtool.fieldId@@',
+            options_ajax_on_change : 'formDefId',
+            options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/form/columns/options'
+        },
+        {
+            key:'embed',
+            label:'@@app.emailtool.embed@@',
+            type:'truefalse'
+        }]
+    },
+    {
+        name:'files',
+        label:'@@app.emailtool.files@@',
+        type:'grid',
+        columns:[{
+            key:'path',
+            label:'@@app.emailtool.path@@'
+        },
+        {
+            key:'type',
+            label:'@@app.emailtool.pathType@@',
+            options: [{
+                value : 'system',
+                label : '@@app.emailtool.pathType.system@@'
+            },
+            {
+                value : 'url',
+                label : '@@app.emailtool.pathType.url@@'
+            }]
+        },
+        {
+            key:'fileName',
+            label:'@@app.emailtool.fileName@@'
+        },
+        {
+            key:'embed',
+            label:'@@app.emailtool.embed@@',
+            type:'truefalse'
+        }]
+    },
+    {
+        label : '@@app.emailtool.ics@@',
+        description : '@@app.emailtool.ics.desc@@',
+        type : 'header'
+    },
+    {
+        name : 'icsAttachement',
+        label : '@@app.emailtool.icsAttachement@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'icsEventName',
+        label : '@@app.emailtool.icsEventName@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'icsDateStart',
+        label : '@@app.emailtool.icsDateStart@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        required : 'true'
+    },
+    {
+        name : 'icsDateEnd',
+        label : '@@app.emailtool.icsDateEnd@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'icsDateFormat',
+        label : '@@app.emailtool.icsDateFormat@@',
+        type : 'textfield',
+        value : 'yyyy-MM-dd HH:mm',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        required : 'true'
+    },
+    {
+        name : 'icsTimezone',
+        label : '@@app.emailtool.icsTimezone@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'icsAllDay',
+        label : '@@app.emailtool.icsAllDay@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }],
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false',
+        supportHash : 'true'
+    },
+    {
+        name : 'icsEventDesc',
+        label : '@@app.emailtool.icsEventDesc@@',
+        type : 'textarea',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'icsLocation',
+        label : '@@app.emailtool.icsLocation@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    },
+    {
+        name : 'icsOrganizerEmail',
+        label : '@@app.emailtool.icsOrganizerEmail@@',
+        type : 'textfield',
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    },
+    {
+        name:'icsAttendees',
+        label:'@@app.emailtool.icsAttendees@@',
+        type:'grid',
+        columns:[{
+            key:'name',
+            label:'@@app.emailtool.icsAttendees.name@@',
+            required : 'true'
+        },
+        {
+            key:'email',
+            label:'@@app.emailtool.icsAttendees.email@@',
+            required : 'true'
+        },
+        {
+            key:'required',
+            label:'@@app.emailtool.icsAttendees.required@@',
+            type: 'truefalse'
+        }],
+        control_field: 'icsAttachement',
+        control_value: 'true',
+        control_use_regex: 'false'
+    }]
+}]

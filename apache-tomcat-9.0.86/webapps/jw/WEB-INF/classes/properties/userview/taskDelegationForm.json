@@ -1,0 +1,426 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "taskDelegation",
+        "name": "@@userview.taskDelegation.label@@",
+        "tableName": "taskDelegation",
+        "description": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+            "properties": {
+                "script": "import java.text.SimpleDateFormat;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.Element;\nimport org.joget.apps.form.model.FormData;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.app.dao.UserReplacementDao;\nimport org.joget.apps.app.model.UserReplacement;\n\npublic FormRowSet load(Element element, String primaryKey, FormData formData) {\n    if (primaryKey != null && !primaryKey.isEmpty()) {\n        UserReplacementDao dao = (UserReplacementDao) AppUtil.getApplicationContext().getBean(\"userReplacementDao\");\n        UserReplacement replacement = dao.getUserReplacement(primaryKey);\n\n        if (replacement != null) {\n            SimpleDateFormat df = new SimpleDateFormat(\"yyyy-MM-dd\");\n            FormRowSet rows = new FormRowSet();\n            FormRow r = new FormRow();\n            rows.add(r);\n\n            r.setId(primaryKey);\n            r.setProperty(\"applicationId\", (replacement.getAppId() != null)?replacement.getAppId():\"\");\n            r.setProperty(\"processIds\", (replacement.getProcessIds() != null)?replacement.getProcessIds():\"\");\n            r.setProperty(\"username\", (replacement.getUsername() != null)?replacement.getUsername():\"\");\n            r.setProperty(\"replacementUser\", (replacement.getReplacementUser() != null)?replacement.getReplacementUser():\"\");\n            r.setProperty(\"startDate\", (replacement.getStartDate() != null)?df.format(replacement.getStartDate()):\"\");\n            r.setProperty(\"endDate\", (replacement.getEndDate() != null)?df.format(replacement.getEndDate()):\"\");\n            \n            return rows;\n        }\n    }\n    return null;\n}\n\nreturn load(element, primaryKey, formData);",
+                "useAjax": ""
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+            "properties": {
+                "script": "import java.text.SimpleDateFormat;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.Element;\nimport org.joget.apps.form.model.FormData;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.app.dao.UserReplacementDao;\nimport org.joget.apps.app.model.UserReplacement;\nimport org.joget.workflow.model.dao.WorkflowHelper;\n\npublic FormRowSet store(Element element, FormRowSet rows, FormData formData) {\n    if (rows != null && !rows.isEmpty()) {\n        UserReplacementDao dao = (UserReplacementDao) AppUtil.getApplicationContext().getBean(\"userReplacementDao\");\n\n        FormRow r = rows.get(0);\n        \n        UserReplacement replacement = null;\n        if (r.getId() != null) {\n            replacement = dao.getUserReplacement(r.getId());\n            \n            if (replacement != null) {\n                WorkflowHelper helper = (WorkflowHelper) AppUtil.getApplicationContext().getBean(\"workflowHelper\");\n                helper.removeReplacementUsers(replacement.getReplacementUser());\n            }\n        }\n        SimpleDateFormat df = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n        \n        if (replacement == null) {\n            replacement = new UserReplacement();\n        }\n        replacement.setAppId(r.getProperty(\"applicationId\"));\n        replacement.setProcessIds(r.getProperty(\"processIds\"));\n        replacement.setUsername(r.getProperty(\"username\"));\n        replacement.setReplacementUser(r.getProperty(\"replacementUser\"));\n        replacement.setStartDate(df.parse(r.getProperty(\"startDate\") + \" 00:00:00\"));\n        replacement.setEndDate(df.parse(r.getProperty(\"endDate\") + \" 23:59:59\"));\n\n        dao.saveUserReplacement(replacement);\n    }\n    return null;\n}\n\nreturn store(element, rows, formData);",
+                "useAjax": ""
+            }
+        },
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "noPermissionMessage": "",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "postProcessorRunOn": "both"
+    },
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.plugin.enterprise.MultiSelectBox",
+                            "properties": {
+                                "id": "applicationId",
+                                "readonlyLabel": "",
+                                "workflowVariable": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "script": "import java.util.Collection;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.app.dao.AppDefinitionDao;\nimport org.joget.apps.app.model.AppDefinition;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\nimport org.apache.commons.lang.ArrayUtils;\n\nAppDefinitionDao appDefinitionDao = (AppDefinitionDao) AppUtil.getApplicationContext().getBean(\"appDefinitionDao\");\nCollection appDefinitionList = appDefinitionDao.findPublishedApps(\"name\", Boolean.FALSE, null, null);\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n\nString mode = formData.getRequestParameter(\"_allowed_app\");\nString selected = formData.getRequestParameter(\"_select_allowed_app\");\nif (selected == null) {\n    selected = \"\";\n}\nString[] apps = selected.split(\";\");\nif (appDefinitionList != null) {\n    for (AppDefinition a : appDefinitionList) {\n        if (\"all\".equals(mode) || (\"selected\".equals(mode) && ArrayUtils.contains(apps, a.getAppId()))) {\n            FormRow r = new FormRow();\n            r.setProperty(FormUtil.PROPERTY_VALUE, a.getAppId());\n            r.setProperty(FormUtil.PROPERTY_LABEL, a.getName());\n            results.add(r);\n        }\n    }\n}\n\nreturn results;"
+                                    }
+                                },
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "controlField": "",
+                                "label": "@@userview.taskDelegation.app@@",
+                                "multiple": "true",
+                                "readonly": "",
+                                "options": [],
+                                "size": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section4",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "String[] mode = requestParams.get(\"_allowed_app\");\nif (mode != null && mode[0] != null && !\"current\".equals(mode[0]) ) {\n    return true;\n}\nreturn false;"
+                    }
+                }
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "applicationId",
+                                "workflowVariable": "",
+                                "value": "#requestParam.appId#",
+                                "useDefaultWhenEmpty": "true"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section6",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "String[] mode = requestParams.get(\"_allowed_app\");\nif (mode != null && mode[0] != null && \"current\".equals(mode[0]) ) {\n    return true;\n}\nreturn false;"
+                    }
+                }
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.plugin.enterprise.MultiSelectBox",
+                            "properties": {
+                                "id": "processIds",
+                                "readonlyLabel": "",
+                                "workflowVariable": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "script": "import java.util.Collection;\nimport java.util.HashSet;\nimport java.util.Set;\nimport java.util.ArrayList;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\nimport org.joget.workflow.model.service.WorkflowManager;\nimport org.joget.workflow.model.WorkflowProcess;\nimport org.apache.commons.lang.ArrayUtils;\nimport org.joget.apps.app.dao.AppDefinitionDao;\nimport org.joget.apps.app.model.AppDefinition;\nimport org.joget.apps.app.model.PackageDefinition;\n\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\nAppDefinitionDao appDefinitionDao = (AppDefinitionDao) AppUtil.getApplicationContext().getBean(\"appDefinitionDao\");\n\nCollection appDefinitionList = appDefinitionDao.findPublishedApps(\"name\", Boolean.FALSE, null, null);\nCollection processList = new ArrayList();\n\nif (appDefinitionList != null && !appDefinitionList.isEmpty()) {\n    for (AppDefinition ad : appDefinitionList) {\n        Collection packageDefList = ad.getPackageDefinitionList();\n        if (packageDefList != null && !packageDefList.isEmpty()) {\n            PackageDefinition packageDef = packageDefList.iterator().next();\n            Collection pl = workflowManager.getProcessList(packageDef.getId(), packageDef.getVersion().toString());\n            if (pl != null) {\n                processList.addAll(pl);\n            }\n        }\n    }\n}\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n\nString mode = formData.getRequestParameter(\"_allowed_process\");\nString selected = formData.getRequestParameter(\"_select_allowed_processess\");\nif (selected == null) {\n    selected = \"\";\n}\nString[] processes = selected.split(\";\");\n            \nSet exists = new HashSet();\nif (processList != null) {\n    for (WorkflowProcess p : processList) {\n        if (!exists.contains(p.getPackageId() + \":\" + p.getIdWithoutVersion())\n            && (\"all\".equals(mode) || (\"selected\".equals(mode) && ArrayUtils.contains(processes, p.getPackageId() + \":\" + p.getIdWithoutVersion())))) {\n            FormRow r = new FormRow();\n            r.setProperty(FormUtil.PROPERTY_VALUE, p.getPackageId() + \":\" + p.getIdWithoutVersion());\n            r.setProperty(FormUtil.PROPERTY_LABEL, p.getName());\n            r.setProperty(FormUtil.PROPERTY_GROUPING, p.getPackageId());\n            exists.add(p.getPackageId() + \":\" + p.getIdWithoutVersion());\n            results.add(r);\n        }\n    }\n}\n\nreturn results;"
+                                    }
+                                },
+                                "width": "40%%",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "controlField": "applicationId",
+                                "label": "@@userview.taskDelegation.process@@",
+                                "multiple": "true",
+                                "readonly": "",
+                                "options": []
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "processes_hint",
+                                "value": "<span style=\"color:#666;font-style:italic;\">@@userview.taskDelegation.process.hint@@</span>",
+                                "label": "&nbsp;",
+                                "autoPopulate": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section6",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                }
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "username",
+                                "workflowVariable": "",
+                                "value": "#currentUser.username#",
+                                "useDefaultWhenEmpty": "true"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section2",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "String[] mode = requestParams.get(\"_mode\");\nif (mode != null && mode[0] != null && \"user\".equals(mode[0]) ) {\n    return true;\n}\nreturn false;"
+                    }
+                }
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.plugin.enterprise.MultiSelectBox",
+                            "properties": {
+                                "id": "username",
+                                "workflowVariable": "",
+                                "readonlyLabel": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "script": "import java.util.Collection;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\nimport org.apache.commons.lang.ArrayUtils;\nimport org.joget.directory.model.User;\nimport org.joget.directory.model.service.ExtDirectoryManager;\n\nExtDirectoryManager directoryManager = (ExtDirectoryManager) AppUtil.getApplicationContext().getBean(\"directoryManager\");\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n\nString mode = formData.getRequestParameter(\"_mode\");\nCollection users = null;\n\nif (\"hod\".equals(mode)) {\n    users = directoryManager.getUserDepartmentUser(\"#currentUser.username#\");\n} else if (\"admin\".equals(mode)) {\n    users = directoryManager.getUsers(null, null, null, null, null, null, null, \"firstName\", false, null, null);\n}\n\nif (users != null && !users.isEmpty()) {\n    for (User u : users) {\n        FormRow r = new FormRow();\n        r.setProperty(FormUtil.PROPERTY_VALUE, u.getUsername());\n        r.setProperty(FormUtil.PROPERTY_LABEL, u.getFirstName() + \" \" + u.getLastName() + \" (\" + u.getUsername() + \")\");\n        results.add(r);\n    }\n}\n\nreturn results;"
+                                    }
+                                },
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "custom-regex": "",
+                                        "mandatory": "true",
+                                        "type": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "value": "",
+                                "label": "@@userview.taskDelegation.user@@",
+                                "readonly": "",
+                                "multiple": "",
+                                "size": "",
+                                "options": []
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section3",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "String[] mode = requestParams.get(\"_mode\");\nif (mode != null && mode[0] != null && (\"admin\".equals(mode[0]) || \"hod\".equals(mode[0]))) {\n    return true;\n}\nreturn false;"
+                    }
+                }
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.plugin.enterprise.MultiSelectBox",
+                            "properties": {
+                                "id": "replacementUser",
+                                "workflowVariable": "",
+                                "readonlyLabel": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "script": "import java.util.Collection;\nimport java.util.ArrayList;\nimport java.util.TreeMap;\nimport java.util.Map;\nimport org.joget.apps.app.service.AppUtil;\nimport org.joget.apps.form.model.FormRow;\nimport org.joget.apps.form.model.FormRowSet;\nimport org.joget.apps.form.service.FormUtil;\nimport org.apache.commons.lang.ArrayUtils;\nimport org.joget.directory.model.Group;\nimport org.joget.directory.model.User;\nimport org.joget.directory.model.service.ExtDirectoryManager;\n\nExtDirectoryManager directoryManager = (ExtDirectoryManager) AppUtil.getApplicationContext().getBean(\"directoryManager\");\n\nFormRowSet results = new FormRowSet();\nresults.setMultiRow(true);\n\nFormRow emptyRow = new FormRow();\nemptyRow.setProperty(FormUtil.PROPERTY_VALUE, \"\");\nemptyRow.setProperty(FormUtil.PROPERTY_LABEL, \"\");\nresults.add(emptyRow);\n\nString mode = formData.getRequestParameter(\"_mode\");\nCollection users = null;\n\nif (\"hod\".equals(mode)) {\n    users = directoryManager.getUserDepartmentUser(\"#currentUser.username#\");\n} else if (\"admin\".equals(mode)) {\n    users = directoryManager.getUsers(null, null, null, null, null, null, \"1\", \"firstName\", false, null, null);\n} else {\n    String reassignMode = formData.getRequestParameter(\"_reassign_mode\");\n    if (\"department\".equals(reassignMode)) {\n        users = directoryManager.getUserDepartmentUser(\"#currentUser.username#\");\n    } else if (\"group\".equals(reassignMode)) {\n        Collection groups = directoryManager.getGroupByUsername(\"#currentUser.username#\");\n        if (groups != null && !groups.isEmpty()) {\n            users = new ArrayList();\n            Map userMap = new TreeMap();\n            for (Group g : groups) {\n                Collection temp = directoryManager.getUserByGroupId(g.getId());\n                if (temp != null && !temp.isEmpty()) {\n                    for (User u : temp) {\n                        if (u.getActive() == null || u.getActive() == User.ACTIVE) {\n                            userMap.put(u.getFirstName() + \" \" + u.getLastName() + \" (\" + u.getUsername() + \")\", u.getUsername());\n                        }\n                    }\n                }\n            }\n            for (String key : userMap.keySet()) {\n              FormRow r = new FormRow();\n              r.setProperty(FormUtil.PROPERTY_VALUE, userMap.get(key));\n              r.setProperty(FormUtil.PROPERTY_LABEL, key);\n              results.add(r);\n            }\n        }\n        return results;\n    } else {\n        users = directoryManager.getUsers(null, null, null, null, null, null, \"1\", \"firstName\", false, null, null);\n    }\n}\n\nif (users != null && !users.isEmpty()) {\n    for (User u : users) {\n        if (u.getActive() == null || u.getActive() == User.ACTIVE) {\n            FormRow r = new FormRow();\n            r.setProperty(FormUtil.PROPERTY_VALUE, u.getUsername());\n            r.setProperty(FormUtil.PROPERTY_LABEL, u.getFirstName() + \" \" + u.getLastName() + \" (\" + u.getUsername() + \")\");\n            results.add(r);\n        }\n    }\n}\n\nreturn results;"
+                                    }
+                                },
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "custom-regex": "",
+                                        "mandatory": "true",
+                                        "type": ""
+                                    }
+                                },
+                                "controlField": "",
+                                "value": "",
+                                "label": "@@userview.taskDelegation.replacementUser@@",
+                                "readonly": "",
+                                "multiple": "",
+                                "size": "",
+                                "options": []
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "readonlyLabel": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "endDateFieldId": "endDate",
+                                "label": "@@userview.taskDelegation.startDate@@",
+                                "format": "%s",
+                                "startDateFieldId": "",
+                                "allowManual": "",
+                                "id": "startDate",
+                                "workflowVariable": "",
+                                "value": "",
+                                "dataFormat": "yyyy-MM-dd",
+                                "readonly": "",
+                                "yearRange": "c-10:c+10",
+                                "currentDateAs": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "readonlyLabel": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "endDateFieldId": "",
+                                "label": "@@userview.taskDelegation.endDate@@",
+                                "format": "%s",
+                                "startDateFieldId": "startDate",
+                                "allowManual": "",
+                                "id": "endDate",
+                                "workflowVariable": "",
+                                "value": "",
+                                "dataFormat": "yyyy-MM-dd",
+                                "readonly": "",
+                                "yearRange": "c-10:c+10",
+                                "currentDateAs": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "id",
+                                "workflowVariable": "",
+                                "value": "",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section1",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                }
+            }
+        }
+    ]
+}

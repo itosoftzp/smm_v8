@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class entity-name="app_fd_j_crm_proposal" lazy="false" name="org.joget.apps.form.model.FormRow" table="app_fd_j_crm_proposal">
+        <id name="id" type="string"/>
+        <property index="idx_datecreated" name="dateCreated" type="timestamp"/>
+        <property name="dateModified" type="timestamp"/>
+        <property index="idx_createdby" name="createdBy" type="string"/>
+        <property name="createdByName" type="string"/>
+        <property name="modifiedBy" type="string"/>
+        <property name="modifiedByName" type="string"/>
+        <dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true"><property column="c_approver" name="approver" not-null="false" type="text"/><property column="c_refNo" name="refNo" not-null="false" type="text"/><property column="c_comments" name="comments" not-null="false" type="text"/><property column="c_notes" name="notes" not-null="false" type="text"/><property column="c_proposer" name="proposer" not-null="false" type="text"/><property column="c_description" name="description" not-null="false" type="text"/><property column="c_selectApprover" name="selectApprover" not-null="false" type="text"/><property column="c_title" name="title" not-null="false" type="text"/><property column="c_attachment" name="attachment" not-null="false" type="text"/><property column="c_dateProposed" name="dateProposed" not-null="false" type="text"/><property column="c_dateApproved" name="dateApproved" not-null="false" type="text"/><property column="c_account" name="account" not-null="false" type="text"/><property column="c_status" name="status" not-null="false" type="text"/></dynamic-component>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,70 @@
+[{
+    title : '@@userview.permissionMenu.config@@',
+    properties : [{
+        name : 'id',
+        label : 'Id',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.calendarMenu.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.calendarMenu.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.calendarMenu.label@@',
+        type : 'textfield',
+        value : '@@org.joget.plugin.enterprise.PermissionMenu.pluginLabel@@',
+        required : 'True'
+    },
+    {
+        name : 'title',
+        label : '@@userview.calendarMenu.title@@',
+        type : 'textfield'
+    },
+    {
+        name:'permissions',
+        label:'@@userview.permissionMenu.permissions@@',
+        type:'grid',
+        columns:[{
+            key:'key',
+            label:'@@userview.permissionMenu.permissionKey@@'
+        },{
+            key:'label',
+            label:'@@userview.permissionMenu.permissionLabel@@'
+        },{
+            key:'category',
+            label:'@@userview.permissionMenu.permissionCategory@@'
+        }]
+    },
+    {
+        name:'usePlugin',
+        label:'@@userview.permissionMenu.usePermissionPlugin@@',
+        type:'checkbox',
+        options:[
+            {
+                value:'true',
+                label:''
+            }
+        ]
+    }]
+},
+{
+    title : '@@userview.calendarMenu.advanced@@',
+    properties : [
+    {
+        name : 'customHeader',
+        label : '@@userview.calendarMenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'customFooter',
+        label : '@@userview.calendarMenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }],
+    developer_mode : 'advanced'
+}]

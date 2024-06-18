@@ -1,0 +1,9 @@
+[{
+    title : '@@userview.PermissionMenuController.config@@',
+    properties : [{
+        name : 'permissionKey',
+        label : '@@userview.permissionMenu.permissionKey@@',
+        type : 'textfield',
+        required : 'True'
+    }]
+}]

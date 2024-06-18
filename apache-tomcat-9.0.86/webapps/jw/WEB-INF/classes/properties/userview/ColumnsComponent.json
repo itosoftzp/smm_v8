@@ -1,0 +1,60 @@
+[
+    {
+        "title" : "@@userview.page.editColumns@@",
+        "properties" : [
+            {
+                "name" : "id",
+                "label" : "Id",
+                "type" : "hidden"
+            },
+            {
+                "name" : "customId",
+                "label" : "@@userview.formmenu.customId@@",
+                "type" : "textfield",
+                "regex_validation" : "^[a-zA-Z0-9_]+$",
+                "validation_message" : "@@userview.formmenu.invalidId@@"
+            },
+            {
+                "name" : "columns",
+                "label" : "@@userview.page.columns@@",
+                "type" : "grid",
+                "columns" : [
+                    {
+                        "key" : "style-max-width",
+                        "label" : "@@userview.page.columnsClass@@"
+                    },
+                    {
+                        "key" : "style-tablet-max-width",
+                        "label" : "@@userview.page.columnsClass.tablet@@"
+                    },
+                    {
+                        "key" : "style-mobile-max-width",
+                        "label" : "@@userview.page.columnsClass.mobile@@"
+                    }
+                ]
+            },
+            {
+                "name" : "css-mobile-stack-columns",
+                "label" : "@@userview.page.columns.stackColumns@@",
+                "type" : "checkbox",
+                "value" : "true",
+                "options" : [
+                    {
+                        "value" : "true",
+                        "label" : ""
+                    }
+                ]
+            },
+            {
+                "name" : "gutter",
+                "label" : "@@userview.page.columns.gutter@@",
+                "type" : "number",
+                "mode" : "css_unit",
+                "value" : "5px"
+            }
+        ]
+    }
+]
+
+
+

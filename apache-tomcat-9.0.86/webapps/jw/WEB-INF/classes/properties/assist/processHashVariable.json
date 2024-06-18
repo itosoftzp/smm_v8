@@ -1,0 +1,550 @@
+{
+    "optionGroup" : {
+        "@@assist.WorkflowProcess@@" : [
+            {
+                "value" : "#process.appId[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.appId@@",
+                "syntax" : [
+                    "#process.appId",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.processId[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.processId@@",
+                "syntax" : [
+                    "#process.processId",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.processDefId[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.processDefId@@",
+                "syntax" : [
+                    "#process.processDefId",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.processDefIdWithoutVersion[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.processDefIdWithoutVersion@@",
+                "syntax" : [
+                    "#process.processDefIdWithoutVersion",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.processName[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.processName@@",
+                "syntax" : [
+                    "#process.processName",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.processVersion[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.processVersion@@",
+                "syntax" : [
+                    "#process.processVersion",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.processRequesterId[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.processRequesterId@@",
+                "syntax" : [
+                    "#process.processRequesterId",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.recordId[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.recordId@@",
+                "syntax" : [
+                    "#process.recordId",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.state[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.state@@",
+                "syntax" : [
+                    "#process.state",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.startedTime[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.startedTime@@",
+                "syntax" : [
+                    "#process.startedTime",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.limit[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.limit@@",
+                "syntax" : [
+                    "#process.limit",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.due[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.due@@",
+                "syntax" : [
+                    "#process.due",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.delay[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.delay@@",
+                "syntax" : [
+                    "#process.delay",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.delayInSeconds[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.delayInSeconds@@",
+                "syntax" : [
+                    "#process.delayInSeconds",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.finishTime[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.finishTime@@",
+                "syntax" : [
+                    "#process.finishTime",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.timeConsumingFromDateStarted[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.timeConsumingFromDateStarted@@",
+                "syntax" : [
+                    "#process.timeConsumingFromDateStarted",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.timeConsumingFromDateStartedInSeconds[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.process.timeConsumingFromDateStartedInSeconds@@",
+                "syntax" : [
+                    "#process.timeConsumingFromDateStartedInSeconds",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.instanceId[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.instanceId@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".instanceId",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.name[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.name@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".name",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.status[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.status@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".status",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.state[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.state@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".state",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.type[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.type@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".type",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.startedTime[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.startedTime@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".startedTime",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.limit[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.limit@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".limit",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.limitInSeconds[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.limitInSeconds@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".limitInSeconds",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.due[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.due@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".due",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.delay[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.delay@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".delay",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.delayInSeconds[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.delayInSeconds@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".delayInSeconds",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.finishTime[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.finishTime@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".finishTime",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.timeConsumingFromDateStarted[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.timeConsumingFromDateStarted@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".timeConsumingFromDateStarted",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.timeConsumingFromDateStartedInSeconds[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.timeConsumingFromDateStartedInSeconds@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".timeConsumingFromDateStartedInSeconds",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.performer[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.performer@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".performer",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.performerUser[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.performerUser@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".performerUser",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            },
+            {
+                "value" : "#process.activityInst.ACTIVITY_DEF_ID.assignmentUsers[PROCESS_INSTANCE_ID]#",
+                "label" : "@@assist.processAct.assignmentUsers@@",
+                "syntax" : [
+                    "#process.activityInst.",
+                    {
+                        "placeholder" : "ACTIVITY_DEF_ID",
+                        "option" : "processActivity",
+                        "required" : true
+                    },
+                    ".assignmentUsers",
+                    {
+                        "placeholder" : "PROCESS_INSTANCE_ID",
+                        "prefix" : "[",
+                        "postfix" : "]"
+                    },
+                    "#"
+                ]
+            }
+        ]
+    }
+}

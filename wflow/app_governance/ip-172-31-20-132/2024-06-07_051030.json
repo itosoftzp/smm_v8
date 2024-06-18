@@ -1,0 +1,146 @@
+{
+  "org.joget.governance.lib.OrphanedFormDataCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030373,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.ResponseTimesCheck": {
+    "status": "PASS",
+    "score": 100,
+    "timestamp": 1717737030469,
+    "suppressable": false
+  },
+  "lastCheckDate": {
+    "status": "FAIL",
+    "timestamp": 1717737030189,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.ErrorRateCheck": {
+    "status": "PASS",
+    "score": 100,
+    "timestamp": 1717737030194,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.SecureProcessesCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030470,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.SecureAuthenticationCheck": {
+    "status": "FAIL",
+    "timestamp": 1717737030470,
+    "details": [
+      {
+        "detail": "Security Enhanced Directory Manager is not enabled",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.EmailUsageCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030191,
+    "details": [],
+    "datas": {
+      "JogetDxShowcase_1": "{\"details\":[],\"timestamp\":1717665648000}",
+      "appcenter_1": "{\"details\":[],\"timestamp\":1717665720000}",
+      "isr_1": "{\"details\":[],\"timestamp\":1717665633000}",
+      "crm_1": "{\"details\":[],\"timestamp\":1717665618000}",
+      "expenseclaim_1": "{\"details\":[],\"timestamp\":1717665628000}",
+      "dashboard_1": "{\"details\":[],\"timestamp\":1717665622000}"
+    },
+    "suppressable": true
+  },
+  "org.joget.governance.lib.CpuUsageCheck": {
+    "status": "PASS",
+    "score": 99,
+    "timestamp": 1717737030190,
+    "details": [
+      {
+        "detail": "Average CPU load at 0.46% for last 10 minutes",
+        "link": "/web/console/monitor/apm",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.DbConnectionsCheck": {
+    "status": "PASS",
+    "score": 98,
+    "timestamp": 1717737030191,
+    "details": [
+      {
+        "detail": "20 DB connections used",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.MissingPluginCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030201,
+    "suppressable": false
+  },
+  "org.joget.governance.lib.HashVariableCheck": {
+    "status": "WARN",
+    "timestamp": 1717737030195,
+    "details": [
+      {
+        "detail": "App \u003cb\u003eJoget DX Showcase\u003c/b\u003e: Form \u003cb\u003eProcess - Request\u003c/b\u003e has following unsecure/unescaped Hash Variable used: \u003col\u003e\u003cli\u003e#requestParam.activityId#\u003c/li\u003e\u003c/ol\u003e",
+        "link": "/web/console/app/JogetDxShowcase/1/form/builder/processRequest",
+        "appId": "JogetDxShowcase",
+        "suppressed": false
+      }
+    ],
+    "moreInfo": "Hash Variable used in SQL and script should escape with \"?sql\", \"?java\" or \"?javascript\".",
+    "datas": {
+      "JogetDxShowcase_1": "{\"details\":[{\"detail\":\"App \\u003cb\\u003eJoget DX Showcase\\u003c/b\\u003e: Form \\u003cb\\u003eProcess - Request\\u003c/b\\u003e has following unsecure/unescaped Hash Variable used: \\u003col\\u003e\\u003cli\\u003e#requestParam.activityId#\\u003c/li\\u003e\\u003c/ol\\u003e\",\"link\":\"/web/console/app/JogetDxShowcase/1/form/builder/processRequest\",\"appId\":\"JogetDxShowcase\",\"suppressed\":false}],\"timestamp\":1717665648000}",
+      "appcenter_1": "{\"details\":[],\"timestamp\":1717665720000}",
+      "isr_1": "{\"details\":[],\"timestamp\":1717665633000}",
+      "crm_1": "{\"details\":[],\"timestamp\":1717665618000}",
+      "expenseclaim_1": "{\"details\":[],\"timestamp\":1717665628000}",
+      "dashboard_1": "{\"details\":[],\"timestamp\":1717665622000}"
+    },
+    "suppressable": true
+  },
+  "org.joget.governance.lib.SecureUserviewsCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030537,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.MemoryUsageCheck": {
+    "status": "PASS",
+    "score": 79,
+    "timestamp": 1717737030200,
+    "details": [
+      {
+        "detail": "Average free memory available at 83.44% for last 10 minutes",
+        "link": "/web/console/monitor/apm",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  },
+  "org.joget.governance.lib.ProcessDataIntegrityCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030390,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.NamingConventionCheck": {
+    "status": "PASS",
+    "timestamp": 1717737030319,
+    "suppressable": true
+  },
+  "org.joget.governance.lib.DeadlineCheckerAvailabilityCheck": {
+    "status": "WARN",
+    "timestamp": 1717737030191,
+    "details": [
+      {
+        "detail": "Deadline checker is not started. Please enable it in System Settings.",
+        "link": "/web/console/setting/general",
+        "suppressed": false
+      }
+    ],
+    "suppressable": false
+  }
+}
