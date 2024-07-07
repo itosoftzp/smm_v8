@@ -4,6 +4,13 @@ apache-tomcat-9.0.86/
 data/
 docs/
 wflow/glowroot/
+apache-tomcat-9.0.86/webapps/jw/WEB-INF/lib/tensorflow-core-api-0.4.1-windows-x86_64.jar
+wflow/glowroot/agent-ip-172-31-20-132/data/trace-detail.capped.db
+wflow/glowroot/agent-ip-172-31-20-132/data/rollup-0-detail.capped.db
+apache-tomcat-9.0.86/logs/catalina.out
+apache-tomcat-9.0.86/webapps/jw/WEB-INF/lib/tensorflow-core-api-0.4.1-linux-x86_64.jar
+apache-tomcat-9.0.86/webapps/jw.war
+wflow/glowroot/agent-ip-172-31-20-132/data/data.h2.db
 
 # Ignore other potential files and folders
 *.log
