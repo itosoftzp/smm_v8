@@ -1,0 +1,21 @@
+# Ignore directories
+apache-ant-1.7.1/
+apache-tomcat-9.0.86/
+data/
+docs/
+wflow/glowroot/
+
+# Ignore other potential files and folders
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# ignore git 
+***/.git
+****/.git
