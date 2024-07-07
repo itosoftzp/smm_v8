@@ -1,0 +1,4 @@
+2024-07-05 08:34:34.925 INFO  org.glowroot - Glowroot version: 0.14.2, built 2024-04-06 19:02:00 +0000
+2024-07-05 08:34:34.928 INFO  org.glowroot - Java version: 11.0.23 (Ubuntu / Linux)
+2024-07-05 08:34:34.928 INFO  org.glowroot - Java args: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xms6144M -Xmx8192M -javaagent:./wflow/wflow-cluster.jar -javaagent:./wflow/aspectjweaver-1.9.22.jar -javaagent:./wflow/glowroot/glowroot.jar
+2024-07-05 08:34:38.656 INFO  org.glowroot - UI listening on 0.0.0.0:4000

@@ -1,0 +1,85 @@
+20-Jun-2024 02:24:08.100 INFO [main] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Jun-2024 02:24:12.063 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Jun-2024 02:25:03.792 INFO [main] org.apache.catalina.core.ApplicationContext.log Printing properties before JavaScript servlet, note, the JavaScript properties might not be initialized yet: 
+************************************************************
+* OWASP CSRFGuard properties
+
+* Actions: 
+	* org.owasp.csrfguard.action.Log
+		* Parameter: Message = potential cross-site request forgery (CSRF) attack thwarted (user:%user%, ip:%remote_ip%, method:%request_method%, uri:%request_uri%, error:%exception_message%)
+	* org.owasp.csrfguard.action.Error
+		* Parameter: Message = Security violation.
+		* Parameter: Code = 403
+	* org.owasp.csrfguard.action.Rotate
+* Ajax: true
+* Banned User Agent Properties: 
+	* msie
+	* trident
+* Enabled: true
+* Force Synchronous Ajax: false
+* Is Javascript Inject Into Dynamically Created Nodes: false
+* Javascript Domain Strict: false
+* Javascript Inject Form Attributes: false
+* Javascript Inject Get Forms: false
+* Javascript Inject Into Attributes: false
+* Javascript Inject Into Forms: false
+* Javascript Params Initialized: false
+* Javascript Referer Match Domain: false
+* Javascript Referer Match Protocol: false
+* Logical Session Extractor: org.owasp.csrfguard.session.SessionTokenKeyExtractor
+* Page Token Synchronization Tolerance: 2000 ms
+* Print Config: true
+* Prng: java.security.SecureRandom(algorithm: SHA1PRNG, provider: SUN version 11)
+* Protect: false
+* Rotate: false
+* Token Holder: org.owasp.csrfguard.token.storage.impl.InMemoryTokenHolder
+* Token Length: 32
+* Token Name: OWASP_CSRFTOKEN
+* Token Per Page: false
+* Token Per Page Precreate: false
+* Unprotected Methods: 
+	* GET
+* Unprotected Pages: 
+	* /jw/web/json/*
+* Use New Token Landing Page: false
+* Validation When No Session Exists: true
+************************************************************
+
+20-Jun-2024 02:25:03.946 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring CustomDispatcherServlet 'dispatcher'
+20-Jun-2024 02:25:04.337 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Jun-2024 02:25:04.338 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Jun-2024 02:25:04.341 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@58de92f7')
+20-Jun-2024 11:08:01.401 INFO [Thread-32] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Jun-2024 11:08:01.403 INFO [Thread-32] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Jun-2024 11:08:01.497 INFO [Thread-32] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'dispatcher'
+20-Jun-2024 11:08:01.593 SEVERE [Thread-32] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.joget.apps.app.web.ContextListener]
+	java.lang.Error: ThreadLocalCleaner.cleanThreads()
+		at org.joget.apps.app.web.ThreadCleaner.cleanThreads(ThreadCleaner.java:61)
+		at org.joget.apps.app.web.ContextListener.contextDestroyed(ContextListener.java:17)
+		at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4508)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5147)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+		at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1348)
+		at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1337)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+		at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:931)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:496)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:978)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:242)
+		at org.apache.catalina.startup.Catalina.stop(Catalina.java:810)
+		at org.apache.catalina.startup.Catalina$CatalinaShutdownHook.run(Catalina.java:955)
+	Caused by: java.lang.NullPointerException
+		at org.joget.apps.app.web.ThreadCleaner.cleanThreads(ThreadCleaner.java:48)
+		... 24 more
+20-Jun-2024 11:08:01.593 INFO [Thread-32] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext

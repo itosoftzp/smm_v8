@@ -1,0 +1,7 @@
+# ignore db
+wflow/*.properties
+
+apache-tomcat-9.0.86/webapps/examples
+apache-tomcat-9.0.86/webapps/docs
+apache-tomcat-9.0.86/webapps/manager
+apache-tomcat-9.0.86/webapps/host-manager

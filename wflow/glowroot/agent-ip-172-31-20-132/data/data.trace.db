@@ -1,0 +1,20 @@
+06-27 08:01:24 jdbc[3]: exception
+org.glowroot.agent.embedded.shaded.org.h2.jdbc.JdbcSQLException: Out of memory.; SQL statement:
+merge into gauge_value_rollup_4 (gauge_id, capture_time, value, weight) key (gauge_id, capture_time) select gauge_id, ceil(capture_time / 14400000.0) * 14400000 ceil_capture_time, sum(value * weight) / sum(weight), sum(weight) from gauge_value_rollup_3 gp where gp.capture_time > ? and gp.capture_time <= ? group by gp.gauge_id, ceil_capture_time [90108-176]
+	at org.glowroot.agent.embedded.shaded.org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.glowroot.agent.embedded.shaded.org.h2.message.DbException.get(DbException.java:167)
+	at org.glowroot.agent.embedded.shaded.org.h2.message.DbException.convert(DbException.java:288)
+	at org.glowroot.agent.embedded.shaded.org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.glowroot.agent.embedded.shaded.org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.glowroot.agent.embedded.shaded.org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at org.glowroot.agent.embedded.util.DataSource.update(DataSource.java:366)
+	at org.glowroot.agent.embedded.util.DataSource.update(DataSource.java:338)
+	at org.glowroot.agent.embedded.repo.GaugeValueDao.rollup(GaugeValueDao.java:218)
+	at org.glowroot.agent.embedded.repo.GaugeValueDao.store(GaugeValueDao.java:157)
+	at org.glowroot.agent.embedded.init.EmbeddedCollector.collectGaugeValues(EmbeddedCollector.java:115)
+	at org.glowroot.agent.init.CollectorProxy.collectGaugeValues(CollectorProxy.java:66)
+	at org.glowroot.agent.init.GaugeCollector$GaugeFlushingLoop.run(GaugeCollector.java:372)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.OutOfMemoryError: Java heap space

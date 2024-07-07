@@ -1,0 +1,69 @@
+2024-07-01 05:28:05.391 INFO  org.glowroot - Glowroot version: 0.14.2, built 2024-04-06 19:02:00 +0000
+2024-07-01 05:28:05.393 INFO  org.glowroot - Java version: 11.0.23 (Ubuntu / Linux)
+2024-07-01 05:28:05.394 INFO  org.glowroot - Java args: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xms4096M -Xmx6114M -javaagent:./wflow/wflow-cluster.jar -javaagent:./wflow/aspectjweaver-1.9.22.jar -javaagent:./wflow/glowroot/glowroot.jar
+2024-07-01 05:28:07.310 WARN  org.glowroot - one or more important classes were loaded before Glowroot instrumentation could be applied to them: java.util.concurrent.ThreadPoolExecutor$Worker, java.util.concurrent.Executors$RunnableAdapter, java.util.concurrent.FutureTask. This likely occurred because one or more other javaagents are listed in the JVM args prior to the Glowroot agent (-javaagent:./wflow/wflow-cluster.jar -javaagent:./wflow/aspectjweaver-1.9.22.jar) which gives them a higher loading precedence.
+2024-07-01 05:28:08.412 INFO  org.glowroot - creating glowroot schema...
+2024-07-01 05:28:08.681 INFO  org.glowroot - glowroot schema created
+2024-07-01 05:28:09.124 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2024-07-01 05:33:38.655 INFO  org.glowroot - Glowroot version: 0.14.2, built 2024-04-06 19:02:00 +0000
+2024-07-01 05:33:38.657 INFO  org.glowroot - Java version: 11.0.23 (Ubuntu / Linux)
+2024-07-01 05:33:38.657 INFO  org.glowroot - Java args: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xms6144M -Xmx8192M -javaagent:./wflow/wflow-cluster.jar -javaagent:./wflow/aspectjweaver-1.9.22.jar -javaagent:./wflow/glowroot/glowroot.jar
+2024-07-01 05:33:40.426 WARN  org.glowroot - one or more important classes were loaded before Glowroot instrumentation could be applied to them: java.util.concurrent.ThreadPoolExecutor$Worker, java.util.concurrent.Executors$RunnableAdapter, java.util.concurrent.FutureTask. This likely occurred because one or more other javaagents are listed in the JVM args prior to the Glowroot agent (-javaagent:./wflow/wflow-cluster.jar -javaagent:./wflow/aspectjweaver-1.9.22.jar) which gives them a higher loading precedence.
+2024-07-01 05:33:42.179 INFO  org.glowroot - UI listening on 0.0.0.0:4000
+2024-07-01 08:25:57.923 ERROR o.g.a.e.s.o.g.ui.CommonHandler - java.lang.UnsupportedOperationException
+java.util.concurrent.ExecutionException: java.lang.UnsupportedOperationException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2005)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.TransactionJsonService.getPercentiles(TransactionJsonService.java:156)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.CommonHandler.callMethod(CommonHandler.java:585)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.CommonHandler.handleJsonServiceMappings(CommonHandler.java:324)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.CommonHandler.handleRequest(CommonHandler.java:235)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.CommonHandler.handle(CommonHandler.java:159)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.HttpServerHandler.channelRead(HttpServerHandler.java:128)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at org.glowroot.agent.shaded.io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at org.glowroot.agent.shaded.io.netty.handler.codec.MessageToMessageCodec.channelRead(MessageToMessageCodec.java:111)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at org.glowroot.agent.shaded.io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at org.glowroot.agent.shaded.io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at org.glowroot.agent.shaded.io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at org.glowroot.agent.shaded.io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at org.glowroot.agent.shaded.io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at org.glowroot.agent.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at org.glowroot.agent.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at org.glowroot.agent.shaded.io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at org.glowroot.agent.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at org.glowroot.agent.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at org.glowroot.agent.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at org.glowroot.agent.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at org.glowroot.agent.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at org.glowroot.agent.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at org.glowroot.agent.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.UnsupportedOperationException: null
+	at org.glowroot.agent.shaded.com.google.common.collect.ImmutableCollection.addAll(ImmutableCollection.java:297)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.TransactionCommonService.lambda$getPercentileAggregates$6(TransactionCommonService.java:230)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyNow(CompletableFuture.java:680)
+	at java.base/java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:658)
+	at java.base/java.util.concurrent.CompletableFuture.thenApply(CompletableFuture.java:2100)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.TransactionCommonService.lambda$getPercentileAggregates$7(TransactionCommonService.java:228)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1106)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2241)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:143)
+	at org.glowroot.agent.embedded.shaded.org.glowroot.ui.TransactionCommonService.getPercentileAggregates(TransactionCommonService.java:203)
+	... 41 common frames omitted

@@ -302,6 +302,7 @@
   "org.joget.governance.lib.ProcessDataIntegrityCheck": {
     "status": "PASS",
     "timestamp": 1718100342250,
+    "details": [],
     "suppressable": true
   },
   "org.joget.governance.lib.NamingConventionCheck": {

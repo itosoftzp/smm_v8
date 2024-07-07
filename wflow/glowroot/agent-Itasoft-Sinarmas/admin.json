@@ -1,0 +1,59 @@
+{
+  "general": {
+    "agentDisplayName": "Joget DX"
+  },
+  "users": [
+    {
+      "username": "anonymous",
+      "roles": [
+        "Administrator"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "name": "Administrator",
+      "permissions": [
+        "agent:transaction",
+        "agent:error",
+        "agent:jvm",
+        "agent:incident",
+        "agent:config",
+        "admin"
+      ]
+    }
+  ],
+  "web": {
+    "port": 4000,
+    "bindAddress": "0.0.0.0",
+    "contextPath": "/",
+    "sessionTimeoutMinutes": 30,
+    "sessionCookieName": "GLOWROOT_SESSION_ID"
+  },
+  "storage": {
+    "rollupExpirationHours": [
+      72,
+      336,
+      2160,
+      2160
+    ],
+    "traceExpirationHours": 336,
+    "fullQueryTextExpirationHours": 336,
+    "rollupCappedDatabaseSizesMb": [
+      500,
+      500,
+      500,
+      500
+    ],
+    "traceCappedDatabaseSizeMb": 500
+  },
+  "smtp": {
+    "host": "http://smtp.gmail.com",
+    "port": 465,
+    "connectionSecurity": "ssl-tls",
+    "username": "training@itasoft.co.id",
+    "encryptedPassword": "A48wPErc0gaIHKyvUQ6bxBRoVhklQOx1gSCOWtHhR/g:XscNBoSo+FXzXzvrgKHnew",
+    "fromEmailAddress": "training@itasoft.co.id",
+    "fromDisplayName": "training@itasoft.co.id"
+  }
+}
